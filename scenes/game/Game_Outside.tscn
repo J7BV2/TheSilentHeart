@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/models/Place.glb" type="PackedScene" id=1]
+[ext_resource path="res://assets/models/world/Outside/House/House outside.glb" type="PackedScene" id=2]
+[ext_resource path="res://assets/models/world/Outside/Woodshed/Woodshed.glb" type="PackedScene" id=3]
+[ext_resource path="res://assets/models/world/Outside/Chopping_Log/Chopping log.glb" type="PackedScene" id=4]
+
+[node name="Game_Outside" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+
+[node name="Particles" type="Particles" parent="."]
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="House outside" parent="Spatial" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.263587, 13.8376, -4.41604 )
+
+[node name="Chopping log" parent="Spatial" instance=ExtResource( 4 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 8.3465, 13.2968, -3.63639 )
+
+[node name="Woodshed" parent="Spatial" instance=ExtResource( 3 )]
+transform = Transform( -1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 4.13835, 14.0028, -8.52101 )
+
+[node name="Place" parent="Spatial" instance=ExtResource( 1 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 7.58138, 0 )
+
+[node name="KinematicBody" type="KinematicBody" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.486153, 15.7475, -2.00985 )
+
+[node name="Camera" type="Camera" parent="KinematicBody"]
