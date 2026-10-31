@@ -15,8 +15,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -27,38 +27,38 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 
-[node name="Main_Menu" type="Spatial"]
+[node name="Main_Menu" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 
 [node name="Particles" type="Particles" parent="."]
 
-[node name="Spatial" type="Spatial" parent="."]
+[node name="Node3D" type="Node3D" parent="."]
 
-[node name="House outside" parent="Spatial" instance=ExtResource( 2 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.263587, 13.8376, -4.41604 )
+[node name="House outside" parent="Node3D" instance=ExtResource( 2 )]
+transform = Transform3D( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.263587, 13.8376, -4.41604 )
 
-[node name="Chopping log" parent="Spatial" instance=ExtResource( 4 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 8.3465, 13.2968, -3.63639 )
+[node name="Chopping log" parent="Node3D" instance=ExtResource( 4 )]
+transform = Transform3D( 3, 0, 0, 0, 3, 0, 0, 0, 3, 8.3465, 13.2968, -3.63639 )
 
-[node name="Woodshed" parent="Spatial" instance=ExtResource( 3 )]
-transform = Transform( -1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 4.13835, 14.0028, -8.52101 )
+[node name="Woodshed" parent="Node3D" instance=ExtResource( 3 )]
+transform = Transform3D( -1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 4.13835, 14.0028, -8.52101 )
 
-[node name="Place" parent="Spatial" instance=ExtResource( 1 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 7.58138, 0 )
+[node name="Place" parent="Node3D" instance=ExtResource( 1 )]
+transform = Transform3D( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 7.58138, 0 )
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 0.469472, 0, 0.882948, 0, 1, 0, -0.882948, 0, 0.469472, 11.6634, 14.667, -1.92925 )
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D( 0.469472, 0, 0.882948, 0, 1, 0, -0.882948, 0, 0.469472, 11.6634, 14.667, -1.92925 )
 fov = 55.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D"]
 anims/Menu_sway = ExtResource( 5 )
 anims/RESET = SubResource( 2 )
