@@ -1,0 +1,4 @@
+res://default_env.tres
+res://scenes/main_menu/Main_Menu.tscn
+res://scenes/game/Game_Outside.tscn
+res://scenes/game/Game_House.tscn

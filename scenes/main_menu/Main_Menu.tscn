@@ -1,64 +1,83 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=3 uid="uid://dyc7w02ih3mnb"]
 
-[ext_resource path="res://assets/models/Place.glb" type="PackedScene" id=1]
-[ext_resource path="res://assets/models/world/Outside/House/House outside.glb" type="PackedScene" id=2]
-[ext_resource path="res://assets/models/world/Outside/Woodshed/Woodshed.glb" type="PackedScene" id=3]
-[ext_resource path="res://assets/models/world/Outside/Chopping_Log/Chopping log.glb" type="PackedScene" id=4]
-[ext_resource path="res://assets/animations/main_menuMenu_sway.tres" type="Animation" id=5]
+[ext_resource type="PackedScene" uid="uid://buavaneptb1k7" path="res://assets/models/World/Outside/House/House_outside.glb" id="1_y210c"]
+[ext_resource type="PackedScene" uid="uid://ckn2trhmf2ndo" path="res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb" id="2_8afvm"]
+[ext_resource type="PackedScene" uid="uid://cho4b5ltnfl5f" path="res://assets/models/World/Outside/Woodshed/Woodshed.glb" id="3_iukig"]
+[ext_resource type="PackedScene" uid="uid://d0022qex0inel" path="res://assets/models/World/Outside/Place/Place.glb" id="4_12wyl"]
+[ext_resource type="Animation" path="res://assets/animations/main_menuMenu_sway.tres" id="5"]
+[ext_resource type="PackedScene" uid="uid://h3lr8p0bm76b" path="res://assets/models/Buttons/Play_button.glb" id="5_ekc0u"]
+[ext_resource type="PackedScene" uid="uid://8foj0up8nte1" path="res://assets/models/Buttons/Settings_button.glb" id="6_2k0je"]
+[ext_resource type="PackedScene" uid="uid://0y3yt3r20e1k" path="res://assets/models/Buttons/Authors_button.glb" id="7_65jxp"]
+[ext_resource type="PackedScene" uid="uid://d3bdy465ccvkw" path="res://assets/models/Buttons/Exit_button.glb" id="8_d4ctb"]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 length = 0.001
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:h_offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0.0 ]
+"values": [0.0]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath(".:v_offset")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0.0 ]
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ekc0u"]
+_data = {
+&"Menu_sway": ExtResource("5"),
+&"RESET": SubResource("2")
 }
 
 [node name="Main_Menu" type="Node3D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-
-[node name="Particles" type="Particles" parent="."]
-
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="House outside" parent="Node3D" instance=ExtResource( 2 )]
-transform = Transform3D( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.263587, 13.8376, -4.41604 )
+[node name="House_outside" parent="Node3D" instance=ExtResource("1_y210c")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.05745, 7.88879, -3.71198)
 
-[node name="Chopping log" parent="Node3D" instance=ExtResource( 4 )]
-transform = Transform3D( 3, 0, 0, 0, 3, 0, 0, 0, 3, 8.3465, 13.2968, -3.63639 )
+[node name="Chopping_log2" parent="Node3D" instance=ExtResource("2_8afvm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.68146, 7.49085, -3.53913)
 
-[node name="Woodshed" parent="Node3D" instance=ExtResource( 3 )]
-transform = Transform3D( -1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 4.13835, 14.0028, -8.52101 )
+[node name="Woodshed" parent="Node3D" instance=ExtResource("3_iukig")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 2.14643, 7.9097, -6.90341)
 
-[node name="Place" parent="Node3D" instance=ExtResource( 1 )]
-transform = Transform3D( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 7.58138, 0 )
+[node name="Place" parent="Node3D" instance=ExtResource("4_12wyl")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.270152, 3.68579, -0.780029)
+
+[node name="Buttons 3D" type="Node3D" parent="."]
+
+[node name="Play_button2" parent="Buttons 3D" instance=ExtResource("5_ekc0u")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.25446, 9.92447, -3.45505)
+
+[node name="Settings_button2" parent="Buttons 3D" instance=ExtResource("6_2k0je")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.254, 9.44595, -3.36975)
+
+[node name="Authors_button2" parent="Buttons 3D" instance=ExtResource("7_65jxp")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.254, 8.95578, -3.41526)
+
+[node name="Exit_button2" parent="Buttons 3D" instance=ExtResource("8_d4ctb")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.254, 8.50074, -3.35439)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D( 0.469472, 0, 0.882948, 0, 1, 0, -0.882948, 0, 0.469472, 11.6634, 14.667, -1.92925 )
+transform = Transform3D(0.469472, 0, 0.882948, 0, 1, 0, -0.882948, 0, 0.469472, 7.73877, 8.43644, -2.34331)
 fov = 55.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D"]
-anims/Menu_sway = ExtResource( 5 )
-anims/RESET = SubResource( 2 )
+libraries = {
+&"": SubResource("AnimationLibrary_ekc0u")
+}

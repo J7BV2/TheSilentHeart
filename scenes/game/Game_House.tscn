@@ -1,17 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://ciygq767tfjf6"]
 
-[ext_resource path="res://assets/models/world/Inside/House/House inside.glb" type="PackedScene" id=1]
+[ext_resource type="PackedScene" uid="uid://bp5u6bb62kbvn" path="res://assets/models/World/Inside/House/House_inside.glb" id="1_tywni"]
 
 [node name="Game_House" type="Node3D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="House inside" parent="." instance=ExtResource( 1 )]
-transform = Transform3D( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 1.65095, 0 )
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.13342, 0 )
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+[node name="House_inside" parent="Node3D" instance=ExtResource("1_tywni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564734, 0)
