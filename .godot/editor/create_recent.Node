@@ -1,6 +1,11 @@
+CollisionShape3D
+Area3D
+WorldEnvironment
+DirectionalLight3D
+GPUParticles3D
+Node
 StaticBody3D
 MeshInstance3D
-CollisionShape3D
 CollisionPolygon3D
 Node3D
 Camera3D

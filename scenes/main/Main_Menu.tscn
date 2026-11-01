@@ -1,0 +1,163 @@
+[gd_scene load_steps=22 format=3 uid="uid://dyc7w02ih3mnb"]
+
+[ext_resource type="Environment" uid="uid://dt66w20wbkija" path="res://resoursces/Test_Environment/new_environment.tres" id="1_1kppg"]
+[ext_resource type="PackedScene" uid="uid://buavaneptb1k7" path="res://assets/models/World/Outside/House/House_outside.glb" id="1_bvopx"]
+[ext_resource type="PackedScene" uid="uid://ckn2trhmf2ndo" path="res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb" id="2_1kppg"]
+[ext_resource type="PackedScene" uid="uid://cho4b5ltnfl5f" path="res://assets/models/World/Outside/Woodshed/Woodshed.glb" id="3_tq0kw"]
+[ext_resource type="PackedScene" uid="uid://d0022qex0inel" path="res://assets/models/World/Outside/Place/Place.glb" id="4_ng4m3"]
+[ext_resource type="PackedScene" uid="uid://h3lr8p0bm76b" path="res://assets/models/Buttons/Play_button.glb" id="5_flt8e"]
+[ext_resource type="PackedScene" uid="uid://8foj0up8nte1" path="res://assets/models/Buttons/Settings_button.glb" id="6_sipcu"]
+[ext_resource type="Script" uid="uid://pj6trciwp1sl" path="res://scripts/Menu_UI/Play_Button.gd" id="6_tq0kw"]
+[ext_resource type="PackedScene" uid="uid://0y3yt3r20e1k" path="res://assets/models/Buttons/Authors_button.glb" id="7_kbo2b"]
+[ext_resource type="PackedScene" uid="uid://d3bdy465ccvkw" path="res://assets/models/Buttons/Exit_button.glb" id="8_2erfd"]
+[ext_resource type="Script" uid="uid://b5gdx1g6ydjmx" path="res://scripts/Menu_UI/Exit_Button.gd" id="9_1kppg"]
+[ext_resource type="Animation" path="res://assets/animations/main_menuMenu_sway.tres" id="9_quena"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ng4m3"]
+emission_shape_offset = Vector3(1, -0.2, 0)
+emission_shape = 3
+emission_box_extents = Vector3(25, 2, 25)
+spread = 25.0
+initial_velocity_min = 1.5
+initial_velocity_max = 3.5
+scale_min = 0.03
+scale_max = 0.08
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1kppg"]
+transparency = 1
+shading_mode = 0
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_flt8e"]
+material = SubResource("StandardMaterial3D_1kppg")
+size = Vector2(0.08, 0.08)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bvopx"]
+size = Vector3(3.47327, 0.853394, 0.546997)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1kppg"]
+size = Vector3(3.5601, 0.837372, 0.565186)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tq0kw"]
+size = Vector3(3.51086, 0.835205, 0.546875)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ng4m3"]
+size = Vector3(3.50888, 0.820374, 0.55426)
+
+[sub_resource type="Animation" id="2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:h_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:v_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ekc0u"]
+_data = {
+&"Menu_sway": ExtResource("9_quena"),
+&"RESET": SubResource("2")
+}
+
+[node name="Main_Menu" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_1kppg")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, -0.000183105, 0, 0.0172858)
+light_color = Color(0.768627, 0.847059, 0.92549, 1)
+light_energy = 0.85
+shadow_enabled = true
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.5315, 0)
+amount = 1500
+lifetime = 15.0
+randomness = 0.5
+visibility_aabb = AABB(-13, -3, -13, 27, -15, 20)
+process_material = SubResource("ParticleProcessMaterial_ng4m3")
+draw_pass_1 = SubResource("QuadMesh_flt8e")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="House_outside" parent="Node3D" instance=ExtResource("1_bvopx")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.05745, 7.88879, -3.71198)
+
+[node name="Chopping_log2" parent="Node3D" instance=ExtResource("2_1kppg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.68146, 7.49085, -3.53913)
+
+[node name="Woodshed" parent="Node3D" instance=ExtResource("3_tq0kw")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 2.14643, 7.9097, -6.90341)
+
+[node name="Place" parent="Node3D" instance=ExtResource("4_ng4m3")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.270152, 3.68579, -0.780029)
+
+[node name="Buttons 3D" type="Node3D" parent="."]
+
+[node name="Play_button2" parent="Buttons 3D" instance=ExtResource("5_flt8e")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.25446, 9.92447, -3.45505)
+
+[node name="Area3D" type="Area3D" parent="Buttons 3D/Play_button2"]
+script = ExtResource("6_tq0kw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons 3D/Play_button2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.149475, 0.03302, -0.226501)
+shape = SubResource("BoxShape3D_bvopx")
+
+[node name="Settings_button2" parent="Buttons 3D" instance=ExtResource("6_sipcu")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.254, 9.44595, -3.36975)
+
+[node name="Area3D" type="Area3D" parent="Buttons 3D/Settings_button2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons 3D/Settings_button2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0403366, -0.0242767, -0.217407)
+shape = SubResource("BoxShape3D_1kppg")
+
+[node name="Authors_button2" parent="Buttons 3D" instance=ExtResource("7_kbo2b")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.254, 8.95578, -3.41526)
+
+[node name="Area3D" type="Area3D" parent="Buttons 3D/Authors_button2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons 3D/Authors_button2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0707397, 0.0379639, -0.226563)
+shape = SubResource("BoxShape3D_tq0kw")
+
+[node name="Exit_button2" parent="Buttons 3D" instance=ExtResource("8_2erfd")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.254, 8.50074, -3.35439)
+
+[node name="Area3D" type="Area3D" parent="Buttons 3D/Exit_button2"]
+script = ExtResource("9_1kppg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons 3D/Exit_button2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.078598, 0.030365, -0.22287)
+shape = SubResource("BoxShape3D_ng4m3")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.469472, 0, 0.882948, 0, 1, 0, -0.882948, 0, 0.469472, 7.73877, 8.43644, -2.34331)
+current = true
+fov = 55.0
+
+[node name="Menu_sway" type="AnimationPlayer" parent="Camera3D"]
+libraries = {
+&"": SubResource("AnimationLibrary_ekc0u")
+}
+autoplay = "Menu_sway"
