@@ -3,18 +3,18 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cho4b5ltnfl5f"
-path="res://.godot/imported/Woodshed.glb-d33a73ca1e77bab7f23a3b20cd757a30.scn"
+uid="uid://c6v0ynjs12488"
+path="res://.godot/imported/Axe.glb-84d93635d49816b4b2a6a65b8b7d0493.scn"
 
 [deps]
 
-source_file="res://assets/models/World/Outside/Woodshed/Woodshed.glb"
-dest_files=["res://.godot/imported/Woodshed.glb-d33a73ca1e77bab7f23a3b20cd757a30.scn"]
+source_file="res://assets/models/Items/Axe/Axe.glb"
+dest_files=["res://.godot/imported/Axe.glb-84d93635d49816b4b2a6a65b8b7d0493.scn"]
 
 [params]
 
-nodes/root_type="Node3D"
-nodes/root_name="Scene Root"
+nodes/root_type=""
+nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -22,16 +22,16 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=0
-meshes/lightmap_texel_size=0.1
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
-animation/fps=15
+animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-gltf/naming_version=0
+gltf/naming_version=1
 gltf/embedded_image_handling=1

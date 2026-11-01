@@ -1,7 +1,0 @@
-res://default_env.tres
-res://scenes/game/Game_Outside.tscn
-res://scenes/main/Main_Menu.tscn
-res://scenes/game/Game_House.tscn
-res://resoursces/Test_Environment/new_environment.tres
-res://scripts/Exit_Button.gd
-res://scripts/Menu_UI/Play_Button.gd
