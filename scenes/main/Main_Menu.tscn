@@ -1,9 +1,9 @@
 [gd_scene load_steps=22 format=3 uid="uid://dyc7w02ih3mnb"]
 
 [ext_resource type="Environment" uid="uid://dt66w20wbkija" path="res://resoursces/Test_Environment/new_environment.tres" id="1_1kppg"]
-[ext_resource type="PackedScene" uid="uid://buavaneptb1k7" path="res://assets/models/World/Outside/House/House_outside.glb" id="1_bvopx"]
+[ext_resource type="PackedScene" uid="uid://b54gao3jq41xb" path="res://assets/models/World/Outside/House/House_outside.glb" id="1_bvopx"]
 [ext_resource type="PackedScene" uid="uid://ckn2trhmf2ndo" path="res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb" id="2_1kppg"]
-[ext_resource type="PackedScene" uid="uid://cho4b5ltnfl5f" path="res://assets/models/World/Outside/Woodshed/Woodshed.glb" id="3_tq0kw"]
+[ext_resource type="PackedScene" uid="uid://cluh1fm31uhux" path="res://assets/models/World/Outside/Woodshed/Woodshed.glb" id="3_tq0kw"]
 [ext_resource type="PackedScene" uid="uid://d0022qex0inel" path="res://assets/models/World/Outside/Place/Place.glb" id="4_ng4m3"]
 [ext_resource type="PackedScene" uid="uid://h3lr8p0bm76b" path="res://assets/models/Buttons/Play_button.glb" id="5_flt8e"]
 [ext_resource type="PackedScene" uid="uid://8foj0up8nte1" path="res://assets/models/Buttons/Settings_button.glb" id="6_sipcu"]
