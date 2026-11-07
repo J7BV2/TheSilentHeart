@@ -1,94 +1,94 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1794074073
-default_env.tres::Environment/Environment::6679978981544919484::1794073189::0::1::::<><><>0<>0<><>::
+::res://::1794074806
+default_env.tres::Environment::6679978981544919484::1794074793::0::1::::<><><>0<>0<><>::
 icon.png::CompressedTexture2D/CompressedTexture2D::549468775116025124::1793458586::1793458912::1::::<><><>0<>0<>0d2dace215193c7fc8a20b664a209691<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 README.md::TextFile/TextFile::-1::1793458586::0::1::::<><><>0<>0<><>::
 ::res://assets/::1794073877
 ::res://assets/animations/::1794073877
-main_menuMenu_sway.tres::Animation::-1::1794073877::0::1::::<><><>0<>0<><>::
+main_menuMenu_sway.tres::Animation/Animation::-1::1794073877::0::1::::<><><>0<>0<><>::
 ::res://assets/models/::1794073877
-::res://assets/models/Buttons/::1794073877
+::res://assets/models/Buttons/::1794074076
 Authors_button.glb::PackedScene/PackedScene::1806010133907070502::1794073877::1794074075::1::::<><><>0<>0<>c8b4ca2646423e0cacf9a260884e8f7c<>res://.godot/imported/Authors_button.glb-9055c7585054dc75d1984d16c57892f1.scn::
 Exit_button.glb::PackedScene/PackedScene::9126840633162216302::1794073877::1794074075::1::::<><><>0<>0<>65f49c347828d43e4c7418849f2ded1b<>res://.godot/imported/Exit_button.glb-ffd5c1f1ff82bc7090877f377addcfa6.scn::
 Play_button.glb::PackedScene/PackedScene::549824485577067375::1794073877::1794074075::1::::<><><>0<>0<>0b00e2a81ac411b5a53d4090ccaf7d27<>res://.godot/imported/Play_button.glb-2ed7268acc4db05855782033ba04f8e8.scn::
 Settings_button.glb::PackedScene/PackedScene::2327421183575247558::1794073877::1794074076::1::::<><><>0<>0<>091013a842c889af7414310688ddb1b0<>res://.godot/imported/Settings_button.glb-ddaa41eaf508144958e999586cfb8e44.scn::
 ::res://assets/models/Items/::1794073877
-::res://assets/models/Items/Axe/::1794073877
+::res://assets/models/Items/Axe/::1794074076
 Axe.glb::PackedScene/PackedScene::6993608934433810287::1794073877::1794074076::1::::<><><>0<>0<>48b50f3c8b945e986e4e7668eb78a0f2<>res://.godot/imported/Axe.glb-84d93635d49816b4b2a6a65b8b7d0493.scn::
-::res://assets/models/Items/Axe_Grinder/::1794073877
+::res://assets/models/Items/Axe_Grinder/::1794074076
 Axe_grinder.glb::PackedScene/PackedScene::2466546782536531165::1794073877::1794074076::1::::<><><>0<>0<>42e6fe691f3981030683b596adcdcf0b<>res://.godot/imported/Axe_grinder.glb-77d78cb7b5801b5972ad2148321f0174.scn::
-::res://assets/models/Items/Box_Of_Matches/::1794073877
+::res://assets/models/Items/Box_Of_Matches/::1794074077
 Box_of_matches.glb::PackedScene/PackedScene::6606016350502046573::1794073877::1794074077::1::::<><><>0<>0<>39e34d3c5f4ca64fbe2b15e44ddee4d5<>res://.godot/imported/Box_of_matches.glb-ba6ddb5b96c1d867bc882c9b9d62fa27.scn::
-::res://assets/models/Items/Lamp/::1794073877
-Down grey_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-Glass_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+::res://assets/models/Items/Lamp/::1794074077
+Down grey_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Glass_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
 Lantern.glb::PackedScene/PackedScene::1060299357029574365::1794073877::1794074077::1::::<><><>0<>0<>80ac3aac9fba9c5f7857fefd612e5d08<>res://.godot/imported/Lantern.glb-e72e952866540684f8ab90d716986a54.scn::
-Light grey_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-Light metall_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-Metall_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-::res://assets/models/Items/Lamp_Old/::1794073877
-Down grey_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-Glass_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Light grey_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Light metall_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Metall_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+::res://assets/models/Items/Lamp_Old/::1794074077
+Down grey_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Glass_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
 Lamp.glb::PackedScene/PackedScene::3165475458155995580::1794073877::1794074077::1::::<><><>0<>0<>8bc26ab129f5a5caec37f969c1005e81<>res://.godot/imported/Lamp.glb-5ef662406829722cd54177f2d0234f64.scn::
-Light grey_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-Light metall_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-Metall_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-::res://assets/models/Items/Log_Single/::1794073877
+Light grey_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Light metall_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Metall_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+::res://assets/models/Items/Log_Single/::1794074077
 Log_single.glb::PackedScene/PackedScene::654995550236274000::1794073877::1794074077::1::::<><><>0<>0<>68fc2f5e0c17cd7bdbb57bd3a7ec1dd0<>res://.godot/imported/Log_single.glb-80e15302ba599b969d675b05962e1e7f.scn::
 Log_single.obj::Mesh/Mesh::3552098131009142169::1794073877::1794074075::1::::<><><>0<>0<>b9b63af57268531e2c49cd79211a3beb<>res://.godot/imported/Log_single.obj-d10fe7d9060644567e27411a075f9390.mesh<*>res://.godot/imported/Log_single.obj-d10fe7d9060644567e27411a075f9390.mesh::
-::res://assets/models/Items/Tinder/::1794073877
+::res://assets/models/Items/Tinder/::1794074077
 Tinder.glb::PackedScene/PackedScene::6312952764330627212::1794073877::1794074077::1::::<><><>0<>0<>43bd911d6c6d2a3412a26242066a4493<>res://.godot/imported/Tinder.glb-78276ba1f51a7a2e5f4cfa2605a2407b.scn::
-::res://assets/models/Items/Wood_For_Fireplace/::1794073877
+::res://assets/models/Items/Wood_For_Fireplace/::1794074077
 Wood_for_fireplace.glb::PackedScene/PackedScene::5473871647728336580::1794073877::1794074077::1::::<><><>0<>0<>248c1be019b14ca789527404b1e58a38<>res://.godot/imported/Wood_for_fireplace.glb-a6cf96c83988d84f8f937f67509277d0.scn::
-::res://assets/models/Items/Wood_Single/::1794073877
+::res://assets/models/Items/Wood_Single/::1794074076
 Wood_single.glb::PackedScene/PackedScene::8782653477788613822::1794073877::1794074076::1::::<><><>0<>0<>0826f485a4f532382f4fe2aeb259592f<>res://.godot/imported/Wood_single.glb-ed8353c66ea4a5ecd2b6bc2ff76dc7a4.scn::
 ::res://assets/models/Material/::1794073877
-Bark.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-Down grey_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-Glass_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-Light grey_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-Light metall_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-Metall_001.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
-Veneer.material::StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Bark.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Down grey_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Glass_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Light grey_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Light metall_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Metall_001.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
+Veneer.material::StandardMaterial3D/StandardMaterial3D::-1::1794073877::0::1::::<><><>0<>0<><>::
 ::res://assets/models/World/::1794073877
 ::res://assets/models/World/Furniture/::1794073877
-::res://assets/models/World/Furniture/Bed/::1794073877
+::res://assets/models/World/Furniture/Bed/::1794074076
 Bed.glb::PackedScene/PackedScene::6503124072627535461::1794073877::1794074076::1::::<><><>0<>0<>e8f4c17aff562aaba715c7602ebe71d3<>res://.godot/imported/Bed.glb-11ed561079b1d3d393f23757e1e244d5.scn::
 Bed.obj::Mesh/Mesh::7456148137418104987::1794073877::1794074075::1::::<><><>0<>0<>c363a16fdb1b641cf89e9374206f0562<>res://.godot/imported/Bed.obj-f8bd6aa4d169f463ba5a69e33c720015.mesh<*>res://.godot/imported/Bed.obj-f8bd6aa4d169f463ba5a69e33c720015.mesh::
-::res://assets/models/World/Furniture/Chair/::1794073877
+::res://assets/models/World/Furniture/Chair/::1794074076
 Chair.glb::PackedScene/PackedScene::1810039514566582483::1794073877::1794074076::1::::<><><>0<>0<>0f33168d1124e6f2931dcf2d82dd9521<>res://.godot/imported/Chair.glb-c41b419d09e78e15b1ef9229f4efd758.scn::
 Chair.obj::Mesh/Mesh::1111485707684248146::1794073877::1794074075::1::::<><><>0<>0<>2cedcbd24a0692d441855bc05666aac3<>res://.godot/imported/Chair.obj-cdf3ab20d29be16ab0c8111bf4dc4839.mesh<*>res://.godot/imported/Chair.obj-cdf3ab20d29be16ab0c8111bf4dc4839.mesh::
-::res://assets/models/World/Furniture/Clocks/::1794073877
+::res://assets/models/World/Furniture/Clocks/::1794074076
 Clocks.glb::PackedScene/PackedScene::492858632129491241::1794073877::1794074076::1::::<><><>0<>0<>aae3f55498ae7e800af9c5f95621c69d<>res://.godot/imported/Clocks.glb-cbdc5077023d6cf28b9b6cf3f054f156.scn::
-::res://assets/models/World/Furniture/Fireplace/::1794073877
+::res://assets/models/World/Furniture/Fireplace/::1794074076
 Fireplace.glb::PackedScene/PackedScene::7188141067244924505::1794073877::1794074076::1::::<><><>0<>0<>dc649e3e6c2c4f70d89b77d9fd31f7b3<>res://.godot/imported/Fireplace.glb-160e181ff8f83dfefcf3f386f53a40db.scn::
-::res://assets/models/World/Furniture/Table/::1794073877
+::res://assets/models/World/Furniture/Table/::1794074076
 Table.glb::PackedScene/PackedScene::415505776171175281::1794073877::1794074076::1::::<><><>0<>0<>dd8b08d8c31ba72f5ca9e1458766a976<>res://.godot/imported/Table.glb-48da7265081298034e4cd0c7671081ce.scn::
 Table.obj::Mesh/Mesh::7436468230799582195::1794073877::1794074075::1::::<><><>0<>0<>6b1edd3d7cc3a2bccbb7a79b234648bc<>res://.godot/imported/Table.obj-e718a8f2c01d463f5f97cfa80f7ac7b8.mesh<*>res://.godot/imported/Table.obj-e718a8f2c01d463f5f97cfa80f7ac7b8.mesh::
 ::res://assets/models/World/Inside/::1794073877
-::res://assets/models/World/Inside/House/::1794073877
+::res://assets/models/World/Inside/House/::1794074076
 House_inside.glb::PackedScene/PackedScene::7975691401895055708::1794073877::1794074076::1::::<><><>0<>0<>e3fc35d25c121cfc2ffe1c7ba3068a23<>res://.godot/imported/House_inside.glb-7ff5b49d9bdfc7a4214ed18207543750.scn::
 ::res://assets/models/World/Outside/::1794073877
-::res://assets/models/World/Outside/Chopping_Log/::1794073877
+::res://assets/models/World/Outside/Chopping_Log/::1794074075
 Chopping_log.glb::PackedScene/PackedScene::5503240907721757072::1794073877::1794074075::1::::<><><>0<>0<>fa3b10101fad17e2ff1002591e5e69e3<>res://.godot/imported/Chopping_log.glb-1ae67075a6e40331d4eace8b6b150868.scn::
 Chopping_log.obj::Mesh/Mesh::4901583413844471817::1794073877::1794074075::1::::<><><>0<>0<>6d3921a032a53aef1acfedd44c768bc5<>res://.godot/imported/Chopping_log.obj-bbc71e17de2394c793360a2ca44e6e36.mesh<*>res://.godot/imported/Chopping_log.obj-bbc71e17de2394c793360a2ca44e6e36.mesh::
-::res://assets/models/World/Outside/House/::1794073877
+::res://assets/models/World/Outside/House/::1794074075
 House_outside.glb::PackedScene/PackedScene::4552318028671301375::1794073877::1794074075::1::::<><><>0<>0<>b925de58b94d3c546d78d787235195d4<>res://.godot/imported/House_outside.glb-c17428e268a8e42771b47047004ea091.scn::
-::res://assets/models/World/Outside/Place/::1794073877
+::res://assets/models/World/Outside/Place/::1794074075
 Place.glb::PackedScene/PackedScene::8967281008753306615::1794073877::1794074075::1::::<><><>0<>0<>b3f2e0b07a251890c81b4ee5a8df43e2<>res://.godot/imported/Place.glb-9cb91110ccc04e590dcda5368d89365c.scn::
 Place.obj::Mesh/Mesh::246066022410051920::1794073877::1794074075::1::::<><><>0<>0<>21389ef70b43096c8eb69c6f69fee90e<>res://.godot/imported/Place.obj-22ea6f2537db5544b80a65d8eb18f897.mesh<*>res://.godot/imported/Place.obj-22ea6f2537db5544b80a65d8eb18f897.mesh::
-::res://assets/models/World/Outside/Woodshed/::1794073877
+::res://assets/models/World/Outside/Woodshed/::1794074075
 Woodshed.glb::PackedScene/PackedScene::5586677934538781595::1794073877::1794074075::1::::<><><>0<>0<>7d6a23ddda5505dd3e4f12d679e78ca3<>res://.godot/imported/Woodshed.glb-d33a73ca1e77bab7f23a3b20cd757a30.scn::
 ::res://assets/music/::1794073877
-null.txt::TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
+null.txt::TextFile/TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
 ::res://assets/sounds/::1794073877
-null.txt::TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
+null.txt::TextFile/TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
 ::res://Dev/::1794073877
 ::res://Dev/Blend/::1794073877
-null.txt::TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
-::res://Dev/Docs/::1794073877
+null.txt::TextFile/TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
+::res://Dev/Docs/::1794074075
 House Plan.png::CompressedTexture2D/CompressedTexture2D::4652300214268101006::1794073877::1794074075::1::::<><><>0<>0<>240ac0040ba20892e213e9cf9e80adfe<>res://.godot/imported/House Plan.png-cae02385f33fd8b534a6c1a4e13c7bb4.ctex::
-Mechanics.txt::TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
+Mechanics.txt::TextFile/TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
 ::res://Dev/ExportFiles/::1794073877
 ::res://resoursces/::1794073877
 ::res://resoursces/game_balance/::1794073877
@@ -99,31 +99,31 @@ null.txt::TextFile/TextFile::-1::1793458586::0::1::::<><><>0<>0<><>::
 House_Env.tres::Environment/Environment::65200089535876205::1794064192::0::1::::<><><>0<>0<><>::
 new_environment.tres::Environment/Environment::8558768762571322162::1793512464::0::1::::<><><>0<>0<><>::
 ::res://scenes/::1794073877
-::res://scenes/game/::1794073877
-Game_House.tscn::PackedScene/PackedScene::5384291787362645509::1794073189::0::1::::<><><>0<>0<><>::uid://bp5u6bb62kbvn::::res://assets/models/World/Inside/House/House_inside.glb<>uid://6t3omeqlldd::::res://resoursces/Test_Environment/House_Env.tres<>uid://cuqawsg48vtke::::res://scripts/player/Player.gd<>uid://pdu8fw85uv8h::::res://assets/models/Items/Lamp/Lantern.glb<>uid://63vcxguukpdd::::res://scripts/interactables/Common/Door.gd
-Game_Outside.tscn::PackedScene/PackedScene::8624867021858921672::1794073189::0::1::::<><><>0<>0<><>::uid://dt66w20wbkija::::res://resoursces/Test_Environment/new_environment.tres<>uid://buavaneptb1k7::::res://assets/models/World/Outside/House/House_outside.glb<>uid://ckn2trhmf2ndo::::res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb<>uid://cho4b5ltnfl5f::::res://assets/models/World/Outside/Woodshed/Woodshed.glb<>uid://drgw3ghkj6tg::::res://assets/models/World/Outside/Place/Place.obj<>uid://cuqawsg48vtke::::res://scripts/player/Player.gd<>uid://63vcxguukpdd::::res://scripts/interactables/Common/Door.gd
-::res://scenes/main/::1794073877
+::res://scenes/game/::1794074793
+Game_House.tscn::PackedScene::5384291787362645509::1794074732::0::1::::<><><>0<>0<><>::uid://dlvqqb1pegs3m::::res://assets/models/World/Inside/House/House_inside.glb<>uid://6t3omeqlldd::::res://resoursces/Test_Environment/House_Env.tres<>uid://cuqawsg48vtke::::res://scripts/player/Player.gd<>uid://pdu8fw85uv8h::::res://assets/models/Items/Lamp/Lantern.glb<>uid://63vcxguukpdd::::res://scripts/interactables/Common/Door.gd
+Game_Outside.tscn::PackedScene::8624867021858921672::1794074793::0::1::::<><><>0<>0<><>::uid://dt66w20wbkija::::res://resoursces/Test_Environment/new_environment.tres<>uid://b54gao3jq41xb::::res://assets/models/World/Outside/House/House_outside.glb<>uid://ckn2trhmf2ndo::::res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb<>uid://cluh1fm31uhux::::res://assets/models/World/Outside/Woodshed/Woodshed.glb<>uid://drgw3ghkj6tg::::res://assets/models/World/Outside/Place/Place.obj<>uid://cuqawsg48vtke::::res://scripts/player/Player.gd<>uid://63vcxguukpdd::::res://scripts/interactables/Common/Door.gd
+::res://scenes/main/::1794074732
 Main.tscn::PackedScene/PackedScene::4541121230538725516::1793474506::0::1::::<><><>0<>0<><>::uid://jrgbr1sxnq5c::::res://scripts/systems/main.gd
-Main_Menu.tscn::PackedScene/PackedScene::8849906640302059899::1794073189::0::1::::<><><>0<>0<><>::uid://dt66w20wbkija::::res://resoursces/Test_Environment/new_environment.tres<>uid://buavaneptb1k7::::res://assets/models/World/Outside/House/House_outside.glb<>uid://ckn2trhmf2ndo::::res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb<>uid://cho4b5ltnfl5f::::res://assets/models/World/Outside/Woodshed/Woodshed.glb<>uid://d0022qex0inel::::res://assets/models/World/Outside/Place/Place.glb<>uid://h3lr8p0bm76b::::res://assets/models/Buttons/Play_button.glb<>uid://8foj0up8nte1::::res://assets/models/Buttons/Settings_button.glb<>uid://pj6trciwp1sl::::res://scripts/Menu_UI/Play_Button.gd<>uid://0y3yt3r20e1k::::res://assets/models/Buttons/Authors_button.glb<>uid://d3bdy465ccvkw::::res://assets/models/Buttons/Exit_button.glb<>uid://b5gdx1g6ydjmx::::res://scripts/Menu_UI/Exit_Button.gd<>res://assets/animations/main_menuMenu_sway.tres
+Main_Menu.tscn::PackedScene::8849906640302059899::1794074732::0::1::::<><><>0<>0<><>::uid://dt66w20wbkija::::res://resoursces/Test_Environment/new_environment.tres<>uid://b54gao3jq41xb::::res://assets/models/World/Outside/House/House_outside.glb<>uid://ckn2trhmf2ndo::::res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb<>uid://cluh1fm31uhux::::res://assets/models/World/Outside/Woodshed/Woodshed.glb<>uid://d0022qex0inel::::res://assets/models/World/Outside/Place/Place.glb<>uid://h3lr8p0bm76b::::res://assets/models/Buttons/Play_button.glb<>uid://8foj0up8nte1::::res://assets/models/Buttons/Settings_button.glb<>uid://pj6trciwp1sl::::res://scripts/Menu_UI/Play_Button.gd<>uid://0y3yt3r20e1k::::res://assets/models/Buttons/Authors_button.glb<>uid://d3bdy465ccvkw::::res://assets/models/Buttons/Exit_button.glb<>uid://b5gdx1g6ydjmx::::res://scripts/Menu_UI/Exit_Button.gd<>res://assets/animations/main_menuMenu_sway.tres
 ::res://scenes/player/::1794073877
 null.txt::TextFile/TextFile::-1::1793458586::0::1::::<><><>0<>0<><>::
 ::res://scenes/ui/::1794073877
 null.txt::TextFile/TextFile::-1::1793458586::0::1::::<><><>0<>0<><>::
 ::res://scripts/::1794073877
 ::res://scripts/interactables/::1794073978
-null.txt::TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
+null.txt::TextFile/TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
 ::res://scripts/interactables/Common/::1794073978
 Door.gd::GDScript/GDScript::2234936576570308661::1794070586::0::1::::<>Area3D<><>0<>0<><>::
 ::res://scripts/interactables/Game_Outside/::1794073978
 null.txt::TextFile/TextFile::-1::1793458586::0::1::::<><><>0<>0<><>::
 ::res://scripts/interactables/House_Inside/::1794073978
 null.txt::TextFile/TextFile::-1::1793458586::0::1::::<><><>0<>0<><>::
-::res://scripts/Menu_UI/::1794073877
+::res://scripts/Menu_UI/::1794074793
 Exit_Button.gd::GDScript/GDScript::4504696859913172427::1793515383::0::1::::<>Area3D<><>0<>0<><>::
-Play_Button.gd::GDScript/GDScript::1073329107597041455::1794073189::0::1::::<>Area3D<><>0<>0<><>::
-::res://scripts/player/::1794073978
-null.txt::TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
-Player.gd::GDScript/GDScript::6209688527729417084::1794073188::0::1::::<>CharacterBody3D<><>0<>0<><>::
+Play_Button.gd::GDScript::1073329107597041455::1794074793::0::1::::<>Area3D<><>0<>0<><>::
+::res://scripts/player/::1794074732
+null.txt::TextFile/TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
+Player.gd::GDScript::6209688527729417084::1794074732::0::1::::<>CharacterBody3D<><>0<>0<><>::
 ::res://scripts/systems/::1794073877
 main.gd::GDScript/GDScript::667161036222782422::1793515383::0::1::::<>Node<><>0<>0<><>::
-null.txt::TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
+null.txt::TextFile/TextFile::-1::1794073877::0::1::::<><><>0<>0<><>::
