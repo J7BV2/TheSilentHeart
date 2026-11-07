@@ -1,3 +1,6 @@
 res://default_env.tres
-res://scenes/main/Main_Menu.tscn
+res://scenes/game/Game_House.tscn
 res://scripts/Menu_UI/Play_Button.gd
+res://scripts/player/Player.gd
+res://scenes/game/Game_Outside.tscn
+res://scenes/main/Main_Menu.tscn

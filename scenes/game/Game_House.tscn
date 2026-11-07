@@ -1,10 +1,124 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciygq767tfjf6"]
+[gd_scene load_steps=13 format=3 uid="uid://ciygq767tfjf6"]
 
-[ext_resource type="PackedScene" uid="uid://bp5u6bb62kbvn" path="res://assets/models/World/Inside/House/House_inside.glb" id="1_tywni"]
+[ext_resource type="PackedScene" uid="uid://dlvqqb1pegs3m" path="res://assets/models/World/Inside/House/House_inside.glb" id="1_tywni"]
+[ext_resource type="Environment" uid="uid://6t3omeqlldd" path="res://resoursces/Test_Environment/House_Env.tres" id="1_wdxgx"]
+[ext_resource type="Script" uid="uid://cuqawsg48vtke" path="res://scripts/player/Player.gd" id="2_15vw4"]
+[ext_resource type="PackedScene" uid="uid://pdu8fw85uv8h" path="res://assets/models/Items/Lamp/Lantern.glb" id="3_f7w2n"]
+[ext_resource type="Script" uid="uid://63vcxguukpdd" path="res://scripts/interactables/Common/Door.gd" id="4_f7w2n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wdxgx"]
+size = Vector3(5.19238, 0.001, 3.60193)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f7w2n"]
+size = Vector3(5.17047, 2.66101, 0.001)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ix6oo"]
+size = Vector3(0.001, 2.6593, 3.63232)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mll60"]
+size = Vector3(5.1463, 2.49106, 0.001)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p2jwk"]
+size = Vector3(0.001, 2.51489, 3.61536)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_60y21"]
+size = Vector3(1.0083, 2.00562, 0.0885127)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wdxgx"]
 
 [node name="Game_House" type="Node3D"]
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_wdxgx")
 
-[node name="House_inside" parent="Node3D" instance=ExtResource("1_tywni")]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+light_color = Color(0.662745, 0.776471, 0.909804, 1)
+light_energy = 0.25
+
+[node name="Static" type="Node3D" parent="."]
+
+[node name="House_inside" parent="Static" instance=ExtResource("1_tywni")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564734, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Static/House_inside"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/House_inside/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07223, -0.342285, -0.883295)
+shape = SubResource("BoxShape3D_wdxgx")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Static/House_inside"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.42674)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/House_inside/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09586, 0.830505, -0.4995)
+shape = SubResource("BoxShape3D_f7w2n")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Static/House_inside"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.16444, 0, -0.958638)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/House_inside/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4995, 0.829651, 0.0773926)
+shape = SubResource("BoxShape3D_ix6oo")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="Static/House_inside"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.18119, -0.0113244, -3.18451)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/House_inside/StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101738, 0.921897, 0.514797)
+shape = SubResource("BoxShape3D_mll60")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="Static/House_inside"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99338, 0, -0.947698)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/House_inside/StaticBody3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4995, 0.904907, 0.0772095)
+shape = SubResource("BoxShape3D_p2jwk")
+
+[node name="Lantern" parent="Static" instance=ExtResource("3_f7w2n")]
+transform = Transform3D(0.981627, 0, 0.190809, 0, 1, 0, -0.190809, 0, 0.981627, -1.17843, 1.11515, -2.32595)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Static/Lantern"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00911725, 0)
+light_color = Color(1, 0.713726, 0.431373, 1)
+light_energy = 0.238
+
+[node name="Interactables" type="Node3D" parent="."]
+
+[node name="Door" type="Area3D" parent="Interactables"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0808178, 1.15279, 1.3836)
+script = ExtResource("4_f7w2n")
+next_scene = "uid://du47kgra6lxgy"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00415039, 0.0921631, -0.445978)
+shape = SubResource("BoxShape3D_60y21")
+debug_fill = false
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00494775, 0.941224, 0.345032)
+script = ExtResource("2_15vw4")
+walk_speed = 3.0
+run_speed = 5.0
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.732248, 0)
+current = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Player/Camera3D"]
+target_position = Vector3(0, 0, -1.5)
+collide_with_areas = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0115654, 0.304617, 0)
+shape = SubResource("CapsuleShape3D_wdxgx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+
+[node name="CenterContainer" type="CenterContainer" parent="Player/CanvasLayer"]
+
+[node name="Label" type="Label" parent="Player/CanvasLayer/CenterContainer"]
+visible = false
+layout_mode = 2
+text = "Дверь — нажмите ЛКМ, чтобы выйти"
+horizontal_alignment = 1
+vertical_alignment = 1
