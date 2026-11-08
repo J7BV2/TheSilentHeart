@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cv648wtuws0fq"]
+[gd_scene load_steps=3 format=3 uid="uid://cv648wtuws0fq"]
 
 [ext_resource type="Script" uid="uid://cptq6nj08tuif" path="res://scripts/systems/game_session.gd" id="1_86y5d"]
+[ext_resource type="PackedScene" uid="uid://chr2mpdb0128g" path="res://scenes/player/Player.tscn" id="2_0g0lo"]
 
 [node name="GameSession" type="Node3D"]
 script = ExtResource("1_86y5d")
+
+[node name="Player" parent="." instance=ExtResource("2_0g0lo")]
+
+[node name="TimeManager" type="Node" parent="."]
+
+[node name="GameManager" type="Node" parent="."]
+
+[node name="LevelContainer" type="Node3D" parent="."]

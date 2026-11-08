@@ -1,13 +1,8 @@
 res://default_env.tres
-res://scripts/Menu_UI/Play_Button.gd
-res://scenes/game/Levels/Game_House.tscn
-res://scenes/game/Levels/Game_Outside.tscn
-res://scenes/main/Main_Menu.tscn
 res://scenes/game/Game_Session.tscn
-res://scenes/game/Game_House.tscn
-res://scenes/game/Game_Outside.tscn
-res://scenes/main/Main.tscn
+res://scripts/Menu_UI/Play_Button.gd
 res://scripts/systems/game_session.gd
-res://scenes/game/levels/Game_Outside.tscn
 res://scenes/game/levels/Game_House.tscn
-res://scenes/player/Player.tscn
+res://scenes/game/levels/Game_Outside.tscn
+res://scenes/main/Main_Menu.tscn
+res://scenes/main/Main.tscn
