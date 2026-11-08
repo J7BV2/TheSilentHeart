@@ -1,6 +1,6 @@
 extends Area3D
 
-var game_scene_path: String = "res://scenes/game/Game_House.tscn"
+var game_scene_path: String = "res://scenes/game/levels/Game_House.tscn"
 
 var _last_press_time := 0.0
 const PRESS_COOLDOWN := 0.2

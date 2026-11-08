@@ -1,6 +1,8 @@
+CharacterBody3D
+Node3D
+Node
 CollisionShape3D
 StaticBody3D
-Node3D
 CSGPolygon3D
 Label
 CenterContainer
@@ -11,4 +13,3 @@ OmniLight3D
 DirectionalLight3D
 WorldEnvironment
 Camera3D
-MeshInstance3D
