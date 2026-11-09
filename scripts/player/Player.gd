@@ -8,14 +8,19 @@ extends CharacterBody3D
 @onready var ray: RayCast3D = $Camera3D/RayCast3D
 @onready var interaction_label: Label = $CanvasLayer/CenterContainer/Label
 
-var current_door: Area3D = null
+var current_interactable: Area3D = null
 var gravity: float = 9.8
 var camera_pitch: float = 0.0
 
-func _ready():
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-	$CanvasLayer/CenterContainer.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+func _ready():
+	# Захватываем мышь только на устройствах без сенсорного экрана
+	if not DisplayServer.is_touchscreen_available():
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+	$CanvasLayer/CenterContainer.set_anchors_and_offsets_preset(
+		Control.PRESET_FULL_RECT
+	)
 
 	interaction_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	interaction_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
@@ -23,21 +28,27 @@ func _ready():
 	interaction_label.add_theme_color_override("font_color", Color.WHITE)
 	interaction_label.visible = false
 
+
 func _input(event):
+
 	# Поворот камеры мышью
 	if event is InputEventMouseMotion:
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			rotate_y(-event.relative.x * mouse_sensitivity)
 
 			camera_pitch -= event.relative.y * mouse_sensitivity
-			camera_pitch = clampf(camera_pitch, deg_to_rad(-89), deg_to_rad(89))
+			camera_pitch = clampf(
+				camera_pitch,
+				deg_to_rad(-89),
+				deg_to_rad(89)
+			)
 			head.rotation.x = camera_pitch
 
 	# Выход из режима захвата мыши
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
-	# Нажатие левой кнопки мыши
+	# ЛЕВАЯ КНОПКА МЫШИ = ВЗАИМОДЕЙСТВИЕ
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 
@@ -47,13 +58,17 @@ func _input(event):
 				var collider = ray.get_collider()
 
 				if collider is Area3D and collider.has_method("interact"):
-					print("КЛИК ПО ДВЕРИ!")
 					collider.interact()
 					return
 
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			# Если ничего не нажали, возвращаем захват мыши
+			if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
+				if not DisplayServer.is_touchscreen_available():
+					Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
 
 func _physics_process(delta):
+
 	# Гравитация
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -80,6 +95,7 @@ func _physics_process(delta):
 
 	# Бег
 	var speed = walk_speed
+
 	if Input.is_key_pressed(KEY_SHIFT):
 		speed = run_speed
 
@@ -93,18 +109,35 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+
 func _process(_delta):
+
 	ray.force_raycast_update()
 
-	current_door = null
+	current_interactable = null
 
 	if ray.is_colliding():
+
 		var collider = ray.get_collider()
 
-		if collider is Area3D and collider.has_method("interact"):
-			current_door = collider
-			interaction_label.visible = true
-			interaction_label.text = "ДВЕРЬ\nНажмите ЛКМ, чтобы взаимодействовать"
-			return
+		if collider is Area3D:
+
+			# Объект сам сообщает текст подсказки
+			if collider.has_method("get_prompt_text"):
+
+				current_interactable = collider
+
+				interaction_label.text = collider.get_prompt_text()
+				interaction_label.visible = true
+				return
+
+			# Запасной вариант для объектов без собственного текста
+			elif collider.has_method("interact"):
+
+				current_interactable = collider
+
+				interaction_label.text = "Нажмите, чтобы взаимодействовать"
+				interaction_label.visible = true
+				return
 
 	interaction_label.visible = false

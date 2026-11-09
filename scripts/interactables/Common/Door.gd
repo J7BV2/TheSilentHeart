@@ -5,6 +5,8 @@ extends Area3D
 
 var is_transitioning: bool = false
 
+func get_prompt_text() -> String:
+	return "ДВЕРЬ\nНажмите, чтобы открыть"
 
 func interact() -> void:
 	if is_transitioning:

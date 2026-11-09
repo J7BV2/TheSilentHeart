@@ -20,7 +20,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.622016, 0)
 current = true
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
-target_position = Vector3(0, 0, -2.5)
+target_position = Vector3(0, 0, -2)
+collision_mask = 5
 collide_with_areas = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -30,6 +31,6 @@ collide_with_areas = true
 [node name="Label" type="Label" parent="CanvasLayer/CenterContainer"]
 visible = false
 layout_mode = 2
-text = "Дверь — нажмите ЛКМ, чтобы выйти"
+text = "Дверь — нажмите ЛКМ, чтобы взаимодействовать"
 horizontal_alignment = 1
 vertical_alignment = 1
