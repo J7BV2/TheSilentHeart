@@ -1,7 +1,7 @@
 class_name GameSession
 extends Node3D
 
-const OUTSIDE_SCENE: PackedScene = preload(
+const HOUSE_SCENE: PackedScene = preload(
 	"res://scenes/game/levels/Game_House.tscn"
 )
 
@@ -14,7 +14,7 @@ var current_level: Node3D
 func _ready() -> void:
 	add_to_group("game_session")
 
-	change_location(OUTSIDE_SCENE, &"PlayerStart")
+	change_location(HOUSE_SCENE, &"PlayerStart")
 
 
 func change_location(

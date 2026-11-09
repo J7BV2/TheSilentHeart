@@ -1,12 +1,12 @@
 [gd_scene load_steps=21 format=3 uid="uid://du47kgra6lxgy"]
 
+[ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_12krm"]
 [ext_resource type="Environment" uid="uid://dt66w20wbkija" path="res://resoursces/Test_Environment/new_environment.tres" id="1_j54u8"]
 [ext_resource type="PackedScene" uid="uid://b54gao3jq41xb" path="res://assets/models/World/Outside/House/House_outside.glb" id="2_12krm"]
 [ext_resource type="PackedScene" uid="uid://ckn2trhmf2ndo" path="res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb" id="3_uwe3p"]
 [ext_resource type="PackedScene" uid="uid://cluh1fm31uhux" path="res://assets/models/World/Outside/Woodshed/Woodshed.glb" id="4_e3m2f"]
 [ext_resource type="ArrayMesh" uid="uid://drgw3ghkj6tg" path="res://assets/models/World/Outside/Place/Place.obj" id="5_gx5ga"]
 [ext_resource type="Script" uid="uid://63vcxguukpdd" path="res://scripts/interactables/Common/Door.gd" id="6_d3qgv"]
-[ext_resource type="PackedScene" uid="uid://chr2mpdb0128g" path="res://scenes/player/Player.tscn" id="7_j54u8"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7e7b0"]
 emission_shape_offset = Vector3(1, -0.2, 0)
@@ -59,6 +59,7 @@ size = Vector3(21.0127, 9.82202, 0.001)
 size = Vector3(1.68932, 2.97714, 0.134179)
 
 [node name="Game_Outside" type="Node3D"]
+script = ExtResource("1_12krm")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_j54u8")
@@ -156,14 +157,15 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.808
 [node name="Door" type="Area3D" parent="Interactables"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0808178, 1.15279, 1.3836)
 script = ExtResource("6_d3qgv")
-next_scene = "uid://ciygq767tfjf6"
+next_scene_path = "uid://ciygq767tfjf6"
+target_spawn = &"FromOutside"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/Door"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0371211, 0.258773, -0.814003)
 shape = SubResource("BoxShape3D_y7mn8")
 debug_fill = false
 
-[node name="Player" parent="." instance=ExtResource("7_j54u8")]
-transform = Transform3D(-1.3, 0, -1.96295e-07, 0, 1.3, 0, 1.96295e-07, 0, -1.3, -1.30936, 8.90187, -1.42523)
-walk_speed = 3.0
-run_speed = 5.0
+[node name="SpawnPoints" type="Node3D" parent="."]
+
+[node name="FromHouse" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.28342, 7.46602, -1.71315)

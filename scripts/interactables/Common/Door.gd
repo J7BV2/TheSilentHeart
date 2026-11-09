@@ -1,22 +1,45 @@
 extends Area3D
 
-@export var next_scene: String = ""
+@export_file("*.tscn") var next_scene_path: String = "res://scenes/game/Game_House.tscn"
+@export var target_spawn: StringName = &"PlayerStart"
 
 var is_transitioning: bool = false
 
 
-func interact():
+func interact() -> void:
 	if is_transitioning:
 		return
 
-	if next_scene.is_empty():
-		push_error("У двери не указана следующая сцена!")
+	# Проверяем путь к сцене
+	if next_scene_path.is_empty():
+		push_error("Door: путь к следующей сцене не указан!")
 		return
 
-	is_transitioning = true
+	# Загружаем сцену
+	var packed_scene := load(next_scene_path) as PackedScene
 
-	var error = get_tree().change_scene_to_file(next_scene)
+	if packed_scene == null:
+		push_error("Door: не удалось загрузить сцену: " + next_scene_path)
+		return
 
-	if error != OK:
-		push_error("Не удалось загрузить сцену: " + next_scene)
-		is_transitioning = false
+	# Ищем Game_Session
+	var session := get_tree().get_first_node_in_group(
+		"game_session"
+	) as GameSession
+
+	if session == null:
+		push_error("Door: Game_Session не найдена!")
+		return
+
+	# Выполняем переход
+	is_transitioning = session.change_location(
+		packed_scene,
+		target_spawn
+	)
+
+	if not is_transitioning:
+		push_warning("Door: переход не выполнен!")
+
+
+func reset_transition() -> void:
+	is_transitioning = false

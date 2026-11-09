@@ -1,5 +1,6 @@
-res://scripts/player
 res://scripts/systems
+res://scenes/game/levels
+res://scripts/player
 res://scenes/game
 res://scripts/interactables/Common
 res://scripts/interactables/Game_Outside

@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://ciygq767tfjf6"]
 
+[ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_ekcrl"]
 [ext_resource type="Environment" uid="uid://6t3omeqlldd" path="res://resoursces/Test_Environment/House_Env.tres" id="1_fsyj8"]
 [ext_resource type="PackedScene" uid="uid://dlvqqb1pegs3m" path="res://assets/models/World/Inside/House/House_inside.glb" id="2_ekcrl"]
 [ext_resource type="PackedScene" uid="uid://pdu8fw85uv8h" path="res://assets/models/Items/Lamp/Lantern.glb" id="3_vnf7m"]
 [ext_resource type="Script" uid="uid://63vcxguukpdd" path="res://scripts/interactables/Common/Door.gd" id="4_s5yin"]
-[ext_resource type="PackedScene" uid="uid://chr2mpdb0128g" path="res://scenes/player/Player.tscn" id="5_fsyj8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wdxgx"]
 size = Vector3(5.19238, 0.001, 3.60193)
@@ -25,6 +25,7 @@ size = Vector3(0.001, 2.51489, 3.61536)
 size = Vector3(1.0083, 2.00562, 0.0885127)
 
 [node name="Game_House" type="Node3D"]
+script = ExtResource("1_ekcrl")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_fsyj8")
@@ -85,14 +86,18 @@ light_energy = 0.238
 [node name="Door" type="Area3D" parent="Interactables"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0808178, 1.15279, 1.3836)
 script = ExtResource("4_s5yin")
-next_scene = "uid://du47kgra6lxgy"
+next_scene_path = "uid://du47kgra6lxgy"
+target_spawn = &"FromHouse"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/Door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00415039, 0.0921631, -0.445978)
 shape = SubResource("BoxShape3D_60y21")
 debug_fill = false
 
-[node name="Player" parent="." instance=ExtResource("5_fsyj8")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 1.1966, 0.363827)
-walk_speed = 3.0
-run_speed = 5.0
+[node name="SpawnPoints" type="Node3D" parent="."]
+
+[node name="PlayerStart" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.86747, 0.304694, -1.13169)
+
+[node name="FromOutside" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0903096, 0.305262, 0.3073)

@@ -104,7 +104,7 @@ func _process(_delta):
 		if collider is Area3D and collider.has_method("interact"):
 			current_door = collider
 			interaction_label.visible = true
-			interaction_label.text = "ДВЕРЬ\nНажмите ЛКМ, чтобы выйти"
+			interaction_label.text = "ДВЕРЬ\nНажмите ЛКМ, чтобы взаимодействовать"
 			return
 
 	interaction_label.visible = false
