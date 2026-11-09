@@ -1,7 +1,5 @@
 extends Area3D
 
-var game_scene_path: String = "res://scenes/game/Game_House.tscn"
-
 var _last_press_time := 0.0
 const PRESS_COOLDOWN := 0.2
 
@@ -10,8 +8,9 @@ func _ready() -> void:
 
 func _on_input_event(_camera: Camera3D, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if _is_press(event):
-		if game_scene_path != "":
-			get_tree().change_scene_to_file(game_scene_path)
+		var main = get_tree().current_scene
+		if main and main.has_method("start_game"):
+			main.call("start_game")
 
 func _is_press(event: InputEvent) -> bool:
 	var pressed := false

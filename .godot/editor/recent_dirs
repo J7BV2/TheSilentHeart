@@ -1,6 +1,12 @@
+res://scripts/systems
+res://scenes/game/levels
+res://scripts/player
+res://scenes/game
+res://scripts/interactables/Common
+res://scripts/interactables/Game_Outside
+res://scripts/interactables/House_Inside
+res://resoursces/Test_Environment
 res://scripts/Menu_UI
 res://scripts
-res://resoursces/Test_Environment
 res://scenes/main
-res://scripts/systems
 res://assets/models/World/Outside/Place

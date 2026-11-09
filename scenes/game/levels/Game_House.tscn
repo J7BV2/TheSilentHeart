@@ -1,0 +1,104 @@
+[gd_scene load_steps=12 format=3 uid="uid://ciygq767tfjf6"]
+
+[ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_ekcrl"]
+[ext_resource type="Environment" uid="uid://6t3omeqlldd" path="res://resoursces/Test_Environment/House_Env.tres" id="1_fsyj8"]
+[ext_resource type="PackedScene" uid="uid://dlvqqb1pegs3m" path="res://assets/models/World/Inside/House/House_inside.glb" id="2_ekcrl"]
+[ext_resource type="PackedScene" uid="uid://pdu8fw85uv8h" path="res://assets/models/Items/Lamp/Lantern.glb" id="3_vnf7m"]
+[ext_resource type="Script" uid="uid://63vcxguukpdd" path="res://scripts/interactables/Common/Door.gd" id="4_s5yin"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wdxgx"]
+size = Vector3(5.19238, 0.001, 3.60193)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f7w2n"]
+size = Vector3(5.17047, 2.66101, 0.001)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ix6oo"]
+size = Vector3(0.001, 2.6593, 3.63232)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mll60"]
+size = Vector3(5.1463, 2.49106, 0.001)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p2jwk"]
+size = Vector3(0.001, 2.51489, 3.61536)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_60y21"]
+size = Vector3(1.0083, 2.00562, 0.0885127)
+
+[node name="Game_House" type="Node3D"]
+script = ExtResource("1_ekcrl")
+player_size = 0.9
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_fsyj8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+light_color = Color(0.662745, 0.776471, 0.909804, 1)
+light_energy = 0.25
+
+[node name="Static" type="Node3D" parent="."]
+
+[node name="House_inside" parent="Static" instance=ExtResource("2_ekcrl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564734, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Static/House_inside"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/House_inside/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07223, -0.342285, -0.883295)
+shape = SubResource("BoxShape3D_wdxgx")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Static/House_inside"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.42674)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/House_inside/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09586, 0.830505, -0.4995)
+shape = SubResource("BoxShape3D_f7w2n")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Static/House_inside"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.16444, 0, -0.958638)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/House_inside/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4995, 0.829651, 0.0773926)
+shape = SubResource("BoxShape3D_ix6oo")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="Static/House_inside"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.18119, -0.0113244, -3.18451)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/House_inside/StaticBody3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101738, 0.921897, 0.514797)
+shape = SubResource("BoxShape3D_mll60")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="Static/House_inside"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99338, 0, -0.947698)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/House_inside/StaticBody3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4995, 0.904907, 0.0772095)
+shape = SubResource("BoxShape3D_p2jwk")
+
+[node name="Lantern" parent="Static" instance=ExtResource("3_vnf7m")]
+transform = Transform3D(0.981627, 0, 0.190809, 0, 1, 0, -0.190809, 0, 0.981627, -1.17843, 1.11515, -2.32595)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Static/Lantern"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00911725, 0)
+light_color = Color(1, 0.713726, 0.431373, 1)
+light_energy = 0.238
+
+[node name="Interactables" type="Node3D" parent="."]
+
+[node name="Door" type="Area3D" parent="Interactables"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0808178, 1.15279, 1.3836)
+script = ExtResource("4_s5yin")
+next_scene_path = "uid://du47kgra6lxgy"
+target_spawn = &"FromHouse"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00415039, 0.0921631, -0.445978)
+shape = SubResource("BoxShape3D_60y21")
+debug_fill = false
+
+[node name="SpawnPoints" type="Node3D" parent="."]
+
+[node name="PlayerStart" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.86747, 0.304694, -1.13169)
+
+[node name="FromOutside" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0903096, 0.305262, 0.3073)
