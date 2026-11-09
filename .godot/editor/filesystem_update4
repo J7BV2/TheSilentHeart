@@ -1,0 +1,3 @@
+res://default_env.tres
+res://scenes/main/Main_Menu.tscn
+res://scripts/Menu_UI/Play_Button.gd
