@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cuqawsg48vtke" path="res://scripts/player/Player.gd" id="1_wr5hl"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gfjak"]
-radius = 0.3022
-height = 1.50481
+radius = 0.375684
+height = 1.93908
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_wr5hl")
@@ -12,7 +12,7 @@ walk_speed = 3.0
 run_speed = 5.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, 0, 0, 0)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_gfjak")
 
 [node name="Camera3D" type="Camera3D" parent="."]

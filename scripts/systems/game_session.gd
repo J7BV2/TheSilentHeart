@@ -8,7 +8,7 @@ const HOUSE_SCENE: PackedScene = preload(
 @onready var player: CharacterBody3D = $Player
 @onready var level_container: Node3D = $LevelContainer
 
-var current_level: Node3D
+var current_level: GameLevel
 
 
 func _ready() -> void:
@@ -26,10 +26,10 @@ func change_location(
 		push_error("Сцена локации не назначена!")
 		return false
 
-	var new_level := packed_scene.instantiate() as Node3D
+	var new_level := packed_scene.instantiate() as GameLevel
 
 	if new_level == null:
-		push_error("Не удалось создать локацию!")
+		push_error("Не удалось создать локацию или отсутствует GameLevel!")
 		return false
 
 	level_container.add_child(new_level)
@@ -55,7 +55,12 @@ func change_location(
 
 	current_level = new_level
 
+	# Перемещаем игрока к точке появления
 	player.global_transform = spawn.global_transform
+	
+	# Меняем размер игрока в зависимости от локации
+	player.scale = Vector3.ONE * new_level.player_size
+
 	player.velocity = Vector3.ZERO
 
 	return true

@@ -60,6 +60,7 @@ size = Vector3(1.68932, 2.97714, 0.134179)
 
 [node name="Game_Outside" type="Node3D"]
 script = ExtResource("1_12krm")
+player_size = 1.4
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_j54u8")
