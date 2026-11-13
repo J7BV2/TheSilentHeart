@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dros0qdsu5311"]
+
+[ext_resource type="Texture2D" uid="uid://ymqqf0a4eaxg" path="res://assets/textures/wood_classic/wood_classic_diffuse2K.png" id="1_vdwtd"]
+
+[resource]
+albedo_texture = ExtResource("1_vdwtd")
+roughness = 0.5

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://22syqusupujm"]
+
+[ext_resource type="Texture2D" uid="uid://nhdmb0ylahm" path="res://assets/textures/soft_tarpaulin_atlas/soft_tarpaulin_diffuse1K.png" id="1_3m24i"]
+
+[resource]
+albedo_texture = ExtResource("1_3m24i")
+roughness = 0.5

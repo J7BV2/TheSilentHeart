@@ -1,12 +1,20 @@
-[gd_scene load_steps=21 format=3 uid="uid://du47kgra6lxgy"]
+[gd_scene load_steps=29 format=3 uid="uid://du47kgra6lxgy"]
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_12krm"]
 [ext_resource type="Environment" uid="uid://dt66w20wbkija" path="res://resoursces/Test_Environment/new_environment.tres" id="1_j54u8"]
-[ext_resource type="PackedScene" uid="uid://b54gao3jq41xb" path="res://assets/models/World/Outside/House/House_outside.glb" id="2_12krm"]
-[ext_resource type="PackedScene" uid="uid://ckn2trhmf2ndo" path="res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb" id="3_uwe3p"]
-[ext_resource type="PackedScene" uid="uid://cluh1fm31uhux" path="res://assets/models/World/Outside/Woodshed/Woodshed.glb" id="4_e3m2f"]
-[ext_resource type="ArrayMesh" uid="uid://drgw3ghkj6tg" path="res://assets/models/World/Outside/Place/Place.obj" id="5_gx5ga"]
+[ext_resource type="PackedScene" uid="uid://dbjba5p55qath" path="res://assets/models/World/Outside/House/House_outside.glb" id="2_12krm"]
+[ext_resource type="PackedScene" uid="uid://b46gyibxttoeu" path="res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb" id="3_uwe3p"]
+[ext_resource type="PackedScene" uid="uid://drbp7r14dk8ba" path="res://assets/models/World/Outside/Woodshed/Woodshed.glb" id="4_e3m2f"]
+[ext_resource type="Material" uid="uid://bw0ram4yyptso" path="res://assets/materials/dark_wooden_planks.tres" id="4_xrap4"]
+[ext_resource type="ArrayMesh" uid="uid://c4gdvpxfa2y44" path="res://assets/models/World/Outside/Place/Place.obj" id="5_gx5ga"]
+[ext_resource type="Material" uid="uid://5d4132havb47" path="res://assets/materials/metal_atlas.tres" id="5_urbsh"]
+[ext_resource type="Material" uid="uid://dw62bivt2t2or" path="res://assets/materials/bark.tres" id="6_46t1j"]
 [ext_resource type="Script" uid="uid://63vcxguukpdd" path="res://scripts/interactables/Common/Door.gd" id="6_d3qgv"]
+[ext_resource type="Material" uid="uid://c7v4dyh2rdj0j" path="res://assets/materials/window_outside.tres" id="7_sifkl"]
+[ext_resource type="Material" uid="uid://dros0qdsu5311" path="res://assets/materials/wood_classic.tres" id="8_s5gnc"]
+[ext_resource type="Material" uid="uid://bejgo7xmydjn" path="res://assets/materials/veneer.tres" id="10_spgwl"]
+[ext_resource type="Material" uid="uid://22syqusupujm" path="res://assets/materials/soft_tarpaulin_atlas.tres" id="12_q1dsh"]
+[ext_resource type="Material" uid="uid://c5hhnd6vljt2h" path="res://assets/materials/snow.tres" id="14_5d8qy"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7e7b0"]
 emission_shape_offset = Vector3(1, -0.2, 0)
@@ -85,6 +93,22 @@ draw_pass_1 = SubResource("QuadMesh_i8kly")
 [node name="House_outside" parent="World" instance=ExtResource("2_12krm")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.05745, 7.88879, -3.71198)
 
+[node name="Door" parent="World/House_outside/House" index="0"]
+surface_material_override/0 = ExtResource("4_xrap4")
+surface_material_override/1 = ExtResource("5_urbsh")
+
+[node name="Roof" parent="World/House_outside/House" index="1"]
+surface_material_override/0 = ExtResource("4_xrap4")
+surface_material_override/1 = ExtResource("5_urbsh")
+
+[node name="Stairs" parent="World/House_outside/House" index="2"]
+surface_material_override/0 = ExtResource("6_46t1j")
+
+[node name="Walls_&_windows" parent="World/House_outside/House" index="3"]
+surface_material_override/0 = ExtResource("7_sifkl")
+surface_material_override/2 = ExtResource("4_xrap4")
+surface_material_override/3 = ExtResource("8_s5gnc")
+
 [node name="StaticBody3D" type="StaticBody3D" parent="World/House_outside"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/House_outside/StaticBody3D"]
@@ -98,6 +122,10 @@ shape = SubResource("ConvexPolygonShape3D_vs6gy")
 [node name="Chopping_log2" parent="World" instance=ExtResource("3_uwe3p")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.68146, 7.49085, -3.53913)
 
+[node name="Chopping_log" parent="World/Chopping_log2" index="0"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
 [node name="StaticBody3D" type="StaticBody3D" parent="World/Chopping_log2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Chopping_log2/StaticBody3D"]
@@ -106,6 +134,118 @@ shape = SubResource("CylinderShape3D_i8kly")
 
 [node name="Woodshed" parent="World" instance=ExtResource("4_e3m2f")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 2.14643, 7.9097, -6.90341)
+
+[node name="Log_001" parent="World/Woodshed/Woodshed" index="0"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_002" parent="World/Woodshed/Woodshed" index="1"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_003" parent="World/Woodshed/Woodshed" index="2"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_004" parent="World/Woodshed/Woodshed" index="3"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_005" parent="World/Woodshed/Woodshed" index="4"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_006" parent="World/Woodshed/Woodshed" index="5"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_007" parent="World/Woodshed/Woodshed" index="6"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_008" parent="World/Woodshed/Woodshed" index="7"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_009" parent="World/Woodshed/Woodshed" index="8"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_010" parent="World/Woodshed/Woodshed" index="9"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_011" parent="World/Woodshed/Woodshed" index="10"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_012" parent="World/Woodshed/Woodshed" index="11"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_013" parent="World/Woodshed/Woodshed" index="12"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_014" parent="World/Woodshed/Woodshed" index="13"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_015" parent="World/Woodshed/Woodshed" index="14"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_016" parent="World/Woodshed/Woodshed" index="15"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_017" parent="World/Woodshed/Woodshed" index="16"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_018" parent="World/Woodshed/Woodshed" index="17"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_019" parent="World/Woodshed/Woodshed" index="18"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_020" parent="World/Woodshed/Woodshed" index="19"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_021" parent="World/Woodshed/Woodshed" index="20"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_022" parent="World/Woodshed/Woodshed" index="21"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_023" parent="World/Woodshed/Woodshed" index="22"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_024" parent="World/Woodshed/Woodshed" index="23"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_025" parent="World/Woodshed/Woodshed" index="24"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_026" parent="World/Woodshed/Woodshed" index="25"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Log_027" parent="World/Woodshed/Woodshed" index="26"]
+surface_material_override/0 = ExtResource("6_46t1j")
+surface_material_override/1 = ExtResource("10_spgwl")
+
+[node name="Woodshed_carcase" parent="World/Woodshed/Woodshed" index="27"]
+surface_material_override/0 = ExtResource("12_q1dsh")
+surface_material_override/1 = ExtResource("8_s5gnc")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="World/Woodshed"]
 
@@ -116,6 +256,7 @@ shape = SubResource("BoxShape3D_vs6gy")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.27, 3.686, -0.78)
 mesh = ExtResource("5_gx5ga")
+surface_material_override/0 = ExtResource("14_5d8qy")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="World/MeshInstance3D"]
 
@@ -170,3 +311,7 @@ debug_fill = false
 
 [node name="FromHouse" type="Marker3D" parent="SpawnPoints"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.28342, 7.46602, -1.71315)
+
+[editable path="World/House_outside"]
+[editable path="World/Chopping_log2"]
+[editable path="World/Woodshed"]

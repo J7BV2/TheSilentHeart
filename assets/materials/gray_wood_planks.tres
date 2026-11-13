@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ctky5b0p3ivgm"]
+
+[ext_resource type="Texture2D" uid="uid://3tykjlxu7u01" path="res://assets/textures/gray_wood_planks/gray_wood_planks_diffuse.png" id="1_r2icq"]
+[ext_resource type="Texture2D" uid="uid://b1ejsu0tu0xin" path="res://assets/textures/gray_wood_planks/gray_wood_planks_normal1K.png" id="2_w6srt"]
+
+[resource]
+albedo_texture = ExtResource("1_r2icq")
+normal_enabled = true
+normal_texture = ExtResource("2_w6srt")
