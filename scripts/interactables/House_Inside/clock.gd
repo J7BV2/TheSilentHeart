@@ -1,4 +1,4 @@
-extends Area3D
+extends Interactable
 
 
 func get_prompt_text() -> String:

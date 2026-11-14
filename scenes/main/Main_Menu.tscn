@@ -261,7 +261,7 @@ surface_material_override/0 = ExtResource("13_gqkr6")
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.25446, 9.92447, -3.45505)
 
 [node name="Play_button" parent="Buttons 3D/Play_button2" index="0"]
-transform = Transform3D(-1.22392e-07, 0, -2.8, 0, 2.8, 0, 2.8, 0, -1.22392e-07, 0, 0, 0)
+transform = Transform3D(-1.22392e-07, 0, -2.8, 0, 2.8, 0, 2.8, 0, -1.22392e-07, -0.125803, 0, 0)
 surface_material_override/0 = ExtResource("15_iqecb")
 
 [node name="Area3D" type="Area3D" parent="Buttons 3D/Play_button2"]
@@ -275,7 +275,7 @@ shape = SubResource("BoxShape3D_bvopx")
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.254, 9.44595, -3.36975)
 
 [node name="Settings_button" parent="Buttons 3D/Settings_button2" index="0"]
-transform = Transform3D(-1.22392e-07, 0, -2.8, 0, 2.8, 0, 2.8, 0, -1.22392e-07, 0, 0, 0)
+transform = Transform3D(-1.22392e-07, 0, -2.8, 0, 2.8, 0, 2.8, 0, -1.22392e-07, 0.0546765, 0, 0)
 surface_material_override/0 = ExtResource("15_iqecb")
 
 [node name="Area3D" type="Area3D" parent="Buttons 3D/Settings_button2"]
@@ -288,7 +288,7 @@ shape = SubResource("BoxShape3D_1kppg")
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.254, 8.95578, -3.41526)
 
 [node name="Authors_button" parent="Buttons 3D/Authors_button2" index="0"]
-transform = Transform3D(-1.22392e-07, 0, -2.8, 0, 2.8, 0, 2.8, 0, -1.22392e-07, 0, 0, 0)
+transform = Transform3D(-1.22392e-07, 0, -2.8, 0, 2.8, 0, 2.8, 0, -1.22392e-07, -0.025878, 0, 0)
 surface_material_override/0 = ExtResource("15_iqecb")
 
 [node name="Area3D" type="Area3D" parent="Buttons 3D/Authors_button2"]
@@ -301,7 +301,7 @@ shape = SubResource("BoxShape3D_tq0kw")
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 1.254, 8.50074, -3.35439)
 
 [node name="Exit_button" parent="Buttons 3D/Exit_button2" index="0"]
-transform = Transform3D(-1.22392e-07, 0, -2.8, 0, 2.8, 0, 2.8, 0, -1.22392e-07, 0, 0, 0)
+transform = Transform3D(-1.22392e-07, 0, -2.8, 0, 2.8, 0, 2.8, 0, -1.22392e-07, 0.135786, 0, 0)
 surface_material_override/0 = ExtResource("15_iqecb")
 
 [node name="Area3D" type="Area3D" parent="Buttons 3D/Exit_button2"]

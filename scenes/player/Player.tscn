@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://chr2mpdb0128g"]
+[gd_scene load_steps=6 format=3 uid="uid://chr2mpdb0128g"]
 
 [ext_resource type="Script" uid="uid://cuqawsg48vtke" path="res://scripts/player/Player.gd" id="1_wr5hl"]
+[ext_resource type="Script" uid="uid://lqc7vgxjqgl4" path="res://scripts/player/components/movement_controller.gd" id="2_4kuee"]
+[ext_resource type="Script" uid="uid://dlr1nl125lonn" path="res://scripts/player/components/camera_controller.gd" id="3_524rm"]
+[ext_resource type="Script" uid="uid://c3iqtxspsc6nx" path="res://scripts/player/components/player_interactor.gd" id="4_524rm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gfjak"]
 radius = 0.375684
@@ -8,8 +11,6 @@ height = 1.93908
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_wr5hl")
-walk_speed = 3.0
-run_speed = 5.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
@@ -34,3 +35,12 @@ layout_mode = 2
 text = "Дверь — нажмите ЛКМ, чтобы взаимодействовать"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MovementController" type="Node" parent="."]
+script = ExtResource("2_4kuee")
+
+[node name="CameraController" type="Node" parent="."]
+script = ExtResource("3_524rm")
+
+[node name="Interactor" type="Node3D" parent="."]
+script = ExtResource("4_524rm")
