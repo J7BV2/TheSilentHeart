@@ -8,7 +8,6 @@
 script = ExtResource("1_86y5d")
 
 [node name="Player" parent="." instance=ExtResource("2_0g0lo")]
-mouse_sensitivity = null
 
 [node name="TimeManager" type="Node" parent="."]
 script = ExtResource("3_y1ew5")

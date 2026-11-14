@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://du47kgra6lxgy"]
+[gd_scene load_steps=33 format=3 uid="uid://du47kgra6lxgy"]
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_12krm"]
 [ext_resource type="Environment" uid="uid://dt66w20wbkija" path="res://resoursces/Test_Environment/new_environment.tres" id="1_j54u8"]
@@ -15,6 +15,8 @@
 [ext_resource type="Material" uid="uid://bejgo7xmydjn" path="res://assets/materials/veneer.tres" id="10_spgwl"]
 [ext_resource type="Material" uid="uid://22syqusupujm" path="res://assets/materials/soft_tarpaulin_atlas.tres" id="12_q1dsh"]
 [ext_resource type="Material" uid="uid://c5hhnd6vljt2h" path="res://assets/materials/snow.tres" id="14_5d8qy"]
+[ext_resource type="Script" uid="uid://car4cwmfgf4bb" path="res://scripts/interactables/Game_Outside/chopping_log.gd" id="16_46t1j"]
+[ext_resource type="Script" uid="uid://bjo0k4lhg16jf" path="res://scripts/interactables/Game_Outside/woodshed.gd" id="17_sifkl"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7e7b0"]
 emission_shape_offset = Vector3(1, -0.2, 0)
@@ -65,6 +67,13 @@ size = Vector3(21.0127, 9.82202, 0.001)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y7mn8"]
 size = Vector3(1.68932, 2.97714, 0.134179)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xrap4"]
+height = 1.06464
+radius = 0.560547
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrap4"]
+size = Vector3(1.67395, 1.56769, 0.765808)
 
 [node name="Game_Outside" type="Node3D"]
 script = ExtResource("1_12krm")
@@ -119,16 +128,16 @@ shape = SubResource("BoxShape3D_7e7b0")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.427193, -0.600913, 1.5994)
 shape = SubResource("ConvexPolygonShape3D_vs6gy")
 
-[node name="Chopping_log2" parent="World" instance=ExtResource("3_uwe3p")]
+[node name="Chopping_log" parent="World" instance=ExtResource("3_uwe3p")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.68146, 7.49085, -3.53913)
 
-[node name="Chopping_log" parent="World/Chopping_log2" index="0"]
+[node name="Chopping_log" parent="World/Chopping_log" index="0"]
 surface_material_override/0 = ExtResource("6_46t1j")
 surface_material_override/1 = ExtResource("10_spgwl")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="World/Chopping_log2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="World/Chopping_log"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Chopping_log2/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Chopping_log/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0254517, -0.0259913)
 shape = SubResource("CylinderShape3D_i8kly")
 
@@ -307,11 +316,27 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0371
 shape = SubResource("BoxShape3D_y7mn8")
 debug_fill = false
 
+[node name="Chopping_log" type="Area3D" parent="Interactables"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18753, 0.116074, 7.48158)
+script = ExtResource("16_46t1j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/Chopping_log"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.053139, 0.142181, 0)
+shape = SubResource("CylinderShape3D_xrap4")
+
+[node name="Woodshed" type="Area3D" parent="Interactables"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.59527, 0.194054, 4.16853)
+script = ExtResource("17_sifkl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/Woodshed"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024353, 0.27829, 0.501007)
+shape = SubResource("BoxShape3D_xrap4")
+
 [node name="SpawnPoints" type="Node3D" parent="."]
 
 [node name="FromHouse" type="Marker3D" parent="SpawnPoints"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.28342, 7.46602, -1.71315)
 
 [editable path="World/House_outside"]
-[editable path="World/Chopping_log2"]
+[editable path="World/Chopping_log"]
 [editable path="World/Woodshed"]

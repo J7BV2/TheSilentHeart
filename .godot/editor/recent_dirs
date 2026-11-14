@@ -1,13 +1,13 @@
+res://scripts/interactables/Game_Outside
+res://scripts/interactables/House_Inside
 res://scripts/player/components
 res://assets/materials
 res://scripts/systems
-res://scripts/interactables/House_Inside
 res://scripts/game_mechanics
 res://scenes/game/levels
 res://scripts/player
 res://scenes/game
 res://scripts/interactables/Common
-res://scripts/interactables/Game_Outside
 res://resoursces/Test_Environment
 res://scripts/Menu_UI
 res://scripts

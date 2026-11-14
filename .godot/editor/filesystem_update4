@@ -17,10 +17,7 @@ res://scenes/game/levels/Game_Outside.tscn
 res://scenes/main/Main_Menu.tscn
 res://scenes/player/Player.tscn
 res://scenes/game/Game_Session.tscn
-res://scripts/player/Player.gd
-res://scripts/player/components/movement_controller.gd
-res://scripts/player/components/camera_controller.gd
-res://scripts/player/components/player_interactor.gd
-res://scripts/systems/interactable.gd
-res://scripts/interactables/Common/Door.gd
-res://scripts/interactables/House_Inside/clock.gd
+res://scripts/interactables/House_Inside/Bed.gd
+res://scripts/interactables/House_Inside/fireplace.gd
+res://scripts/interactables/Game_Outside/chopping_log.gd
+res://scripts/interactables/Game_Outside/woodshed.gd

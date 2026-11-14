@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ciygq767tfjf6"]
+[gd_scene load_steps=33 format=3 uid="uid://ciygq767tfjf6"]
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_ekcrl"]
 [ext_resource type="Environment" uid="uid://6t3omeqlldd" path="res://resoursces/Test_Environment/House_Env.tres" id="1_fsyj8"]
@@ -16,6 +16,8 @@
 [ext_resource type="Material" uid="uid://bejgo7xmydjn" path="res://assets/materials/veneer.tres" id="9_nqmbi"]
 [ext_resource type="Material" uid="uid://dr0y7lny0r645" path="res://assets/materials/window_inside.tres" id="10_iqc42"]
 [ext_resource type="Material" uid="uid://dros0qdsu5311" path="res://assets/materials/wood_classic.tres" id="11_nkbct"]
+[ext_resource type="Script" uid="uid://b3ijcgtw13s0b" path="res://scripts/interactables/House_Inside/bed.gd" id="17_iqc42"]
+[ext_resource type="Script" uid="uid://cxunytjsv62e1" path="res://scripts/interactables/House_Inside/fireplace.gd" id="18_nkbct"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igj70"]
 albedo_texture = ExtResource("4_vmdak")
@@ -36,7 +38,16 @@ size = Vector3(5.1463, 2.49106, 0.001)
 size = Vector3(0.001, 2.51489, 3.61536)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fsyj8"]
-size = Vector3(2.46625, 1.00391, 1.31433)
+size = Vector3(2.46625, 0.567385, 1.17621)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iqc42"]
+size = Vector3(0.999756, 0.620361, 0.774597)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kyp6l"]
+size = Vector3(1.35767, 0.76123, 0.953125)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vb6mh"]
+size = Vector3(0.620575, 0.771362, 0.31543)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_60y21"]
 size = Vector3(1.0083, 2.00562, 0.0885127)
@@ -46,7 +57,10 @@ height = 0.140993
 radius = 0.293457
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ekcrl"]
-size = Vector3(2.48096, 1.10535, 1.27051)
+size = Vector3(2.48096, 0.71872, 1.27051)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nkbct"]
+size = Vector3(1.26542, 0.905548, 0.988464)
 
 [node name="Game_House" type="Node3D"]
 script = ExtResource("1_ekcrl")
@@ -182,8 +196,26 @@ light_energy = 0.238
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43632, 0.269622, 0.278674)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Static/Bed"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0369568, 0.00195313, 0.0647583)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0369568, 0.220216, -0.00430268)
 shape = SubResource("BoxShape3D_fsyj8")
+
+[node name="Fireplace" type="StaticBody3D" parent="Static"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.00363, 0.339208, -2.10735)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/Fireplace"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -0.229797, 0.166138, -0.111353)
+shape = SubResource("BoxShape3D_iqc42")
+
+[node name="Table_Chair" type="StaticBody3D" parent="Static"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.593581, 0.473432, -2.31073)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/Table_Chair"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.133179, 0.119385, 0.078125)
+shape = SubResource("BoxShape3D_kyp6l")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Static/Table_Chair"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.232224, 0.119934, 0.632324)
+shape = SubResource("BoxShape3D_vb6mh")
 
 [node name="Interactables" type="Node3D" parent="."]
 
@@ -209,10 +241,20 @@ shape = SubResource("CylinderShape3D_fsyj8")
 
 [node name="Bed" type="Area3D" parent="Interactables"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.45412, 0.340229, 0.409554)
+script = ExtResource("17_iqc42")
+prompt_text = "Нажмите, чтобы отдохнуть"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/Bed"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0119629, 0.0526733, -0.135254)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0119629, 0.245988, -0.135254)
 shape = SubResource("BoxShape3D_ekcrl")
+
+[node name="Fireplace" type="Area3D" parent="Interactables"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.23165, 0.293315, -2.3478)
+script = ExtResource("18_nkbct")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/Fireplace"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -0.0366819, 0.349106, 0.0285251)
+shape = SubResource("BoxShape3D_nkbct")
 
 [node name="SpawnPoints" type="Node3D" parent="."]
 
