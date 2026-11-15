@@ -1,5 +1,5 @@
 res://default_env.tres
-res://scenes/main/Main.tscn
+res://scenes/ui/interactables/Bed.tscn
 res://assets/materials/dark_wooden_planks.tres
 res://assets/materials/metal_atlas.tres
 res://assets/materials/bark.tres
@@ -12,12 +12,13 @@ res://assets/materials/gray_wood_planks.tres
 res://assets/materials/weathered_planks.tres
 res://assets/materials/clocks_face.tres
 res://assets/materials/window_inside.tres
+res://scripts/interactables/House_Inside/bed.gd
+res://scripts/ui/bed_ui.gd
+res://scripts/game_mechanics/time_manager.gd
+res://scenes/main/Main.tscn
 res://scenes/game/levels/Game_House.tscn
 res://scenes/game/levels/Game_Outside.tscn
 res://scenes/main/Main_Menu.tscn
 res://scenes/player/Player.tscn
 res://scenes/game/Game_Session.tscn
-res://scripts/interactables/House_Inside/Bed.gd
-res://scripts/interactables/House_Inside/fireplace.gd
-res://scripts/interactables/Game_Outside/chopping_log.gd
-res://scripts/interactables/Game_Outside/woodshed.gd
+res://scripts/ui/game_inside/bed_ui.gd

@@ -1,3 +1,5 @@
+res://scripts/ui/game_inside
+res://assets/ui/interactables/bed
 res://scripts/interactables/Game_Outside
 res://scripts/interactables/House_Inside
 res://scripts/player/components
