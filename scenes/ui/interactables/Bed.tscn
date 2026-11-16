@@ -1,7 +1,98 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyh51vk2lk8ej"]
+[gd_scene load_steps=39 format=3 uid="uid://dyh51vk2lk8ej"]
 
 [ext_resource type="Script" uid="uid://dr76p3d7mhjmm" path="res://scripts/ui/game_inside/bed_ui.gd" id="1_ainup"]
-[ext_resource type="Texture2D" uid="uid://bm1gwj3mhhtmk" path="res://assets/ui/interactables/bed/UI_Sleep.png" id="1_i51yj"]
+[ext_resource type="Texture2D" uid="uid://bgkfex8qegem7" path="res://assets/ui/interactables/bed/UI_Sleep.png" id="1_i51yj"]
+[ext_resource type="Texture2D" uid="uid://c2y6uyhkq2mwn" path="res://assets/ui/interactables/bed/arrow_buttonFocus.png" id="3_tcavr"]
+[ext_resource type="Texture2D" uid="uid://c84h07cnnf2ip" path="res://assets/ui/interactables/bed/arrow_buttonPressed.png" id="4_bra5p"]
+[ext_resource type="Texture2D" uid="uid://c6gjwi3ur7782" path="res://assets/ui/interactables/bed/arrow_buttonNormal.png" id="5_a7qw3"]
+[ext_resource type="Texture2D" uid="uid://cbbrd0vnwuv8b" path="res://assets/ui/interactables/bed/small_buttonFocus.png" id="6_amtui"]
+[ext_resource type="Texture2D" uid="uid://buhurb1ahpkgm" path="res://assets/ui/interactables/bed/small_buttonPressed.png" id="7_m8e1y"]
+[ext_resource type="Texture2D" uid="uid://bthuddqloxooh" path="res://assets/ui/interactables/bed/small_buttonNormal.png" id="8_ywow6"]
+[ext_resource type="Texture2D" uid="uid://p72sogf3j6si" path="res://assets/ui/interactables/bed/confirm_buttonFocus.png" id="9_ghtnr"]
+[ext_resource type="Texture2D" uid="uid://n1fhc4aoc2f1" path="res://assets/ui/interactables/bed/confirm_buttonPressed.png" id="10_fvlgf"]
+[ext_resource type="Texture2D" uid="uid://dkt0uvc1rbeua" path="res://assets/ui/interactables/bed/confirm_buttonNormal.png" id="11_r0udi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s87ia"]
+texture = ExtResource("3_tcavr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fvlgf"]
+texture = ExtResource("3_tcavr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4q3lh"]
+texture = ExtResource("4_bra5p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iw8sk"]
+texture = ExtResource("5_a7qw3")
+region_rect = Rect2(0, 0, 32, 44)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_otqu6"]
+texture = ExtResource("3_tcavr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r0udi"]
+texture = ExtResource("3_tcavr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_88laa"]
+texture = ExtResource("4_bra5p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35blt"]
+texture = ExtResource("5_a7qw3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ve1kr"]
+texture = ExtResource("6_amtui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bkey"]
+texture = ExtResource("6_amtui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vkhxv"]
+texture = ExtResource("7_m8e1y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dmmjo"]
+texture = ExtResource("8_ywow6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ttayf"]
+texture = ExtResource("6_amtui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ghtnr"]
+texture = ExtResource("6_amtui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7mxx1"]
+texture = ExtResource("7_m8e1y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3thb7"]
+texture = ExtResource("8_ywow6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_esw1m"]
+texture = ExtResource("6_amtui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ftqhf"]
+texture = ExtResource("6_amtui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ayti"]
+texture = ExtResource("7_m8e1y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bgo86"]
+texture = ExtResource("8_ywow6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yq6x6"]
+texture = ExtResource("9_ghtnr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fufb6"]
+texture = ExtResource("9_ghtnr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x2n7f"]
+texture = ExtResource("10_fvlgf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f53wb"]
+texture = ExtResource("11_r0udi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_amtui"]
+texture = ExtResource("6_amtui")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m8e1y"]
+texture = ExtResource("7_m8e1y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ywow6"]
+texture = ExtResource("8_ywow6")
 
 [node name="Bed" type="Control"]
 layout_mode = 3
@@ -26,87 +117,111 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="Background" type="TextureRect" parent="CenterContainer/Window"]
-custom_minimum_size = Vector2(700, 300)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -400.0
-offset_top = -226.5
-offset_right = 400.0
-offset_bottom = 226.5
+offset_left = -262.5
+offset_top = -237.0
+offset_right = 262.5
+offset_bottom = 237.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_i51yj")
 
-[node name="Title" type="Label" parent="CenterContainer/Window"]
-layout_mode = 2
-offset_left = -149.0
-offset_top = -209.0
-offset_right = 157.0
-offset_bottom = -81.0
-theme_override_font_sizes/font_size = 23
-text = "Отдых
-
-Время окончания отдыха"
-horizontal_alignment = 1
-
 [node name="TimeLabel" type="Label" parent="CenterContainer/Window"]
-offset_left = -117.0
-offset_top = -97.0
-offset_right = 118.0
-offset_bottom = 15.0
+layout_mode = 0
+offset_left = -53.0
+offset_top = -35.0
+offset_right = 57.0
+offset_bottom = 37.0
 theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LeftArrow" type="Button" parent="CenterContainer/Window"]
 layout_mode = 0
-offset_left = -261.0
-offset_top = -73.0
-offset_right = -198.0
-offset_bottom = -8.0
+offset_left = -86.0
+offset_top = 32.0
+offset_right = -39.0
+offset_bottom = 97.0
+rotation = 3.14159
+theme_override_styles/focus = SubResource("StyleBoxTexture_s87ia")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fvlgf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q3lh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_iw8sk")
 
 [node name="RightArrow" type="Button" parent="CenterContainer/Window"]
-offset_left = 196.0
-offset_top = -73.0
-offset_right = 261.0
-offset_bottom = -9.0
+layout_mode = 0
+offset_left = 87.0
+offset_top = -32.0
+offset_right = 130.0
+offset_bottom = 33.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_otqu6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_r0udi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_88laa")
+theme_override_styles/normal = SubResource("StyleBoxTexture_35blt")
 
 [node name="Step1Button" type="Button" parent="CenterContainer/Window"]
-offset_left = -216.0
-offset_top = 41.0
-offset_right = -117.0
-offset_bottom = 97.0
-text = "По минуте"
+layout_mode = 0
+offset_left = -163.0
+offset_top = 73.0
+offset_right = -53.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxTexture_ve1kr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6bkey")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vkhxv")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dmmjo")
+text = "По минутам"
 
 [node name="Step10Button" type="Button" parent="CenterContainer/Window"]
-offset_left = -48.0
-offset_top = 42.0
-offset_right = 49.0
-offset_bottom = 98.0
-text = "По 10 мин."
+layout_mode = 0
+offset_left = -55.0
+offset_top = 73.0
+offset_right = 61.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxTexture_ttayf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ghtnr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7mxx1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3thb7")
+text = "По десяткам"
 
 [node name="Step60Button" type="Button" parent="CenterContainer/Window"]
-offset_left = 118.0
-offset_top = 40.0
-offset_right = 215.0
-offset_bottom = 98.0
-text = "По часу"
+layout_mode = 0
+offset_left = 59.0
+offset_top = 73.0
+offset_right = 161.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxTexture_esw1m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ftqhf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2ayti")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bgo86")
+text = "По часам"
 
 [node name="ConfirmButton" type="Button" parent="CenterContainer/Window"]
-offset_left = -118.0
-offset_top = 129.0
-offset_right = 118.0
-offset_bottom = 181.0
-theme_override_font_sizes/font_size = 24
+layout_mode = 0
+offset_left = -107.0
+offset_top = 143.0
+offset_right = 110.0
+offset_bottom = 189.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_yq6x6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fufb6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_x2n7f")
+theme_override_styles/normal = SubResource("StyleBoxTexture_f53wb")
 text = "Подтвердить"
 
 [node name="CancelButton" type="Button" parent="CenterContainer/Window"]
-offset_left = -202.0
-offset_top = 129.0
-offset_right = -133.0
-offset_bottom = 181.0
+layout_mode = 1
+offset_left = 809.0
+offset_top = 469.0
+offset_right = 893.0
+offset_bottom = 512.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_amtui")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m8e1y")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ywow6")
 text = "X"

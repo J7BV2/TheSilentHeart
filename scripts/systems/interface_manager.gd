@@ -2,7 +2,7 @@ extends CanvasLayer
 
 var current_ui: Control = null
 var was_paused_before_ui: bool = false
-
+var prompt_label: Label = null
 
 func _ready() -> void:
 	# Менеджер должен работать даже во время паузы.
@@ -36,6 +36,9 @@ func open_ui(scene: PackedScene) -> void:
 
 	# Останавливаем игровое дерево.
 	get_tree().paused = true
+	
+	# Скрываем подсказку
+	hide_prompt()
 
 	# Показываем мышь на ПК.
 	if not DisplayServer.is_touchscreen_available():
@@ -55,3 +58,7 @@ func close_ui() -> void:
 	# Возвращаем захват мыши.
 	if not DisplayServer.is_touchscreen_available():
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+func hide_prompt() -> void:
+	if prompt_label:
+		prompt_label.hide()

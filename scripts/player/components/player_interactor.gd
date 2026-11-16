@@ -24,6 +24,8 @@ func _ready() -> void:
 	prompt_label.add_theme_color_override("font_color", Color.WHITE)
 
 	prompt_label.hide()
+	
+	InterfaceManager.prompt_label = prompt_label
 
 
 func _process(_delta: float) -> void:
