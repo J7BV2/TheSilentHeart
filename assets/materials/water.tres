@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cdwveqkos751q"]
+
+[ext_resource type="Texture2D" uid="uid://dbmug6xqat2ur" path="res://assets/textures/water/water_normal512.png" id="1_mlyr4"]
+
+[resource]
+normal_enabled = true
+normal_texture = ExtResource("1_mlyr4")

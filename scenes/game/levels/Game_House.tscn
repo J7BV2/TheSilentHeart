@@ -1,21 +1,22 @@
-[gd_scene load_steps=33 format=3 uid="uid://ciygq767tfjf6"]
+[gd_scene load_steps=34 format=3 uid="uid://ciygq767tfjf6"]
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_ekcrl"]
 [ext_resource type="Environment" uid="uid://6t3omeqlldd" path="res://resoursces/Test_Environment/House_Env.tres" id="1_fsyj8"]
-[ext_resource type="PackedScene" uid="uid://bhg5eirq3t78u" path="res://assets/models/World/Inside/House/House_inside.glb" id="2_ekcrl"]
+[ext_resource type="PackedScene" uid="uid://daxa0bddevvxg" path="res://assets/models/World/Inside/House/House_inside.glb" id="2_ekcrl"]
 [ext_resource type="PackedScene" uid="uid://ckcj7xrqnj5y2" path="res://assets/models/Items/Lamp/Lantern.glb" id="3_vnf7m"]
 [ext_resource type="Material" uid="uid://5d4132havb47" path="res://assets/materials/metal_atlas.tres" id="4_4ifqm"]
 [ext_resource type="Script" uid="uid://63vcxguukpdd" path="res://scripts/interactables/Common/Door.gd" id="4_s5yin"]
 [ext_resource type="Texture2D" uid="uid://nhdmb0ylahm" path="res://assets/textures/soft_tarpaulin_atlas/soft_tarpaulin_diffuse1K.png" id="4_vmdak"]
-[ext_resource type="Material" uid="uid://bw0ram4yyptso" path="res://assets/materials/dark_wooden_planks.tres" id="5_bcqt4"]
 [ext_resource type="Material" uid="uid://cx1drptvh0ruw" path="res://assets/materials/weathered_planks.tres" id="5_igj70"]
 [ext_resource type="Material" uid="uid://b428fmd5s7s1o" path="res://assets/materials/clocks_face.tres" id="5_laxah"]
 [ext_resource type="Script" uid="uid://cbijntyg5k1wy" path="res://scripts/interactables/House_Inside/clock.gd" id="6_ekcrl"]
 [ext_resource type="Material" uid="uid://dw62bivt2t2or" path="res://assets/materials/bark.tres" id="8_0o18y"]
-[ext_resource type="Material" uid="uid://c7v4dyh2rdj0j" path="res://assets/materials/window_outside.tres" id="9_igj70"]
-[ext_resource type="Material" uid="uid://bejgo7xmydjn" path="res://assets/materials/veneer.tres" id="9_nqmbi"]
+[ext_resource type="Material" uid="uid://bld7sf8u2jlm3" path="res://assets/materials/dark_wooden_planks.tres" id="8_nkbct"]
+[ext_resource type="Material" uid="uid://mo5us47i167b" path="res://assets/materials/snow.tres" id="9_kyp6l"]
 [ext_resource type="Material" uid="uid://dr0y7lny0r645" path="res://assets/materials/window_inside.tres" id="10_iqc42"]
+[ext_resource type="Material" uid="uid://c7v4dyh2rdj0j" path="res://assets/materials/window_outside.tres" id="11_kyp6l"]
 [ext_resource type="Material" uid="uid://dros0qdsu5311" path="res://assets/materials/wood_classic.tres" id="11_nkbct"]
+[ext_resource type="Material" uid="uid://bejgo7xmydjn" path="res://assets/materials/veneer.tres" id="13_vb6mh"]
 [ext_resource type="Script" uid="uid://b3ijcgtw13s0b" path="res://scripts/interactables/House_Inside/bed.gd" id="17_iqc42"]
 [ext_resource type="Script" uid="uid://cxunytjsv62e1" path="res://scripts/interactables/House_Inside/fireplace.gd" id="18_nkbct"]
 
@@ -96,56 +97,77 @@ surface_material_override/0 = ExtResource("4_4ifqm")
 surface_material_override/0 = ExtResource("4_4ifqm")
 
 [node name="Door" parent="Static/House_inside/House" index="0"]
-surface_material_override/0 = ExtResource("5_bcqt4")
+surface_material_override/0 = ExtResource("8_nkbct")
 surface_material_override/1 = ExtResource("4_4ifqm")
 
 [node name="Roof" parent="Static/House_inside/House" index="1"]
-surface_material_override/0 = ExtResource("5_bcqt4")
+surface_material_override/0 = ExtResource("8_nkbct")
 surface_material_override/1 = ExtResource("4_4ifqm")
 
-[node name="Stairs" parent="Static/House_inside/House" index="2"]
+[node name="Snow_on_roof" parent="Static/House_inside/House" index="2"]
+surface_material_override/0 = ExtResource("9_kyp6l")
+
+[node name="Stairs" parent="Static/House_inside/House" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0973899, -0.666074, 1.45113)
 surface_material_override/0 = ExtResource("8_0o18y")
 
-[node name="Walls_&_windows" parent="Static/House_inside/House" index="3"]
-surface_material_override/0 = ExtResource("9_igj70")
+[node name="Walls_&_windows" parent="Static/House_inside/House" index="4"]
+surface_material_override/0 = ExtResource("11_kyp6l")
 surface_material_override/1 = ExtResource("10_iqc42")
-surface_material_override/2 = ExtResource("5_bcqt4")
+surface_material_override/2 = ExtResource("8_nkbct")
 surface_material_override/3 = ExtResource("11_nkbct")
 
 [node name="Table" parent="Static/House_inside" index="5"]
 surface_material_override/0 = ExtResource("5_igj70")
 
-[node name="Logs_for_fireplace" parent="Static/House_inside/Wood_for_fireplace" index="0"]
+[node name="Wood1" parent="Static/House_inside/Wood_for_fireplace" index="0"]
 surface_material_override/0 = ExtResource("8_0o18y")
-surface_material_override/1 = ExtResource("9_nqmbi")
+surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Logs_for_fireplace_001" parent="Static/House_inside/Wood_for_fireplace" index="1"]
+[node name="Wood2" parent="Static/House_inside/Wood_for_fireplace" index="1"]
 surface_material_override/0 = ExtResource("8_0o18y")
-surface_material_override/1 = ExtResource("9_nqmbi")
+surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Logs_for_fireplace_002" parent="Static/House_inside/Wood_for_fireplace" index="2"]
+[node name="Wood3" parent="Static/House_inside/Wood_for_fireplace" index="2"]
 surface_material_override/0 = ExtResource("8_0o18y")
-surface_material_override/1 = ExtResource("9_nqmbi")
+surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Logs_for_fireplace_003" parent="Static/House_inside/Wood_for_fireplace" index="3"]
+[node name="Wood4" parent="Static/House_inside/Wood_for_fireplace" index="3"]
 surface_material_override/0 = ExtResource("8_0o18y")
-surface_material_override/1 = ExtResource("9_nqmbi")
+surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Logs_for_fireplace_004" parent="Static/House_inside/Wood_for_fireplace" index="4"]
+[node name="Wood5" parent="Static/House_inside/Wood_for_fireplace" index="4"]
 surface_material_override/0 = ExtResource("8_0o18y")
-surface_material_override/1 = ExtResource("9_nqmbi")
+surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Logs_for_fireplace_005" parent="Static/House_inside/Wood_for_fireplace" index="5"]
+[node name="Wood6" parent="Static/House_inside/Wood_for_fireplace" index="5"]
 surface_material_override/0 = ExtResource("8_0o18y")
-surface_material_override/1 = ExtResource("9_nqmbi")
+surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Logs_for_fireplace_006" parent="Static/House_inside/Wood_for_fireplace" index="6"]
+[node name="Wood7" parent="Static/House_inside/Wood_for_fireplace" index="6"]
 surface_material_override/0 = ExtResource("8_0o18y")
-surface_material_override/1 = ExtResource("9_nqmbi")
+surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Logs_for_fireplace_007" parent="Static/House_inside/Wood_for_fireplace" index="7"]
+[node name="Wood8" parent="Static/House_inside/Wood_for_fireplace" index="7"]
 surface_material_override/0 = ExtResource("8_0o18y")
-surface_material_override/1 = ExtResource("9_nqmbi")
+surface_material_override/1 = ExtResource("13_vb6mh")
+
+[node name="Stash1" parent="Static/House_inside/Wood_stash" index="0"]
+surface_material_override/0 = ExtResource("8_0o18y")
+surface_material_override/1 = ExtResource("13_vb6mh")
+
+[node name="Stash2" parent="Static/House_inside/Wood_stash" index="1"]
+surface_material_override/0 = ExtResource("8_0o18y")
+surface_material_override/1 = ExtResource("13_vb6mh")
+
+[node name="Stash3" parent="Static/House_inside/Wood_stash" index="2"]
+transform = Transform3D(2.07259, 0, 0, 0, 2.07259, 0, 0, 0, 2.07259, 0, 0.108656, -0.321309)
+surface_material_override/0 = ExtResource("8_0o18y")
+surface_material_override/1 = ExtResource("13_vb6mh")
+
+[node name="Stash4" parent="Static/House_inside/Wood_stash" index="3"]
+surface_material_override/0 = ExtResource("8_0o18y")
+surface_material_override/1 = ExtResource("13_vb6mh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Static/House_inside"]
 

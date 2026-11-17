@@ -1,9 +1,9 @@
+res://assets/materials
 res://assets/ui/interactables/bed
 res://scripts/ui/game_inside
 res://scripts/interactables/Game_Outside
 res://scripts/interactables/House_Inside
 res://scripts/player/components
-res://assets/materials
 res://scripts/systems
 res://scripts/game_mechanics
 res://scenes/game/levels
