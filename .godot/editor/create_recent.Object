@@ -1,4 +1,6 @@
-CanvasLayer
-Interactable
-Area3D
+Control
 Node3D
+Interactable
+Resource
+CanvasLayer
+Area3D

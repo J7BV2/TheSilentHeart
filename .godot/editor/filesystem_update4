@@ -1,5 +1,6 @@
 res://default_env.tres
 res://scenes/main/Main.tscn
+res://shaders/ui/bed_blur.gdshader
 res://assets/materials/dark_wooden_planks.tres
 res://assets/materials/metal_atlas.tres
 res://assets/materials/bark.tres
@@ -12,9 +13,15 @@ res://assets/materials/grey_planks.tres
 res://assets/materials/weathered_planks.tres
 res://assets/materials/clocks_face.tres
 res://assets/materials/window_inside.tres
-res://scenes/game/levels/Game_House.tscn
-res://scenes/game/levels/Game_Outside.tscn
+res://resoursces/items/axe.tres
+res://scripts/items/item_spawn_point.gd
 res://scenes/main/Main_Menu.tscn
 res://scenes/player/Player.tscn
-res://scenes/game/Game_Session.tscn
 res://scenes/ui/interactables/Bed.tscn
+res://scenes/ui/player/HealthsPoints.tscn
+res://scenes/ui/player/Inventory.tscn
+res://scenes/game/Game_Session.tscn
+res://scenes/game/levels/Game_House.tscn
+res://scenes/game/levels/Game_Outside.tscn
+res://scenes/items/ItemPickup.tscn
+res://scenes/ui/items/ItemInspection.tscn

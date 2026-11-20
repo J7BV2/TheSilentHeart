@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dspnm57o8wuk"
-path.s3tc="res://.godot/imported/bark_diffuse1K.jpg-852a3b7cc048492ca226b34385be30f9.s3tc.ctex"
+path.s3tc="res://.godot/imported/bark_diffuse1K.jpg-1e4e525579397e11383b9279f0205ca8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/bark/bark_diffuse1K.jpg"
-dest_files=["res://.godot/imported/bark_diffuse1K.jpg-852a3b7cc048492ca226b34385be30f9.s3tc.ctex"]
+source_file="res://assets/textures/For_objects/bark/bark_diffuse1K.jpg"
+dest_files=["res://.godot/imported/bark_diffuse1K.jpg-1e4e525579397e11383b9279f0205ca8.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqsy4lkr6unr5"
-path="res://.godot/imported/box_of_matches_diffuse.png-f098746979f9d9b7fad3dbff29bc5888.ctex"
+path="res://.godot/imported/box_of_matches_diffuse.png-0299c51d8f83591093d24fe208380ecf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/box_of_matches/box_of_matches_diffuse.png"
-dest_files=["res://.godot/imported/box_of_matches_diffuse.png-f098746979f9d9b7fad3dbff29bc5888.ctex"]
+source_file="res://assets/textures/For_objects/box_of_matches/box_of_matches_diffuse.png"
+dest_files=["res://.godot/imported/box_of_matches_diffuse.png-0299c51d8f83591093d24fe208380ecf.ctex"]
 
 [params]
 

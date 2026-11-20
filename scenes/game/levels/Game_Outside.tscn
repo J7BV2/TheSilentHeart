@@ -122,14 +122,14 @@ surface_material_override/0 = ExtResource("7_sifkl")
 surface_material_override/2 = ExtResource("4_46t1j")
 surface_material_override/3 = ExtResource("8_s5gnc")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="World/House_outside"]
+[node name="StaticHouse" type="StaticBody3D" parent="World/House_outside"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/House_outside/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/House_outside/StaticHouse"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07426, 1.23145, -0.915658)
 shape = SubResource("BoxShape3D_7e7b0")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="World/House_outside/StaticBody3D"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.427193, -0.600913, 1.5994)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="World/House_outside/StaticHouse"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.400548, -0.600913, 1.5994)
 shape = SubResource("ConvexPolygonShape3D_vs6gy")
 
 [node name="Chopping_log" parent="World" instance=ExtResource("3_uwe3p")]
@@ -260,20 +260,20 @@ surface_material_override/1 = ExtResource("10_spgwl")
 surface_material_override/0 = ExtResource("12_q1dsh")
 surface_material_override/1 = ExtResource("8_s5gnc")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="World/Woodshed"]
+[node name="StaticWoodshed" type="StaticBody3D" parent="World/Woodshed"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Woodshed/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Woodshed/StaticWoodshed"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00200653, -0.0266418, 0)
 shape = SubResource("BoxShape3D_vs6gy")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="World"]
+[node name="MeshInstancePlace" type="MeshInstance3D" parent="World"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.27, 3.686, -0.78)
 mesh = ExtResource("5_gx5ga")
 surface_material_override/0 = ExtResource("13_urbsh")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="World/MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="World/MeshInstancePlace"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/MeshInstancePlace/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_y7mn8")
 
 [node name="WorldBorders" type="Node3D" parent="World"]
