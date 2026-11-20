@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://10shdnhg2nbs"
-path.s3tc="res://.godot/imported/metal_atlas_diffuse2K.png-0ebfdf600fb73559972b1a4ecee90315.s3tc.ctex"
+path.s3tc="res://.godot/imported/metal_atlas_diffuse2K.png-59898025ffd99826198a16f19a4a504f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/metal_atlas/metal_atlas_diffuse2K.png"
-dest_files=["res://.godot/imported/metal_atlas_diffuse2K.png-0ebfdf600fb73559972b1a4ecee90315.s3tc.ctex"]
+source_file="res://assets/textures/For_objects/metal_atlas/metal_atlas_diffuse2K.png"
+dest_files=["res://.godot/imported/metal_atlas_diffuse2K.png-59898025ffd99826198a16f19a4a504f.s3tc.ctex"]
 
 [params]
 

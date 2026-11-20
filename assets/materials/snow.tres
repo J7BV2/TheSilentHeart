@@ -1,9 +1,10 @@
 [gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://mo5us47i167b"]
 
-[ext_resource type="Texture2D" uid="uid://buqgtxkbftxp3" path="res://assets/textures/snow/snow_normal2K.png" id="1_liche"]
-[ext_resource type="Texture2D" uid="uid://c4d28o2f3do2q" path="res://assets/textures/snow/snow_roughness1K.png" id="2_8jcnd"]
+[ext_resource type="Texture2D" uid="uid://buqgtxkbftxp3" path="res://assets/textures/For_objects/snow/snow_normal2K.png" id="1_liche"]
+[ext_resource type="Texture2D" uid="uid://c4d28o2f3do2q" path="res://assets/textures/For_objects/snow/snow_roughness1K.png" id="2_8jcnd"]
 
 [resource]
+albedo_color = Color(0.794259, 0.885036, 0.984467, 1)
 roughness_texture = ExtResource("2_8jcnd")
 normal_enabled = true
 normal_texture = ExtResource("1_liche")

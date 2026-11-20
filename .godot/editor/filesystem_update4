@@ -1,5 +1,5 @@
 res://default_env.tres
-res://scenes/main/Main.tscn
+res://scenes/main/Main_Menu.tscn
 res://assets/materials/dark_wooden_planks.tres
 res://assets/materials/metal_atlas.tres
 res://assets/materials/bark.tres
@@ -12,9 +12,11 @@ res://assets/materials/grey_planks.tres
 res://assets/materials/weathered_planks.tres
 res://assets/materials/clocks_face.tres
 res://assets/materials/window_inside.tres
-res://scenes/game/levels/Game_House.tscn
+res://assets/materials/tree_atlas.tres
 res://scenes/game/levels/Game_Outside.tscn
-res://scenes/main/Main_Menu.tscn
+res://scenes/main/Main.tscn
+res://scenes/game/levels/Game_House.tscn
 res://scenes/player/Player.tscn
 res://scenes/game/Game_Session.tscn
 res://scenes/ui/interactables/Bed.tscn
+res://resoursces/Test_Environment/new_environment.tres

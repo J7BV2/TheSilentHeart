@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd7w64fmjvcan"
-path.s3tc="res://.godot/imported/window_inside_diffuse.png-a26adc2c9e97b958090fcdfe833b08ec.s3tc.ctex"
+path.s3tc="res://.godot/imported/window_inside_diffuse.png-6db3714d96a3d3d1f805f5bb39f48419.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/windows/window_inside_diffuse.png"
-dest_files=["res://.godot/imported/window_inside_diffuse.png-a26adc2c9e97b958090fcdfe833b08ec.s3tc.ctex"]
+source_file="res://assets/textures/For_objects/windows/window_inside_diffuse.png"
+dest_files=["res://.godot/imported/window_inside_diffuse.png-6db3714d96a3d3d1f805f5bb39f48419.s3tc.ctex"]
 
 [params]
 

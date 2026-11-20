@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh02uxktxfpm"
-path.s3tc="res://.godot/imported/weathered_planks_roughness1K.png-a16f76b43f0eee5c8c594deef8e6d555.s3tc.ctex"
+path.s3tc="res://.godot/imported/weathered_planks_roughness1K.png-922f5db33cb6d5143e1e59b60b90cfc1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/weathered_planks/weathered_planks_roughness1K.png"
-dest_files=["res://.godot/imported/weathered_planks_roughness1K.png-a16f76b43f0eee5c8c594deef8e6d555.s3tc.ctex"]
+source_file="res://assets/textures/For_objects/weathered_planks/weathered_planks_roughness1K.png"
+dest_files=["res://.godot/imported/weathered_planks_roughness1K.png-922f5db33cb6d5143e1e59b60b90cfc1.s3tc.ctex"]
 
 [params]
 

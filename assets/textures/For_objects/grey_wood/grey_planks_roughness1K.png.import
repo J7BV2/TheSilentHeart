@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://biw4a5yty7n74"
-path.s3tc="res://.godot/imported/grey_planks_roughness1K.png-ded3ee68f680cefb2cc4559b71f64e9d.s3tc.ctex"
+path.s3tc="res://.godot/imported/grey_planks_roughness1K.png-8782624afbd4eec0f2e60e6c473e813a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/grey_wood/grey_planks_roughness1K.png"
-dest_files=["res://.godot/imported/grey_planks_roughness1K.png-ded3ee68f680cefb2cc4559b71f64e9d.s3tc.ctex"]
+source_file="res://assets/textures/For_objects/grey_wood/grey_planks_roughness1K.png"
+dest_files=["res://.godot/imported/grey_planks_roughness1K.png-8782624afbd4eec0f2e60e6c473e813a.s3tc.ctex"]
 
 [params]
 

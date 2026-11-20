@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ckcj7xrqnj5y2" path="res://assets/models/Items/Lamp/Lantern.glb" id="3_vnf7m"]
 [ext_resource type="Material" uid="uid://5d4132havb47" path="res://assets/materials/metal_atlas.tres" id="4_4ifqm"]
 [ext_resource type="Script" uid="uid://63vcxguukpdd" path="res://scripts/interactables/Common/Door.gd" id="4_s5yin"]
-[ext_resource type="Texture2D" uid="uid://nhdmb0ylahm" path="res://assets/textures/soft_tarpaulin_atlas/soft_tarpaulin_diffuse1K.png" id="4_vmdak"]
+[ext_resource type="Texture2D" uid="uid://nhdmb0ylahm" path="res://assets/textures/For_objects/soft_tarpaulin_atlas/soft_tarpaulin_diffuse1K.png" id="4_vmdak"]
 [ext_resource type="Material" uid="uid://cx1drptvh0ruw" path="res://assets/materials/weathered_planks.tres" id="5_igj70"]
 [ext_resource type="Material" uid="uid://b428fmd5s7s1o" path="res://assets/materials/clocks_face.tres" id="5_laxah"]
 [ext_resource type="Script" uid="uid://cbijntyg5k1wy" path="res://scripts/interactables/House_Inside/clock.gd" id="6_ekcrl"]

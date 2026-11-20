@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clkirfgeamxor"
-path.s3tc="res://.godot/imported/dark_wooden_planks_roughness1K.png-6fa30bd0ea19e84440c70c69f87a18c0.s3tc.ctex"
+path.s3tc="res://.godot/imported/dark_wooden_planks_roughness1K.png-80fbde8ef6e5ed9baad3fee53adb9c56.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/dark_wooden_planks/dark_wooden_planks_roughness1K.png"
-dest_files=["res://.godot/imported/dark_wooden_planks_roughness1K.png-6fa30bd0ea19e84440c70c69f87a18c0.s3tc.ctex"]
+source_file="res://assets/textures/For_objects/dark_wooden_planks/dark_wooden_planks_roughness1K.png"
+dest_files=["res://.godot/imported/dark_wooden_planks_roughness1K.png-80fbde8ef6e5ed9baad3fee53adb9c56.s3tc.ctex"]
 
 [params]
 
