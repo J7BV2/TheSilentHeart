@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://yp20v2v33j8l"]
 
-[ext_resource type="Texture2D" uid="uid://dgmvxd07ef0se" path="res://assets/textures/For_inventory/axe1.png" id="1_0cvhp"]
+[ext_resource type="Texture2D" uid="uid://3biim5j7exa6" path="res://assets/textures/For_inventory/axe1.png" id="1_0cvhp"]
 [ext_resource type="PackedScene" uid="uid://blqek4dvcfabm" path="res://assets/models/Items/Axe/Axe.glb" id="2_ff456"]
 [ext_resource type="Script" uid="uid://bwdbjywspunjj" path="res://scripts/items/item_data.gd" id="3_7074u"]
 
