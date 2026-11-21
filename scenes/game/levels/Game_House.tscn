@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ciygq767tfjf6"]
+[gd_scene load_steps=38 format=3 uid="uid://ciygq767tfjf6"]
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_ekcrl"]
 [ext_resource type="Environment" uid="uid://6t3omeqlldd" path="res://resoursces/Test_Environment/House_Env.tres" id="1_fsyj8"]
@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://b3ijcgtw13s0b" path="res://scripts/interactables/House_Inside/bed.gd" id="17_iqc42"]
 [ext_resource type="Script" uid="uid://cxunytjsv62e1" path="res://scripts/interactables/House_Inside/fireplace.gd" id="18_nkbct"]
 [ext_resource type="Script" uid="uid://chha8s8qlp1wj" path="res://scripts/items/item_spawn_point.gd" id="20_7u4ct"]
+[ext_resource type="Script" uid="uid://bv6wflw6xs4wx" path="res://scripts/interactables/House_Inside/axe_grinder.gd" id="20_bhjip"]
 [ext_resource type="Resource" uid="uid://yp20v2v33j8l" path="res://resoursces/items/axe.tres" id="21_bhjip"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igj70"]
@@ -64,6 +65,9 @@ size = Vector3(2.48096, 0.71872, 1.27051)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nkbct"]
 size = Vector3(1.26542, 0.905548, 0.988464)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhjip"]
+size = Vector3(0.307223, 0.190445, 0.320661)
 
 [node name="Game_House" type="Node3D"]
 script = ExtResource("1_ekcrl")
@@ -284,6 +288,14 @@ script = ExtResource("18_nkbct")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/Fireplace"]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -0.0366819, 0.349106, 0.0285251)
 shape = SubResource("BoxShape3D_nkbct")
+
+[node name="AxeGrinder" type="Area3D" parent="Interactables"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.972418, 0.606849, -2.14707)
+script = ExtResource("20_bhjip")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/AxeGrinder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100247, 0.286644, 0.221074)
+shape = SubResource("BoxShape3D_bhjip")
 
 [node name="SpawnPoints" type="Node3D" parent="."]
 
