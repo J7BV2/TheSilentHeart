@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_ekcrl"]
 [ext_resource type="Environment" uid="uid://6t3omeqlldd" path="res://resoursces/Test_Environment/House_Env.tres" id="1_fsyj8"]
-[ext_resource type="PackedScene" uid="uid://daxa0bddevvxg" path="res://assets/models/World/Inside/House/House_inside.glb" id="2_ekcrl"]
+[ext_resource type="PackedScene" uid="uid://d1lai0g2csb" path="res://assets/models/World/Inside/House/House_inside.glb" id="2_ekcrl"]
 [ext_resource type="PackedScene" uid="uid://ckcj7xrqnj5y2" path="res://assets/models/Items/Lamp/Lantern.glb" id="3_vnf7m"]
 [ext_resource type="Material" uid="uid://5d4132havb47" path="res://assets/materials/metal_atlas.tres" id="4_4ifqm"]
 [ext_resource type="Script" uid="uid://63vcxguukpdd" path="res://scripts/interactables/Common/Door.gd" id="4_s5yin"]
@@ -81,11 +81,15 @@ light_energy = 0.25
 [node name="House_inside" parent="Static" instance=ExtResource("2_ekcrl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564734, 0)
 
-[node name="Bed" parent="Static/House_inside" index="0"]
+[node name="Axe_grinder" parent="Static/House_inside" index="0"]
+surface_material_override/0 = ExtResource("11_nkbct")
+surface_material_override/1 = ExtResource("4_4ifqm")
+
+[node name="Bed" parent="Static/House_inside" index="1"]
 surface_material_override/0 = SubResource("StandardMaterial3D_igj70")
 surface_material_override/1 = ExtResource("5_igj70")
 
-[node name="Chair" parent="Static/House_inside" index="1"]
+[node name="Chair" parent="Static/House_inside" index="2"]
 surface_material_override/0 = ExtResource("5_igj70")
 
 [node name="Clocks carcase" parent="Static/House_inside/Clocks" index="0"]
@@ -119,7 +123,7 @@ surface_material_override/1 = ExtResource("10_iqc42")
 surface_material_override/2 = ExtResource("8_nkbct")
 surface_material_override/3 = ExtResource("11_nkbct")
 
-[node name="Table" parent="Static/House_inside" index="5"]
+[node name="Table" parent="Static/House_inside" index="6"]
 surface_material_override/0 = ExtResource("5_igj70")
 
 [node name="Wood1" parent="Static/House_inside/Wood_for_fireplace" index="0"]
