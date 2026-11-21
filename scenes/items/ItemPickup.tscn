@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dc3qqdpla6xii" path="res://scripts/items/item_pickup.gd" id="1_script"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7s3i8"]
+size = Vector3(0.5, 0.6, 0.5)
 
 [node name="ItemPickup" type="Area3D"]
 script = ExtResource("1_script")

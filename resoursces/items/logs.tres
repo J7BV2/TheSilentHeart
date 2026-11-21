@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cd8bhwh3rhfkl"]
+
+[ext_resource type="Texture2D" uid="uid://ussmih6si6eo" path="res://assets/textures/For_inventory/logs1.png" id="1_co4xc"]
+[ext_resource type="PackedScene" uid="uid://hjcw3qitnuta" path="res://assets/models/Items/Single_objects/Wood_single/Wood_single.glb" id="2_m8wqp"]
+[ext_resource type="Script" uid="uid://bwdbjywspunjj" path="res://scripts/items/item_data.gd" id="3_7gfxm"]
+
+[resource]
+script = ExtResource("3_7gfxm")
+item_id = &"logs"
+display_name = "Дрова"
+description = ""
+icon = ExtResource("1_co4xc")
+model_scene = ExtResource("2_m8wqp")
+world_scale = Vector3(1, 1, 1)
+preview_scale = Vector3(1, 1, 1)
+preview_offset = Vector3(0, 0, 0)
+possible_spawn_ids = []

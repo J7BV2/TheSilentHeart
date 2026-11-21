@@ -68,6 +68,7 @@ size = Vector3(1.26542, 0.905548, 0.988464)
 [node name="Game_House" type="Node3D"]
 script = ExtResource("1_ekcrl")
 player_size = 0.9
+level_id = &"game_house"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_fsyj8")
@@ -295,21 +296,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0903096, 0.342944, 0.3073)
 [node name="ItemSpawnPoints" type="Node3D" parent="."]
 
 [node name="AxeSpawn1" type="Marker3D" parent="ItemSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37689, 1.18535, 0)
+transform = Transform3D(-0.5, -0.866025, 3.78552e-08, 0, -4.37114e-08, -1, 0.866025, -0.5, 2.18557e-08, -0.544232, 0.915014, -2.20358)
 script = ExtResource("20_7u4ct")
 item_data = ExtResource("21_bhjip")
 unique_instance_id = &"axe_story_01"
 spawn_option_id = &"axe_spawn_1"
 
 [node name="AxeSpawn2" type="Marker3D" parent="ItemSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.619741, 1.85232, -1.89364)
+transform = Transform3D(-0.99906, 0.043314, -0.00183317, 0.0396791, 0.896544, -0.441174, -0.0174654, -0.440832, -0.89742, -1.82088, 0.422187, -2.5817)
 script = ExtResource("20_7u4ct")
 item_data = ExtResource("21_bhjip")
 unique_instance_id = &"axe_story_01"
 spawn_option_id = &"axe_spawn_2"
 
 [node name="AxeSpawn3" type="Marker3D" parent="ItemSpawnPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.679172, 1.4239, -1.62105)
+transform = Transform3D(-0.997782, -0.0231801, -0.0624105, -0.0475167, 0.904551, 0.423708, 0.0466319, 0.425733, -0.903646, 0.833535, 0.412568, 0.827791)
 script = ExtResource("20_7u4ct")
 item_data = ExtResource("21_bhjip")
 unique_instance_id = &"axe_story_01"

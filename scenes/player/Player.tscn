@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://chr2mpdb0128g"]
+[gd_scene load_steps=9 format=3 uid="uid://chr2mpdb0128g"]
 
 [ext_resource type="Script" uid="uid://cuqawsg48vtke" path="res://scripts/player/Player.gd" id="1_wr5hl"]
 [ext_resource type="Script" uid="uid://lqc7vgxjqgl4" path="res://scripts/player/components/movement_controller.gd" id="2_4kuee"]
 [ext_resource type="Script" uid="uid://dlr1nl125lonn" path="res://scripts/player/components/camera_controller.gd" id="3_524rm"]
 [ext_resource type="Script" uid="uid://c3iqtxspsc6nx" path="res://scripts/player/components/player_interactor.gd" id="4_524rm"]
 [ext_resource type="Script" uid="uid://biisg7pkjqe3m" path="res://scripts/player/components/player_inventory.gd" id="5_c3xxp"]
+[ext_resource type="Script" uid="uid://b8ibrphn272pc" path="res://scripts/player/components/item_dropper.gd" id="5_npwbq"]
 [ext_resource type="PackedScene" uid="uid://bcpsnmg26xvw8" path="res://scenes/ui/player/Inventory.tscn" id="5_tpg5x"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gfjak"]
@@ -35,6 +36,9 @@ script = ExtResource("3_524rm")
 
 [node name="InventoryComponent" type="Node" parent="."]
 script = ExtResource("5_c3xxp")
+
+[node name="ItemDropper" type="Node" parent="."]
+script = ExtResource("5_npwbq")
 
 [node name="Interactor" type="Node3D" parent="."]
 script = ExtResource("4_524rm")

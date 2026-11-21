@@ -9,13 +9,14 @@ const ITEM_PICKUP_SCENE: PackedScene = preload(
 
 @onready var inventory: PlayerInventory = $InventoryComponent
 @onready var inventory_hud: InventoryHUD = $CanvasLayer/Inventory
+@onready var item_dropper: ItemDropper = $ItemDropper
 
 func _ready() -> void:
 
 	inventory_hud.setup(inventory)
 
 	inventory_hud.drop_requested.connect(
-		_drop_selected_item
+		item_dropper.drop_selected_item
 	)
 
 	if not DisplayServer.is_touchscreen_available():
@@ -59,7 +60,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	# Выброс предмета
 	if event.is_action_pressed(&"drop_item"):
-		_drop_selected_item()
+		item_dropper.drop_selected_item()
 		get_viewport().set_input_as_handled()
 		return
 
@@ -71,41 +72,3 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		elif not DisplayServer.is_touchscreen_available():
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
-func _drop_selected_item() -> void:
-
-	var item_info := inventory.take_selected()
-
-	if item_info.is_empty():
-		return
-
-	var data := item_info["item_data"] as ItemData
-	var unique_id := StringName(item_info["unique_id"])
-
-	var session := get_tree().get_first_node_in_group(
-		"game_session"
-	) as GameSession
-
-	if session == null or session.current_level == null:
-		inventory.add_item(data, unique_id)
-		return
-
-	# Уникальный предмет снова становится доступен в мире.
-	ItemRegistry.mark_dropped(unique_id)
-
-	var pickup := ITEM_PICKUP_SCENE.instantiate() as WorldItemPickup
-
-	pickup.item_data = data
-	pickup.unique_instance_id = unique_id
-
-	session.current_level.add_child(pickup)
-
-	var forward := -global_transform.basis.z
-
-	pickup.global_position = (
-		global_position
-		+ forward * 1.2
-		+ Vector3.UP * 0.4
-	)
-
-	pickup.rotation.y = rotation.y

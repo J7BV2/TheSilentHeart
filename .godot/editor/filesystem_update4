@@ -23,8 +23,5 @@ res://scenes/player/Player.tscn
 res://scenes/game/Game_Session.tscn
 res://scenes/ui/interactables/Bed.tscn
 res://scenes/ui/items/ItemInspection.tscn
-res://scripts/items/item_spawn_point.gd
-res://scripts/player/Player.gd
-res://scripts/ui/common/item_inspection.gd
 res://scenes/ui/player/Inventory.tscn
-res://scripts/player/components/inventory_hud.gd
+res://scenes/items/ItemPickup.tscn

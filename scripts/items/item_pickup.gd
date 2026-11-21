@@ -24,7 +24,9 @@ func _ready() -> void:
 		return
 
 	visual_root.add_child(model)
-	model.scale = item_data.world_scale
+	model.scale = (
+	item_data.world_scale * _get_level_item_scale()
+)
 
 
 func get_prompt_text() -> String:
@@ -64,3 +66,35 @@ func interact(actor: Node) -> void:
 	queue_free()
 
 	InterfaceManager.open_ui(INSPECTION_SCENE, item_data)
+
+# Устанавливаем положение выброшенного предмета
+func set_dropped_pose(floor_position: Vector3, player_yaw: float) -> void:
+
+	# Ставим предмет на найденную поверхность
+	global_position = floor_position
+
+	# Сохраняем направление игрока
+	global_rotation = Vector3(0.0, player_yaw, 0.0)
+
+	# Укладываем визуальную модель на бок
+	visual_root.rotation_degrees = Vector3(90.0, 0.0, 0.0)
+func _get_level_item_scale() -> float:
+
+	# Ищем родительскую локацию.
+	var current: Node = get_parent()
+
+	while current != null:
+
+		if current is GameLevel:
+
+			var level := current as GameLevel
+
+			# 0.9 — исходный масштаб игрока в доме.
+			# Сохраняем исходный размер предметов там.
+			const REFERENCE_PLAYER_SIZE := 0.9
+
+			return level.player_size / REFERENCE_PLAYER_SIZE
+
+		current = current.get_parent()
+
+	return 1.0

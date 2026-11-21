@@ -5,6 +5,10 @@ const HOUSE_SCENE: PackedScene = preload(
 	"res://scenes/game/levels/Game_House.tscn"
 )
 
+const ITEM_PICKUP_SCENE: PackedScene = preload(
+	"res://scenes/items/ItemPickup.tscn"
+)
+
 @onready var player: CharacterBody3D = $Player
 @onready var level_container: Node3D = $LevelContainer
 
@@ -64,5 +68,54 @@ func change_location(
 	player.scale = Vector3.ONE * new_level.player_size
 
 	player.velocity = Vector3.ZERO
+	
+	# Восстанавливаем предметы, которые были выброшены
+	# именно в эту локацию.
+	_restore_dropped_items(new_level)
 
 	return true
+
+func _restore_dropped_items(level: GameLevel) -> void:
+
+	if level.level_id == &"":
+		push_warning(
+			"[GameSession] У локации не назначен level_id!"
+		)
+		return
+
+	var saved_items := ItemRegistry.get_dropped_items_for_level(
+		level.level_id
+	)
+
+	for item_state in saved_items:
+
+		var data := item_state["item_data"] as ItemData
+
+		if data == null:
+			continue
+
+		var pickup := ITEM_PICKUP_SCENE.instantiate() as WorldItemPickup
+
+		if pickup == null:
+			continue
+
+		pickup.item_data = data
+		pickup.unique_instance_id = item_state["unique_id"]
+
+		# Добавляем предмет в нужную локацию.
+		level.add_child(pickup)
+
+		# Восстанавливаем положение и поворот.
+		pickup.transform = item_state["level_transform"]
+
+		# Восстанавливаем поворот визуальной модели.
+		var visual_root := pickup.get_node("VisualRoot") as Node3D
+
+		visual_root.transform = item_state["visual_transform"]
+
+		print(
+			"[GameSession] Восстановлен предмет: ",
+			pickup.unique_instance_id,
+			" в локации: ",
+			level.level_id
+		)
