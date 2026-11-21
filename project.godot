@@ -13,7 +13,9 @@ config_version=5
 config/name="The Silent Heart"
 run/main_scene="uid://b5x0urkhay1s7"
 config/features=PackedStringArray("4.4")
+boot_splash/image="uid://dsqtlx3a2n5kt"
 config/icon="res://icon.png"
+boot_splash/minimum_display_time=1300
 
 [autoload]
 
