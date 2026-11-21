@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://du47kgra6lxgy"]
+[gd_scene load_steps=33 format=3 uid="uid://du47kgra6lxgy"]
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_12krm"]
 [ext_resource type="Environment" uid="uid://dt66w20wbkija" path="res://resoursces/Test_Environment/new_environment.tres" id="1_j54u8"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b46gyibxttoeu" path="res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb" id="3_uwe3p"]
 [ext_resource type="Material" uid="uid://bld7sf8u2jlm3" path="res://assets/materials/dark_wooden_planks.tres" id="4_46t1j"]
 [ext_resource type="PackedScene" uid="uid://v8ooi2tn5xp6" path="res://assets/models/World/Outside/Woodshed/Woodshed.glb" id="4_e3m2f"]
-[ext_resource type="ArrayMesh" uid="uid://oio1kci0src2" path="res://assets/models/World/Outside/Place/Place.obj" id="5_gx5ga"]
+[ext_resource type="ArrayMesh" uid="uid://c4gdvpxfa2y44" path="res://assets/models/World/Outside/Place/Place.obj" id="5_gx5ga"]
 [ext_resource type="Material" uid="uid://5d4132havb47" path="res://assets/materials/metal_atlas.tres" id="5_urbsh"]
 [ext_resource type="Material" uid="uid://dw62bivt2t2or" path="res://assets/materials/bark.tres" id="6_46t1j"]
 [ext_resource type="Script" uid="uid://63vcxguukpdd" path="res://scripts/interactables/Common/Door.gd" id="6_d3qgv"]
@@ -15,7 +15,6 @@
 [ext_resource type="Material" uid="uid://bejgo7xmydjn" path="res://assets/materials/veneer.tres" id="10_spgwl"]
 [ext_resource type="Material" uid="uid://22syqusupujm" path="res://assets/materials/soft_tarpaulin_atlas.tres" id="12_q1dsh"]
 [ext_resource type="Material" uid="uid://mo5us47i167b" path="res://assets/materials/snow.tres" id="13_urbsh"]
-[ext_resource type="Material" uid="uid://cefw77ryu5lpc" path="res://assets/materials/tree_atlas.tres" id="15_sifkl"]
 [ext_resource type="Script" uid="uid://car4cwmfgf4bb" path="res://scripts/interactables/Game_Outside/chopping_log.gd" id="16_46t1j"]
 [ext_resource type="Script" uid="uid://bjo0k4lhg16jf" path="res://scripts/interactables/Game_Outside/woodshed.gd" id="17_sifkl"]
 
@@ -115,7 +114,7 @@ surface_material_override/1 = ExtResource("5_urbsh")
 surface_material_override/0 = ExtResource("13_urbsh")
 
 [node name="Stairs" parent="World/House_outside/House" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0973899, -0.544574, 1.44251)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0973899, -0.600743, 1.44251)
 surface_material_override/0 = ExtResource("6_46t1j")
 
 [node name="Walls_&_windows" parent="World/House_outside/House" index="4"]
@@ -123,14 +122,14 @@ surface_material_override/0 = ExtResource("7_sifkl")
 surface_material_override/2 = ExtResource("4_46t1j")
 surface_material_override/3 = ExtResource("8_s5gnc")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="World/House_outside"]
+[node name="StaticHouse" type="StaticBody3D" parent="World/House_outside"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/House_outside/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/House_outside/StaticHouse"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07426, 1.23145, -0.915658)
 shape = SubResource("BoxShape3D_7e7b0")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="World/House_outside/StaticBody3D"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.427193, -0.600913, 1.5994)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="World/House_outside/StaticHouse"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.400548, -0.600913, 1.5994)
 shape = SubResource("ConvexPolygonShape3D_vs6gy")
 
 [node name="Chopping_log" parent="World" instance=ExtResource("3_uwe3p")]
@@ -261,22 +260,20 @@ surface_material_override/1 = ExtResource("10_spgwl")
 surface_material_override/0 = ExtResource("12_q1dsh")
 surface_material_override/1 = ExtResource("8_s5gnc")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="World/Woodshed"]
+[node name="StaticWoodshed" type="StaticBody3D" parent="World/Woodshed"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Woodshed/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Woodshed/StaticWoodshed"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00200653, -0.0266418, 0)
 shape = SubResource("BoxShape3D_vs6gy")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="World"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.27, 8.01847, -0.78)
+[node name="MeshInstancePlace" type="MeshInstance3D" parent="World"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.27, 3.686, -0.78)
 mesh = ExtResource("5_gx5ga")
 surface_material_override/0 = ExtResource("13_urbsh")
-surface_material_override/1 = ExtResource("15_sifkl")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="World/MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="World/MeshInstancePlace"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/MeshInstance3D/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.22703, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/MeshInstancePlace/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_y7mn8")
 
 [node name="WorldBorders" type="Node3D" parent="World"]

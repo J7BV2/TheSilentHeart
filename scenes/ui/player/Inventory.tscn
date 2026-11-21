@@ -1,0 +1,112 @@
+[gd_scene load_steps=14 format=3 uid="uid://bcpsnmg26xvw8"]
+
+[ext_resource type="Script" uid="uid://pw6ap41shyaw" path="res://scripts/player/components/inventory_hud.gd" id="1_b85xg"]
+[ext_resource type="Texture2D" uid="uid://cdbsxihuvx0t" path="res://assets/ui/player/interface/UI_buttonInventoryPressed.png" id="2_uy54t"]
+[ext_resource type="Texture2D" uid="uid://krlktpjdnj0o" path="res://assets/ui/player/interface/UI_buttonInventoryNormal.png" id="3_2vmut"]
+[ext_resource type="Texture2D" uid="uid://c8n2rxc534d6f" path="res://assets/ui/player/interface/UI_dropbuttonPressed.png" id="3_b85xg"]
+[ext_resource type="Texture2D" uid="uid://blm7wx5eycwpt" path="res://assets/ui/player/interface/UI_dropbuttonNormal.png" id="4_x7s5u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b85xg"]
+texture = ExtResource("2_uy54t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x7s5u"]
+texture = ExtResource("3_2vmut")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vvlde"]
+texture = ExtResource("2_uy54t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t5caj"]
+texture = ExtResource("3_2vmut")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mtm2w"]
+texture = ExtResource("2_uy54t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c28lc"]
+texture = ExtResource("3_2vmut")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2vmut"]
+texture = ExtResource("3_b85xg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vwj8"]
+texture = ExtResource("4_x7s5u")
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -394.0
+offset_top = -256.0
+offset_right = -394.0
+offset_bottom = -256.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("1_b85xg")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" type="Control" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="FirstCellButton" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -403.0
+offset_top = -2.0
+offset_right = -179.0
+offset_bottom = 219.0
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b85xg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_x7s5u")
+
+[node name="SecondCellButton" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -135.0
+offset_top = -3.0
+offset_right = 89.0
+offset_bottom = 215.0
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vvlde")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t5caj")
+
+[node name="ThirdCellButton" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = -5.0
+offset_right = 352.0
+offset_bottom = 216.0
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mtm2w")
+theme_override_styles/normal = SubResource("StyleBoxTexture_c28lc")
+
+[node name="DropButton" type="Button" parent="CenterContainer/Window"]
+visible = false
+layout_mode = 0
+offset_left = -671.0
+offset_top = -2.0
+offset_right = -447.0
+offset_bottom = 219.0
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2vmut")
+theme_override_styles/normal = SubResource("StyleBoxTexture_7vwj8")
+
+[node name="DropNumber" type="Label" parent="CenterContainer/Window/DropButton"]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 163.0
+offset_right = 208.0
+offset_bottom = 212.0
+theme_override_font_sizes/font_size = 35
+text = "G"
+
+[node name="CellNumber" type="Label" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -392.0
+offset_top = 166.0
+offset_right = 345.0
+offset_bottom = 215.0
+theme_override_font_sizes/font_size = 35
+text = "                  1                            2                            3"

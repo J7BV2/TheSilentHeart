@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://doe2v5tj1ke7m"]
+
+[ext_resource type="Script" uid="uid://dc3qqdpla6xii" path="res://scripts/items/item_pickup.gd" id="1_script"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7s3i8"]
+
+[node name="ItemPickup" type="Area3D"]
+script = ExtResource("1_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_7s3i8")
+
+[node name="VisualRoot" type="Node3D" parent="."]

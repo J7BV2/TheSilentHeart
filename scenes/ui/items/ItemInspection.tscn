@@ -1,0 +1,163 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwimxdiepub4m"]
+
+[ext_resource type="Script" uid="uid://bm5qp8f5hdno6" path="res://scripts/ui/common/item_inspection.gd" id="1_so617"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.075, 0.082, 0.09, 0.98)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.31, 0.3, 0.27, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_preview"]
+bg_color = Color(0.025, 0.03, 0.037, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.21, 0.21, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0.025, 0.03, 0.037, 1)
+ambient_light_color = Color(0.55, 0.58, 0.64, 1)
+ambient_light_energy = 0.65
+
+[node name="ItemInspection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_so617")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.008, 0.01, 0.014, 0.88)
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16
+anchor_top = 0.06
+anchor_right = 0.84
+anchor_bottom = 0.94
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 22
+
+[node name="Content" type="VBoxContainer" parent="Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Eyebrow" type="Label" parent="Panel/Margin/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.66, 0.63, 0.56, 1)
+theme_override_font_sizes/font_size = 15
+text = "ОСМОТР ПРЕДМЕТА"
+horizontal_alignment = 1
+
+[node name="ItemTitle" type="Label" parent="Panel/Margin/Content"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.93, 0.92, 0.88, 1)
+theme_override_font_sizes/font_size = 32
+text = "Название предмета"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PreviewFrame" type="PanelContainer" parent="Panel/Margin/Content"]
+custom_minimum_size = Vector2(0, 420)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_preview")
+
+[node name="PreviewContainer" type="SubViewportContainer" parent="Panel/Margin/Content/PreviewFrame"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Panel/Margin/Content/PreviewFrame/PreviewContainer"]
+own_world_3d = true
+handle_input_locally = false
+size = Vector2i(2, 2)
+render_target_update_mode = 4
+
+[node name="PreviewWorld" type="Node3D" parent="Panel/Margin/Content/PreviewFrame/PreviewContainer/SubViewport"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Panel/Margin/Content/PreviewFrame/PreviewContainer/SubViewport/PreviewWorld"]
+environment = SubResource("Environment_preview")
+
+[node name="Camera3D" type="Camera3D" parent="Panel/Margin/Content/PreviewFrame/PreviewContainer/SubViewport/PreviewWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.5)
+current = true
+fov = 35.0
+far = 150.0
+
+[node name="KeyLight" type="DirectionalLight3D" parent="Panel/Margin/Content/PreviewFrame/PreviewContainer/SubViewport/PreviewWorld"]
+transform = Transform3D(0.796084, 0.412519, -0.442808, 0, 0.731689, 0.681639, 0.605186, -0.542642, 0.582486, 0, 0, 0)
+light_energy = 2.0
+shadow_enabled = true
+
+[node name="FillLight" type="OmniLight3D" parent="Panel/Margin/Content/PreviewFrame/PreviewContainer/SubViewport/PreviewWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.8, 2)
+light_energy = 0.7
+omni_range = 9.0
+
+[node name="RimLight" type="OmniLight3D" parent="Panel/Margin/Content/PreviewFrame/PreviewContainer/SubViewport/PreviewWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.8, -2)
+light_energy = 1.15
+omni_range = 10.0
+
+[node name="PreviewPivot" type="Node3D" parent="Panel/Margin/Content/PreviewFrame/PreviewContainer/SubViewport/PreviewWorld"]
+
+[node name="Description" type="Label" parent="Panel/Margin/Content"]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.79, 0.79, 1)
+theme_override_font_sizes/font_size = 17
+text = "Описание предмета появится здесь."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Footer" type="HBoxContainer" parent="Panel/Margin/Content"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RotateHint" type="Label" parent="Panel/Margin/Content/Footer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.62, 0.64, 0.65, 1)
+theme_override_font_sizes/font_size = 14
+text = "ЗАЖМИТЕ ЛКМ И ДВИГАЙТЕ МЫШЬ — ВРАЩЕНИЕ"
+horizontal_alignment = 2
+
+[node name="CloseHint" type="Label" parent="Panel/Margin/Content/Footer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.77, 0.72, 0.62, 1)
+theme_override_font_sizes/font_size = 14
+text = "ЩЕЛЧОК ЛКМ — ЗАКРЫТЬ"

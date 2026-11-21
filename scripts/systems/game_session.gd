@@ -12,6 +12,8 @@ var current_level: GameLevel
 
 
 func _ready() -> void:
+	ItemRegistry.reset_for_new_game()
+	
 	add_to_group("game_session")
 
 	change_location(HOUSE_SCENE, &"PlayerStart")
