@@ -32,7 +32,7 @@ func _ready() -> void:
 			if selected != String(spawn_option_id):
 				return
 
-	_spawn_item()
+	call_deferred("_spawn_item")
 
 
 func _spawn_item() -> void:

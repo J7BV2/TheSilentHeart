@@ -38,12 +38,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		return
 
-	# Взаимодействие
-	if event.is_action_pressed(&"interact"):
-
-		if interactor.try_interact(self):
-			get_viewport().set_input_as_handled()
-
 	if is_instance_valid(InterfaceManager.current_ui):
 		return
 

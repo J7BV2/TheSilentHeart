@@ -41,16 +41,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_so617")
 
-[node name="Background" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0.008, 0.01, 0.014, 0.88)
-
 [node name="Panel" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -102,16 +92,17 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="Panel/Margin/Content/PreviewFrame/PreviewContainer"]
 own_world_3d = true
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(1241, 711)
 render_target_update_mode = 4
 
 [node name="PreviewWorld" type="Node3D" parent="Panel/Margin/Content/PreviewFrame/PreviewContainer/SubViewport"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Panel/Margin/Content/PreviewFrame/PreviewContainer/SubViewport/PreviewWorld"]
 environment = SubResource("Environment_preview")
 
 [node name="Camera3D" type="Camera3D" parent="Panel/Margin/Content/PreviewFrame/PreviewContainer/SubViewport/PreviewWorld"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
 current = true
 fov = 35.0
 far = 150.0

@@ -22,6 +22,13 @@ func _ready() -> void:
 	third_button.pressed.connect(_on_slot_pressed.bind(2))
 
 	drop_button.pressed.connect(_on_drop_pressed)
+	
+	# Настройка отображения иконок предметов
+	for button in slot_buttons:
+		button.expand_icon = false
+		button.add_theme_constant_override("icon_max_width", 150)
+		button.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		button.vertical_icon_alignment = VERTICAL_ALIGNMENT_CENTER
 
 	InterfaceManager.ui_opened.connect(_on_ui_opened)
 	InterfaceManager.ui_closed.connect(_on_ui_closed)

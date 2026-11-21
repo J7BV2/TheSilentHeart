@@ -1,10 +1,10 @@
 extends Control
 
-@onready var title_label: Label = $Panel/VBoxContainer/Title
+@onready var title_label: Label = $Panel/Margin/Content/ItemTitle
 
-@onready var description_label: Label = $Panel/VBoxContainer/Description
+@onready var description_label: Label = $Panel/Margin/Content/Description
 
-@onready var preview_pivot: Node3D = $Panel/VBoxContainer/Preview/SubViewport/PreviewWorld/PreviewPivot
+@onready var preview_pivot: Node3D = $Panel/Margin/Content/PreviewFrame/PreviewContainer/SubViewport/PreviewWorld/PreviewPivot
 
 var dragging: bool = false
 var drag_moved: bool = false
