@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nb77ply5sr3j"
-path.s3tc="res://.godot/imported/House_inside_window_inside_diffuse.png-7f1bd7664189c5dd691a70190b5da5ff.s3tc.ctex"
+uid="uid://c8fgawt2d6fjk"
+path.s3tc="res://.godot/imported/carpet_diffuse1K.png-87711d8e11e2a034909c1bbedadcf414.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "5b1a8f0336ebba670009bbf0cbfc6751"
-}
 
 [deps]
 
-source_file="res://assets/models/World/Inside/House/House_inside_window_inside_diffuse.png"
-dest_files=["res://.godot/imported/House_inside_window_inside_diffuse.png-7f1bd7664189c5dd691a70190b5da5ff.s3tc.ctex"]
+source_file="res://assets/textures/For_objects/carpet/carpet_diffuse1K.png"
+dest_files=["res://.godot/imported/carpet_diffuse1K.png-87711d8e11e2a034909c1bbedadcf414.s3tc.ctex"]
 
 [params]
 

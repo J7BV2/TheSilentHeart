@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn6hn0uu7g51f"
-path.s3tc="res://.godot/imported/House_inside_bark_diffuse1K.jpg-e530d2bb6164c22d54d11b785e5f0f15.s3tc.ctex"
+uid="uid://bko3m0l02nk3j"
+path.s3tc="res://.godot/imported/green_metal_rust_roughness1K.png-8fda3ad16da61ac55d842aba15731e29.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "77e659a4884d1df237e8ae822c69584c"
-}
 
 [deps]
 
-source_file="res://assets/models/World/Inside/House/House_inside_bark_diffuse1K.jpg"
-dest_files=["res://.godot/imported/House_inside_bark_diffuse1K.jpg-e530d2bb6164c22d54d11b785e5f0f15.s3tc.ctex"]
+source_file="res://assets/textures/For_objects/green_metal_rust/green_metal_rust_roughness1K.png"
+dest_files=["res://.godot/imported/green_metal_rust_roughness1K.png-8fda3ad16da61ac55d842aba15731e29.s3tc.ctex"]
 
 [params]
 

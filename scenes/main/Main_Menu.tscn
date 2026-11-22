@@ -1,10 +1,10 @@
-[gd_scene load_steps=32 format=3 uid="uid://dyc7w02ih3mnb"]
+[gd_scene load_steps=34 format=3 uid="uid://dyc7w02ih3mnb"]
 
 [ext_resource type="Environment" uid="uid://dt66w20wbkija" path="res://resoursces/Test_Environment/new_environment.tres" id="1_1kppg"]
-[ext_resource type="PackedScene" uid="uid://es3wqi85f6o5" path="res://assets/models/World/Outside/House/House_outside.glb" id="1_bvopx"]
+[ext_resource type="PackedScene" uid="uid://cnsng1b1u1hne" path="res://assets/models/World/Outside/House/House_outside.glb" id="1_bvopx"]
 [ext_resource type="PackedScene" uid="uid://b46gyibxttoeu" path="res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb" id="2_1kppg"]
 [ext_resource type="Material" uid="uid://bld7sf8u2jlm3" path="res://assets/materials/dark_wooden_planks.tres" id="3_iqecb"]
-[ext_resource type="PackedScene" uid="uid://v8ooi2tn5xp6" path="res://assets/models/World/Outside/Woodshed/Woodshed.glb" id="3_tq0kw"]
+[ext_resource type="PackedScene" uid="uid://dp40v8y5bk1tp" path="res://assets/models/World/Outside/Woodshed/Woodshed.glb" id="3_tq0kw"]
 [ext_resource type="Material" uid="uid://5d4132havb47" path="res://assets/materials/metal_atlas.tres" id="4_iqecb"]
 [ext_resource type="PackedScene" uid="uid://eij8v1hbicte" path="res://assets/models/World/Outside/Place/Place.glb" id="4_ng4m3"]
 [ext_resource type="PackedScene" uid="uid://c4uw7moqv0q7m" path="res://assets/models/Buttons/Play_button.glb" id="5_flt8e"]
@@ -15,10 +15,12 @@
 [ext_resource type="Script" uid="uid://pj6trciwp1sl" path="res://scripts/Menu_UI/Play_Button.gd" id="6_tq0kw"]
 [ext_resource type="Material" uid="uid://dros0qdsu5311" path="res://assets/materials/wood_classic.tres" id="7_6faoj"]
 [ext_resource type="PackedScene" uid="uid://ybh25pw7q8q5" path="res://assets/models/Buttons/Authors_button.glb" id="7_kbo2b"]
+[ext_resource type="Material" uid="uid://b4cay8b6bcmxh" path="res://assets/materials/icicle.tres" id="7_q02h8"]
 [ext_resource type="PackedScene" uid="uid://da4xw4iijkf5h" path="res://assets/models/Buttons/Exit_button.glb" id="8_2erfd"]
 [ext_resource type="Script" uid="uid://b5gdx1g6ydjmx" path="res://scripts/Menu_UI/Exit_Button.gd" id="9_1kppg"]
 [ext_resource type="Material" uid="uid://bejgo7xmydjn" path="res://assets/materials/veneer.tres" id="9_74b4h"]
 [ext_resource type="Animation" path="res://assets/animations/main_menuMenu_sway.tres" id="9_quena"]
+[ext_resource type="Material" uid="uid://dvy6y4x6psoiu" path="res://assets/materials/glass.tres" id="10_6faoj"]
 [ext_resource type="Material" uid="uid://22syqusupujm" path="res://assets/materials/soft_tarpaulin_atlas.tres" id="11_baykr"]
 [ext_resource type="Material" uid="uid://cefw77ryu5lpc" path="res://assets/materials/tree_atlas.tres" id="14_j8blv"]
 [ext_resource type="Material" uid="uid://k1gwna3hsonn" path="res://assets/materials/grey_planks.tres" id="15_6faoj"]
@@ -118,10 +120,12 @@ surface_material_override/1 = ExtResource("4_iqecb")
 
 [node name="Roof" parent="Node3D/House_outside/House" index="1"]
 surface_material_override/0 = ExtResource("3_iqecb")
-surface_material_override/1 = ExtResource("4_iqecb")
+surface_material_override/1 = ExtResource("7_6faoj")
+surface_material_override/2 = ExtResource("4_iqecb")
 
 [node name="Snow_on_roof" parent="Node3D/House_outside/House" index="2"]
 surface_material_override/0 = ExtResource("5_q02h8")
+surface_material_override/1 = ExtResource("7_q02h8")
 
 [node name="Stairs" parent="Node3D/House_outside/House" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0973899, -0.544469, 1.44317)
@@ -131,6 +135,7 @@ surface_material_override/0 = ExtResource("5_j8blv")
 surface_material_override/0 = ExtResource("6_q02h8")
 surface_material_override/2 = ExtResource("3_iqecb")
 surface_material_override/3 = ExtResource("7_6faoj")
+surface_material_override/4 = ExtResource("10_6faoj")
 
 [node name="Chopping_log2" parent="Node3D" instance=ExtResource("2_1kppg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.68146, 7.49085, -3.53913)
@@ -141,6 +146,9 @@ surface_material_override/1 = ExtResource("9_74b4h")
 
 [node name="Woodshed" parent="Node3D" instance=ExtResource("3_tq0kw")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 2.14643, 7.9097, -6.90341)
+
+[node name="Woodshed" parent="Node3D/Woodshed" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0667676)
 
 [node name="Log1" parent="Node3D/Woodshed/Woodshed" index="0"]
 surface_material_override/0 = ExtResource("5_j8blv")

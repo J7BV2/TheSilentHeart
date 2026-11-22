@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xhfcraalsmjt"
-path.s3tc="res://.godot/imported/House_inside_clocks_front_diffuse.png-273b3d3979ffc72807e591e7fe4e200a.s3tc.ctex"
+uid="uid://sgvjmpdr18xd"
+path.s3tc="res://.godot/imported/green_metal_rust_diffuse1K.png-f5ec7be631cab0a14fdf7930a01e0091.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "9f16e8b5600f528765cf8a0e73b7408b"
-}
 
 [deps]
 
-source_file="res://assets/models/World/Inside/House/House_inside_clocks_front_diffuse.png"
-dest_files=["res://.godot/imported/House_inside_clocks_front_diffuse.png-273b3d3979ffc72807e591e7fe4e200a.s3tc.ctex"]
+source_file="res://assets/textures/For_objects/green_metal_rust/green_metal_rust_diffuse1K.png"
+dest_files=["res://.godot/imported/green_metal_rust_diffuse1K.png-f5ec7be631cab0a14fdf7930a01e0091.s3tc.ctex"]
 
 [params]
 

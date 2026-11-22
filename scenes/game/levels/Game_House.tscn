@@ -1,8 +1,8 @@
-[gd_scene load_steps=39 format=3 uid="uid://ciygq767tfjf6"]
+[gd_scene load_steps=42 format=3 uid="uid://ciygq767tfjf6"]
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_ekcrl"]
 [ext_resource type="Environment" uid="uid://6t3omeqlldd" path="res://resoursces/Test_Environment/House_Env.tres" id="1_fsyj8"]
-[ext_resource type="PackedScene" uid="uid://d1lai0g2csb" path="res://assets/models/World/Inside/House/House_inside.glb" id="2_ekcrl"]
+[ext_resource type="PackedScene" uid="uid://dxoky48fi25d0" path="res://assets/models/World/Inside/House/House_inside.glb" id="2_ekcrl"]
 [ext_resource type="PackedScene" uid="uid://ckcj7xrqnj5y2" path="res://assets/models/Items/Lamp/Lantern.glb" id="3_vnf7m"]
 [ext_resource type="Material" uid="uid://5d4132havb47" path="res://assets/materials/metal_atlas.tres" id="4_4ifqm"]
 [ext_resource type="Script" uid="uid://63vcxguukpdd" path="res://scripts/interactables/Common/Door.gd" id="4_s5yin"]
@@ -11,13 +11,16 @@
 [ext_resource type="Material" uid="uid://b428fmd5s7s1o" path="res://assets/materials/clocks_face.tres" id="5_laxah"]
 [ext_resource type="Script" uid="uid://cbijntyg5k1wy" path="res://scripts/interactables/House_Inside/clock.gd" id="6_ekcrl"]
 [ext_resource type="Material" uid="uid://dw62bivt2t2or" path="res://assets/materials/bark.tres" id="8_0o18y"]
+[ext_resource type="Material" uid="uid://cs4xfbjlbuqtb" path="res://assets/materials/carpet.tres" id="8_357fn"]
 [ext_resource type="Material" uid="uid://bld7sf8u2jlm3" path="res://assets/materials/dark_wooden_planks.tres" id="8_nkbct"]
+[ext_resource type="Material" uid="uid://bncbxv5lxscqy" path="res://assets/materials/carpet_door.tres" id="9_43vob"]
 [ext_resource type="Material" uid="uid://mo5us47i167b" path="res://assets/materials/snow.tres" id="9_kyp6l"]
 [ext_resource type="Material" uid="uid://dr0y7lny0r645" path="res://assets/materials/window_inside.tres" id="10_iqc42"]
 [ext_resource type="Material" uid="uid://c7v4dyh2rdj0j" path="res://assets/materials/window_outside.tres" id="11_kyp6l"]
 [ext_resource type="Material" uid="uid://dros0qdsu5311" path="res://assets/materials/wood_classic.tres" id="11_nkbct"]
 [ext_resource type="Material" uid="uid://bejgo7xmydjn" path="res://assets/materials/veneer.tres" id="13_vb6mh"]
 [ext_resource type="Material" uid="uid://dvy6y4x6psoiu" path="res://assets/materials/glass.tres" id="16_mh7j3"]
+[ext_resource type="Material" uid="uid://da35ulsgf372g" path="res://assets/materials/green_metal_rust.tres" id="17_cl2ru"]
 [ext_resource type="Script" uid="uid://b3ijcgtw13s0b" path="res://scripts/interactables/House_Inside/bed.gd" id="17_iqc42"]
 [ext_resource type="Script" uid="uid://cxunytjsv62e1" path="res://scripts/interactables/House_Inside/fireplace.gd" id="18_nkbct"]
 [ext_resource type="Script" uid="uid://chha8s8qlp1wj" path="res://scripts/items/item_spawn_point.gd" id="20_7u4ct"]
@@ -26,6 +29,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igj70"]
 albedo_texture = ExtResource("4_vmdak")
+roughness = 0.7
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wdxgx"]
 size = Vector3(5.19238, 0.001, 3.60193)
@@ -78,10 +82,6 @@ level_id = &"game_house"
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_fsyj8")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-light_color = Color(0.662745, 0.776471, 0.909804, 1)
-light_energy = 0.25
-
 [node name="Static" type="Node3D" parent="."]
 
 [node name="House_inside" parent="Static" instance=ExtResource("2_ekcrl")]
@@ -95,12 +95,19 @@ surface_material_override/1 = ExtResource("4_4ifqm")
 surface_material_override/0 = SubResource("StandardMaterial3D_igj70")
 surface_material_override/1 = ExtResource("5_igj70")
 
-[node name="Chair" parent="Static/House_inside" index="2"]
+[node name="Carpet" parent="Static/House_inside" index="3"]
+surface_material_override/0 = ExtResource("8_357fn")
+
+[node name="Carpet_door" parent="Static/House_inside" index="4"]
+surface_material_override/0 = ExtResource("9_43vob")
+
+[node name="Chair" parent="Static/House_inside" index="5"]
 surface_material_override/0 = ExtResource("5_igj70")
 
 [node name="Clocks carcase" parent="Static/House_inside/Clocks" index="0"]
 surface_material_override/0 = ExtResource("5_laxah")
 surface_material_override/1 = ExtResource("4_4ifqm")
+surface_material_override/2 = ExtResource("16_mh7j3")
 
 [node name="Fireplace_carcase" parent="Static/House_inside/Fireplace" index="0"]
 surface_material_override/0 = ExtResource("4_4ifqm")
@@ -115,12 +122,13 @@ surface_material_override/1 = ExtResource("4_4ifqm")
 [node name="Roof" parent="Static/House_inside/House" index="1"]
 surface_material_override/0 = ExtResource("8_nkbct")
 surface_material_override/1 = ExtResource("4_4ifqm")
+surface_material_override/2 = ExtResource("4_4ifqm")
 
 [node name="Snow_on_roof" parent="Static/House_inside/House" index="2"]
 surface_material_override/0 = ExtResource("9_kyp6l")
 
 [node name="Stairs" parent="Static/House_inside/House" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0973899, -0.666074, 1.45113)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0973899, -0.666074, 1.5414)
 surface_material_override/0 = ExtResource("8_0o18y")
 
 [node name="Walls_&_windows" parent="Static/House_inside/House" index="4"]
@@ -128,8 +136,23 @@ surface_material_override/0 = ExtResource("11_kyp6l")
 surface_material_override/1 = ExtResource("10_iqc42")
 surface_material_override/2 = ExtResource("8_nkbct")
 surface_material_override/3 = ExtResource("11_nkbct")
+surface_material_override/4 = ExtResource("16_mh7j3")
 
-[node name="Table" parent="Static/House_inside" index="6"]
+[node name="Locker_base" parent="Static/House_inside/Locker" index="0"]
+transform = Transform3D(3.76509, 0, 0, 0, 3.76509, 0, 0, 0, 3.76509, 0.331902, -0.768092, -0.341802)
+surface_material_override/0 = ExtResource("17_cl2ru")
+
+[node name="Locker_door" parent="Static/House_inside/Locker" index="1"]
+transform = Transform3D(3.76509, 0, 0, 0, 3.76509, 0, 0, 0, 3.76509, -0.331902, 0.768093, 0.341803)
+surface_material_override/0 = ExtResource("17_cl2ru")
+
+[node name="Shelf1" parent="Static/House_inside" index="10"]
+surface_material_override/0 = ExtResource("11_nkbct")
+
+[node name="Shelf2" parent="Static/House_inside" index="11"]
+surface_material_override/0 = ExtResource("11_nkbct")
+
+[node name="Table" parent="Static/House_inside" index="12"]
 surface_material_override/0 = ExtResource("5_igj70")
 
 [node name="Wood1" parent="Static/House_inside/Wood_for_fireplace" index="0"]
@@ -216,17 +239,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4995, 0.904907, 0.0772095)
 shape = SubResource("BoxShape3D_p2jwk")
 
 [node name="Lantern" parent="Static" instance=ExtResource("3_vnf7m")]
-transform = Transform3D(0.981627, 0, 0.190809, 0, 1, 0, -0.190809, 0, 0.981627, -1.17843, 1.11515, -2.32595)
+transform = Transform3D(0.981627, 0, 0.190809, 0, 1, 0, -0.190809, 0, 0.981627, -1.17843, 1.11515, -2.11366)
 
 [node name="Lantern" parent="Static/Lantern" index="0"]
+transform = Transform3D(1, 0, 1.49012e-08, 0, 1, 0, -1.49012e-08, 0, 1, 0, 0, 0)
 surface_material_override/0 = ExtResource("4_4ifqm")
 surface_material_override/1 = ExtResource("16_mh7j3")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Static/Lantern"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00911725, 0)
 light_color = Color(1, 0.713726, 0.431373, 1)
-light_energy = 0.4
-light_size = 0.039
+light_energy = 0.5
+light_size = 0.015
 shadow_enabled = true
 shadow_opacity = 0.75
 shadow_blur = 7.0

@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ik0t8720ocqq"
-path.s3tc="res://.godot/imported/House_inside_snow_normal2K.png-86a6536abdb134c183b8d221307fc229.s3tc.ctex"
+uid="uid://dnm8idagpar08"
+path.s3tc="res://.godot/imported/green_metal_rust_normal1K.png-4caed4ef68eede2d8b5c659a07d1f323.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "3188da907776797f29134b7ab51697df"
-}
 
 [deps]
 
-source_file="res://assets/models/World/Inside/House/House_inside_snow_normal2K.png"
-dest_files=["res://.godot/imported/House_inside_snow_normal2K.png-86a6536abdb134c183b8d221307fc229.s3tc.ctex"]
+source_file="res://assets/textures/For_objects/green_metal_rust/green_metal_rust_normal1K.png"
+dest_files=["res://.godot/imported/green_metal_rust_normal1K.png-4caed4ef68eede2d8b5c659a07d1f323.s3tc.ctex"]
 
 [params]
 
@@ -28,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://assets/models/World/Inside/House/House_inside_snow_normal2K.png"
+roughness/src_normal="res://assets/textures/For_objects/green_metal_rust/green_metal_rust_normal1K.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
