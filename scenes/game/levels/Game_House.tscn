@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://ciygq767tfjf6"]
+[gd_scene load_steps=39 format=3 uid="uid://ciygq767tfjf6"]
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_ekcrl"]
 [ext_resource type="Environment" uid="uid://6t3omeqlldd" path="res://resoursces/Test_Environment/House_Env.tres" id="1_fsyj8"]
@@ -17,6 +17,7 @@
 [ext_resource type="Material" uid="uid://c7v4dyh2rdj0j" path="res://assets/materials/window_outside.tres" id="11_kyp6l"]
 [ext_resource type="Material" uid="uid://dros0qdsu5311" path="res://assets/materials/wood_classic.tres" id="11_nkbct"]
 [ext_resource type="Material" uid="uid://bejgo7xmydjn" path="res://assets/materials/veneer.tres" id="13_vb6mh"]
+[ext_resource type="Material" uid="uid://dvy6y4x6psoiu" path="res://assets/materials/glass.tres" id="16_mh7j3"]
 [ext_resource type="Script" uid="uid://b3ijcgtw13s0b" path="res://scripts/interactables/House_Inside/bed.gd" id="17_iqc42"]
 [ext_resource type="Script" uid="uid://cxunytjsv62e1" path="res://scripts/interactables/House_Inside/fireplace.gd" id="18_nkbct"]
 [ext_resource type="Script" uid="uid://chha8s8qlp1wj" path="res://scripts/items/item_spawn_point.gd" id="20_7u4ct"]
@@ -219,11 +220,16 @@ transform = Transform3D(0.981627, 0, 0.190809, 0, 1, 0, -0.190809, 0, 0.981627, 
 
 [node name="Lantern" parent="Static/Lantern" index="0"]
 surface_material_override/0 = ExtResource("4_4ifqm")
+surface_material_override/1 = ExtResource("16_mh7j3")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Static/Lantern"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00911725, 0)
 light_color = Color(1, 0.713726, 0.431373, 1)
-light_energy = 0.238
+light_energy = 0.4
+light_size = 0.039
+shadow_enabled = true
+shadow_opacity = 0.75
+shadow_blur = 7.0
 
 [node name="Bed" type="StaticBody3D" parent="Static"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43632, 0.269622, 0.278674)
