@@ -1,7 +1,7 @@
 [gd_scene load_steps=34 format=3 uid="uid://dyc7w02ih3mnb"]
 
 [ext_resource type="Environment" uid="uid://dt66w20wbkija" path="res://resoursces/Test_Environment/new_environment.tres" id="1_1kppg"]
-[ext_resource type="PackedScene" uid="uid://cnsng1b1u1hne" path="res://assets/models/World/Outside/House/House_outside.glb" id="1_bvopx"]
+[ext_resource type="PackedScene" uid="uid://dwiqjykcux5bf" path="res://assets/models/World/Outside/House/House_outside.glb" id="1_bvopx"]
 [ext_resource type="PackedScene" uid="uid://b46gyibxttoeu" path="res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb" id="2_1kppg"]
 [ext_resource type="Material" uid="uid://bld7sf8u2jlm3" path="res://assets/materials/dark_wooden_planks.tres" id="3_iqecb"]
 [ext_resource type="PackedScene" uid="uid://dp40v8y5bk1tp" path="res://assets/models/World/Outside/Woodshed/Woodshed.glb" id="3_tq0kw"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_ekcrl"]
 [ext_resource type="Environment" uid="uid://6t3omeqlldd" path="res://resoursces/Test_Environment/House_Env.tres" id="1_fsyj8"]
-[ext_resource type="PackedScene" uid="uid://dxoky48fi25d0" path="res://assets/models/World/Inside/House/House_inside.glb" id="2_ekcrl"]
+[ext_resource type="PackedScene" uid="uid://cdeae5mislyqi" path="res://assets/models/World/Inside/House/House_inside.glb" id="2_ekcrl"]
 [ext_resource type="PackedScene" uid="uid://ckcj7xrqnj5y2" path="res://assets/models/Items/Lamp/Lantern.glb" id="3_vnf7m"]
 [ext_resource type="Material" uid="uid://5d4132havb47" path="res://assets/materials/metal_atlas.tres" id="4_4ifqm"]
 [ext_resource type="Script" uid="uid://63vcxguukpdd" path="res://scripts/interactables/Common/Door.gd" id="4_s5yin"]

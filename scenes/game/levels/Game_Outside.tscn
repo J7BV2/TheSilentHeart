@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_12krm"]
 [ext_resource type="Environment" uid="uid://dt66w20wbkija" path="res://resoursces/Test_Environment/new_environment.tres" id="1_j54u8"]
-[ext_resource type="PackedScene" uid="uid://cnsng1b1u1hne" path="res://assets/models/World/Outside/House/House_outside.glb" id="2_12krm"]
+[ext_resource type="PackedScene" uid="uid://dwiqjykcux5bf" path="res://assets/models/World/Outside/House/House_outside.glb" id="2_12krm"]
 [ext_resource type="PackedScene" uid="uid://b46gyibxttoeu" path="res://assets/models/World/Outside/Chopping_Log/Chopping_log.glb" id="3_uwe3p"]
 [ext_resource type="Material" uid="uid://bld7sf8u2jlm3" path="res://assets/materials/dark_wooden_planks.tres" id="4_46t1j"]
 [ext_resource type="PackedScene" uid="uid://dp40v8y5bk1tp" path="res://assets/models/World/Outside/Woodshed/Woodshed.glb" id="4_e3m2f"]

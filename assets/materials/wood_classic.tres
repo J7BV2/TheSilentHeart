@@ -3,5 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://b2y0ah1oxkbi0" path="res://assets/textures/For_objects/wood_classic/wood_classic_diffuse2K.png" id="1_vdwtd"]
 
 [resource]
+cull_mode = 2
 albedo_texture = ExtResource("1_vdwtd")
 roughness = 0.5
