@@ -21,6 +21,7 @@ boot_splash/minimum_display_time=1300
 
 InterfaceManager="*res://scripts/systems/interface_manager.gd"
 ItemRegistry="*res://scripts/systems/item_registry.gd"
+FireplaceState="*res://scripts/systems/fireplace_state.gd"
 
 [display]
 

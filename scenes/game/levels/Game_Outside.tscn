@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://du47kgra6lxgy"]
+[gd_scene load_steps=39 format=3 uid="uid://du47kgra6lxgy"]
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_12krm"]
 [ext_resource type="Environment" uid="uid://dt66w20wbkija" path="res://resoursces/Test_Environment/new_environment.tres" id="1_j54u8"]
@@ -21,6 +21,8 @@
 [ext_resource type="Script" uid="uid://car4cwmfgf4bb" path="res://scripts/interactables/Game_Outside/chopping_log.gd" id="16_46t1j"]
 [ext_resource type="Script" uid="uid://bjo0k4lhg16jf" path="res://scripts/interactables/Game_Outside/woodshed.gd" id="17_sifkl"]
 [ext_resource type="Resource" uid="uid://csmsh1rrj3ek5" path="res://resoursces/items/log.tres" id="19_s5gnc"]
+[ext_resource type="Script" uid="uid://chha8s8qlp1wj" path="res://scripts/items/item_spawn_point.gd" id="22_3bag7"]
+[ext_resource type="Resource" uid="uid://d3nw245tubc34" path="res://resoursces/items/tinder.tres" id="23_phcn2"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7e7b0"]
 emission_shape_offset = Vector3(1, -0.2, 0)
@@ -356,6 +358,26 @@ shape = SubResource("BoxShape3D_xrap4")
 
 [node name="FromHouse" type="Marker3D" parent="SpawnPoints"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.28342, 7.46602, -1.71315)
+
+[node name="ItemSpawnPoints" type="Node3D" parent="."]
+
+[node name="Axe" type="Node3D" parent="ItemSpawnPoints"]
+
+[node name="Tinder" type="Node3D" parent="ItemSpawnPoints"]
+
+[node name="TinderSpawn4" type="Marker3D" parent="ItemSpawnPoints/Tinder"]
+transform = Transform3D(0.620923, -0.00642666, -0.783845, 0.0103496, 0.999947, 0, 0.783803, -0.0081125, 0.620956, 1.71914, 8.84147, -6.34568)
+script = ExtResource("22_3bag7")
+item_data = ExtResource("23_phcn2")
+unique_instance_id = &"tinder_story_01"
+spawn_option_id = &"tinder_spawn_4"
+
+[node name="TinderSpawn5" type="Marker3D" parent="ItemSpawnPoints/Tinder"]
+transform = Transform3D(0.516608, 0, -0.856222, 0, 1, 0, 0.856222, 0, 0.516608, 5.69814, 8.04114, -3.52543)
+script = ExtResource("22_3bag7")
+item_data = ExtResource("23_phcn2")
+unique_instance_id = &"tinder_story_01"
+spawn_option_id = &"tinder_spawn_5"
 
 [editable path="World/House_outside"]
 [editable path="World/Chopping_log"]

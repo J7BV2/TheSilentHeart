@@ -33,7 +33,7 @@ func get_prompt_text() -> String:
 	if item_data == null:
 		return "Предмет"
 
-	return "Подобрать: " + item_data.display_name + "\nЛКМ"
+	return "Подобрать:\n" + item_data.display_name
 
 
 func can_interact(actor: Node) -> bool:

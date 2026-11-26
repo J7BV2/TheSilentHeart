@@ -1,0 +1,110 @@
+[gd_scene load_steps=20 format=3 uid="uid://dd6lk4dyxlind"]
+
+[ext_resource type="Texture2D" uid="uid://be0ansu5uawpq" path="res://assets/ui/interactables/chopping_log/LogLabel.png" id="1_rhmeh"]
+[ext_resource type="Script" uid="uid://c3txwe02bkv7p" path="res://scripts/ui/game_outside/chopping_log_ui.gd" id="1_sw2bd"]
+[ext_resource type="Texture2D" uid="uid://c4164cebcnymr" path="res://assets/ui/interactables/chopping_log/confirm_buttonFocus.png" id="2_cj73o"]
+[ext_resource type="Texture2D" uid="uid://ctym53e5eovq1" path="res://assets/ui/interactables/chopping_log/ButtonLogNull.png" id="2_sw2bd"]
+[ext_resource type="Texture2D" uid="uid://cvmekjb1t18vf" path="res://assets/ui/interactables/chopping_log/confirm_buttonPressed.png" id="3_5bnqv"]
+[ext_resource type="Texture2D" uid="uid://cabxhemvcdign" path="res://assets/ui/interactables/chopping_log/ButtonLogNormal.png" id="3_vivp0"]
+[ext_resource type="Texture2D" uid="uid://r1c7h1x1t55m" path="res://assets/ui/interactables/chopping_log/confirm_buttonNormal.png" id="4_ky1pi"]
+[ext_resource type="Texture2D" uid="uid://cbbrd0vnwuv8b" path="res://assets/ui/interactables/bed/small_buttonFocus.png" id="5_pg8cl"]
+[ext_resource type="Texture2D" uid="uid://buhurb1ahpkgm" path="res://assets/ui/interactables/bed/small_buttonPressed.png" id="6_8m4w5"]
+[ext_resource type="Texture2D" uid="uid://bthuddqloxooh" path="res://assets/ui/interactables/bed/small_buttonNormal.png" id="7_rhmeh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i24to"]
+texture = ExtResource("1_rhmeh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s47s3"]
+texture = ExtResource("2_sw2bd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1qlfq"]
+texture = ExtResource("3_vivp0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pg8cl"]
+texture = ExtResource("2_cj73o")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8m4w5"]
+texture = ExtResource("3_5bnqv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rhmeh"]
+texture = ExtResource("4_ky1pi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sw2bd"]
+texture = ExtResource("5_pg8cl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vivp0"]
+texture = ExtResource("6_8m4w5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_idliy"]
+texture = ExtResource("7_rhmeh")
+
+[node name="ChoppingLog" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sw2bd")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" type="Control" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="MainLabel" type="Label" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -261.0
+offset_top = -405.0
+offset_right = 263.0
+offset_bottom = -155.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_i24to")
+
+[node name="Cell" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -113.0
+offset_top = -76.0
+offset_right = 115.0
+offset_bottom = 148.0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_s47s3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1qlfq")
+
+[node name="ConfirmButton" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -138.0
+offset_top = 287.0
+offset_right = 141.0
+offset_bottom = 349.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxTexture_pg8cl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8m4w5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rhmeh")
+text = "Подтвердить"
+
+[node name="CancelButton" type="Button" parent="CenterContainer/Window"]
+layout_mode = 1
+offset_left = 809.0
+offset_top = 469.0
+offset_right = 893.0
+offset_bottom = 512.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_sw2bd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vivp0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_idliy")
+text = "X"
+
+[node name="LabelPromt" type="Label" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -200.0
+offset_top = 175.0
+offset_right = 200.0
+offset_bottom = 248.0
+horizontal_alignment = 1
+vertical_alignment = 1

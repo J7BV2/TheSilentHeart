@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dwb45ghq1rvid"]
+
+[ext_resource type="Texture2D" uid="uid://ulvm74oiyxcu" path="res://assets/textures/For_inventory/box_of_matches1.png" id="1_7h47i"]
+[ext_resource type="PackedScene" uid="uid://ja55uf6i08ad" path="res://assets/models/Items/Box_Of_Matches/Box_of_matches.glb" id="2_s5s4v"]
+[ext_resource type="Script" uid="uid://bwdbjywspunjj" path="res://scripts/items/item_data.gd" id="3_wqlm8"]
+
+[resource]
+script = ExtResource("3_wqlm8")
+item_id = &"matches"
+display_name = "Корбок спичек"
+description = ""
+icon = ExtResource("1_7h47i")
+model_scene = ExtResource("2_s5s4v")
+world_scale = Vector3(1, 1, 1)
+preview_scale = Vector3(1, 1, 1)
+preview_offset = Vector3(0, 0, 0)
+possible_spawn_ids = ["matches_spawn_1", "matches_spawn_2"]

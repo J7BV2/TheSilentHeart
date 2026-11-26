@@ -1,0 +1,168 @@
+[gd_scene load_steps=24 format=3 uid="uid://c88lmrvuhysg3"]
+
+[ext_resource type="Script" uid="uid://esdnxp1m3bwh" path="res://scripts/ui/game_inside/fireplace_add_ui.gd" id="1_d5t4p"]
+[ext_resource type="Texture2D" uid="uid://cl0jw80eopbdp" path="res://assets/ui/interactables/fireplace/Add/Shadow.png" id="1_sa6ad"]
+[ext_resource type="Texture2D" uid="uid://p72sogf3j6si" path="res://assets/ui/interactables/bed/confirm_buttonFocus.png" id="2_rnq6e"]
+[ext_resource type="Texture2D" uid="uid://n1fhc4aoc2f1" path="res://assets/ui/interactables/bed/confirm_buttonPressed.png" id="3_d5t4p"]
+[ext_resource type="Texture2D" uid="uid://crujbkmn7sts8" path="res://assets/ui/interactables/bed/confirmbutton.png" id="4_vx3ch"]
+[ext_resource type="Texture2D" uid="uid://cbbrd0vnwuv8b" path="res://assets/ui/interactables/bed/small_buttonFocus.png" id="5_1x5d4"]
+[ext_resource type="Texture2D" uid="uid://buhurb1ahpkgm" path="res://assets/ui/interactables/bed/small_buttonPressed.png" id="6_kpa1b"]
+[ext_resource type="Texture2D" uid="uid://bthuddqloxooh" path="res://assets/ui/interactables/bed/small_buttonNormal.png" id="7_1mqef"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3xj7r"]
+texture = ExtResource("2_rnq6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oaplt"]
+texture = ExtResource("3_d5t4p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_juvo0"]
+texture = ExtResource("4_vx3ch")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2141h"]
+texture = ExtResource("2_rnq6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p6ekn"]
+texture = ExtResource("3_d5t4p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rt7bt"]
+texture = ExtResource("4_vx3ch")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x84qu"]
+texture = ExtResource("2_rnq6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xcovc"]
+texture = ExtResource("3_d5t4p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gkccj"]
+texture = ExtResource("4_vx3ch")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3c2lv"]
+texture = ExtResource("2_rnq6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3nkfn"]
+texture = ExtResource("3_d5t4p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c2yq8"]
+texture = ExtResource("4_vx3ch")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_54ewj"]
+texture = ExtResource("5_1x5d4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ohwl"]
+texture = ExtResource("6_kpa1b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqpe2"]
+texture = ExtResource("7_1mqef")
+
+[node name="FireplaceAdd" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d5t4p")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" type="Control" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/Window"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -865.0
+offset_top = -456.0
+offset_right = -177.0
+offset_bottom = -298.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sa6ad")
+
+[node name="Duration" type="Label" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -771.0
+offset_top = -442.0
+offset_right = -648.0
+offset_bottom = -381.0
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HeatOutput" type="Label" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -420.0
+offset_top = -442.0
+offset_right = -297.0
+offset_bottom = -381.0
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CellButton1" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -820.0
+offset_top = -127.0
+offset_right = -430.0
+offset_bottom = -52.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_3xj7r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_oaplt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_juvo0")
+
+[node name="CellButton2" type="Button" parent="CenterContainer/Window"]
+visible = false
+layout_mode = 0
+offset_left = -820.0
+offset_top = -23.0
+offset_right = -430.0
+offset_bottom = 52.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_2141h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p6ekn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rt7bt")
+
+[node name="CellButton3" type="Button" parent="CenterContainer/Window"]
+visible = false
+layout_mode = 0
+offset_left = -820.0
+offset_top = 80.0
+offset_right = -430.0
+offset_bottom = 155.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_x84qu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xcovc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gkccj")
+
+[node name="ConfirmButton" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 393.0
+offset_right = 697.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxTexture_3c2lv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3nkfn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_c2yq8")
+text = "Подтвердить"
+
+[node name="CancelButton" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 393.0
+offset_right = 863.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxTexture_54ewj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1ohwl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wqpe2")
+text = "X"

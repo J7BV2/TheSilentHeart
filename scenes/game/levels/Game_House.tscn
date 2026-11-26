@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://ciygq767tfjf6"]
+[gd_scene load_steps=50 format=4 uid="uid://ciygq767tfjf6"]
 
 [ext_resource type="Script" uid="uid://cskm1xp5wvih6" path="res://scripts/systems/game_level.gd" id="1_ekcrl"]
 [ext_resource type="Environment" uid="uid://6t3omeqlldd" path="res://resoursces/Test_Environment/House_Env.tres" id="1_fsyj8"]
@@ -26,10 +26,80 @@
 [ext_resource type="Script" uid="uid://chha8s8qlp1wj" path="res://scripts/items/item_spawn_point.gd" id="20_7u4ct"]
 [ext_resource type="Script" uid="uid://bv6wflw6xs4wx" path="res://scripts/interactables/House_Inside/axe_grinder.gd" id="20_bhjip"]
 [ext_resource type="Resource" uid="uid://yp20v2v33j8l" path="res://resoursces/items/axe.tres" id="21_bhjip"]
+[ext_resource type="Resource" uid="uid://d3nw245tubc34" path="res://resoursces/items/tinder.tres" id="27_43vob"]
+[ext_resource type="Resource" uid="uid://dwb45ghq1rvid" path="res://resoursces/items/boxOfMatches.tres" id="28_cl2ru"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igj70"]
 albedo_texture = ExtResource("4_vmdak")
 roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ohaau"]
+resource_name = "bark1"
+cull_mode = 2
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5lsio"]
+resource_name = "veneer1"
+cull_mode = 2
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5f1jr"]
+_surfaces = [{
+"aabb": AABB(-0.117357, -0.148823, -0.092951, 0.200941, 0.297647, 0.185902),
+"format": 34896613377,
+"index_count": 138,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAgADAAQABAADABkABAAZAAgAAwABABoAAwAaABkACQAIABkACQAZAAcABwAKAAkAGQAGAAcABwAGAAoAGQAaAAYACgAGAAsAGgALAAYACgALAAwADQAMAAsAGgAbAAsADQALABsAGgABAAUAGgAFABsAAAAFAAEADgAFAAAADgAAAA8AHAAbAAUADQAbABwAHAAFAA4ADgAPABAAEQANABwAEgANABEAHQAcAA4AEQAcAB0AEAATAA4AHQAOABMAFAATABAAEgARABUAHQAVABEAEgAVABYAHQAeABUAHgAWABUAEwAeAB0AHgAXABYAFAAXAB4AEwAYAB4AFAAeABgAFAAYABMA"),
+"lods": [0.00144586, PackedByteArray("AAABAAIAAgABAAMAAgADAAQAAAAFAAEAAwABAAYABgABAAUABAADAAcAAwAGAAcABAAHAAgACQAIAAcABwAKAAkABwAGAAoACgAGAAsABgAFAAsACgALAAwADQAMAAsADQALAAUADgAFAAAADQAFAA4ADgAAAA8ADgAPABAAEQANAA4AEgANABEAEAATAA4AEQAOABMAFAATABAAEgARABUAEwAVABEAEgAVABYAFQAXABYAFAAXABUAEwAYABUAFAAVABgAFAAYABMA")],
+"name": "bark1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 31,
+"vertex_data": PackedByteArray("ksHzDyCnAADH2IEnl/IAAEjhYyhi5wAAs/owOP//AAD//zg3ifMAAIe07gzorQAACCBO772hAAAAQpH/NK8AAERrqdaTswAAvUT///OiAABsJjnx95YAAFQBVtVBXgAAmAhB1hVXAABOCKLV5FQAAH++JQ5cpQAAOcFnD+ykAADhwNsOuaIAAAAAGtKRUAAAAwgG1bJSAAC7soAKNaQAADnJEARcUgAANQyCyAAAAAD6E+7LjAMAADc2CKdUEgAAibsAANlLAABAZwDXmMAAAGJFgca2sgAAUSacrtptAAAPLd2vo2MAAIAkm6uPXwAAfS+7o2sPAAA=")
+}, {
+"aabb": AABB(-0.111068, -0.144099, -0.0903729, 0.228425, 0.292923, 0.174277),
+"format": 34896613377,
+"index_count": 54,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAABAAMAAQAEAAUABgACAAEAAQAFAAcABgABAAgAAQAHAAgABgAIAAkACgAIAAcACgAJAAgACgAHAAsACgAMAAkADQAKAAsACgAOAAwADwAKAA0ADgAKABAAEAAKAA8A"),
+"name": "veneer1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 17,
+"vertex_data": PackedByteArray("7aKGCyOsAAD//8wyPHwAAJ+i9wrLqQAAO6MUDHyuAAAgv+kkB/MAACXa/DP//wAA96kAABFUAABQV//VxLsAAJx9F9X9NwAApSiZpcQPAAB+XFP+pyYAAGs1//8IqgAAhgoXywAAAADAGvzwP50AAAAAVNRsVAAAggCU1RpZAABBAPPUxFYAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yxnys"]
+resource_name = "House_inside_Cylinder_039"
+_surfaces = [{
+"aabb": AABB(-0.117357, -0.148823, -0.092951, 0.200941, 0.297647, 0.185902),
+"attribute_data": PackedByteArray("+bWUFWrT6DLtzCg1atM8Se3MRElRuwUQurVcEw+16hQltD8UU7f5DAGPLwibjh8Am47nScqk3/+bjr3/8aTASarHg0njxG7+yIeASMiNIP/ghx/a34ff/z+OSkkqCHtH/gTH/B8AM0kBCt3aAQqE/DhYRinkWDMqhVPFKXZJ2gN4TgwEkFkgK0NXni9yeVlCinc2SLmNNEhajVZC6ccsS4PuD//px9//jfGASzb43//S8U9KNvgsS9Xyhf+0/Sb/dvjzSrz970l2+N//6KS82pyOvNp1xNLaW44f2osF3dq4+EPcRP5K3MzxrNyM95vc5FgzKkNXni+QWSArOFhGKYVTxSm7yJvc3e4m3bq1XBP5tZQVUbsFELq1XBMPteoUJbQ/FA=="),
+"format": 34896613399,
+"index_count": 138,
+"index_data": PackedByteArray("AAABAAIAAAAFAAEAAgABAAMAAgADAAQADAAzADQADAAPADMAMwAPABAAMwAQADUAMwA1ABEAMwARAA0ANAAzAA0ANAANAA4AEgA2ABQAEgAWADYAFQAUADYAFQA2ABMAFwA3ABkAFwAaADcANwAaABsANwAbABgALwA4ADkALwAyADgAOQA4ADAAOQAwADEAKwA6ADsAKwAuADoAOwA6ACwAOwAsAC0AHAAdAB4APAAhACIAIwA9AD4AIwAkAD0AJQAkACMAJQAjACYAPwAfACAAPwBAAB8AQQAoACkAQQBCACgAJwBCAEEAJwAqAEIAQwBEAAcAQwBFAEQACAAJAAYACgAJAAgACgALAAkARgBHAEgA"),
+"lods": [0.00144586, PackedByteArray("AAABAAIAAgABAAMAAgADAAQAAAAFAAEABgAFAAAABgAAAAcABgAHAAgACAAJAAYACgAJAAgACgALAAkADAANAA4ADAAPAA0ADQAPABAADQAQABEAEgATABQAFQAUABMAEgAWABMAFwAYABkAFwAaABgAGAAaABsAHAAdAB4AHAAeAB8AHAAfACAAHQAhACIAIwAiACEAIwAkACIAJQAkACMAJQAjACYAJwAoACkAJwAqACgAKwAsAC0AKwAuACwALwAwADEALwAyADAA")],
+"material": SubResource("StandardMaterial3D_ohaau"),
+"name": "bark1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 73,
+"vertex_data": PackedByteArray("ksHzDyCnBOfH2IEnl/Jp50jhYyhi52zns/owOP//1ef//zg3ifPU54e07gzorQTnf74lDlyl7ec5wWcP7KTE5+HA2w65ogfmu7KACjWkk+U5yRAEXFJf5Ym7AADZS2Dls/owOP//T+gIIE7vvaHh5wBCkf80r2box9iBJ5fy3eeHtO4M6K0Z6FQBVtVBXvDn//84N4nzAvMAQpH/NK9b80RrqdaTsy7zvUT///OiW/Oz+jA4//8C8znJEARcUrD7NQyCyAAAj/uJuwAA2Uuw+zc2CKdUEqD7+hPuy4wDj/sDCAbVslLAzU4IotXkVMDNAAAa0pFQwM01DILIAADQyfoT7suMA9DJmAhB1hVXR81UAVbVQV5HzWwmOfH3lu/HCCBO772h6ccAQpH/NK/7xL1E///zovvEu7KACjWkqeo1DILIAACZ6QAAGtKRUJnpibsAANlLqOoAABrSkVCA6H++JQ5cpRvpu7KACjWkGulOCKLV5FSA6E4IotXkVK/th7TuDOitpe9/viUOXKWm71QBVtVBXq/tYkWBxray3+dAZwDXmMBb6FEmnK7abQboQGcA15jALvN9L7ujaw+f+1EmnK7abaTuDy3dr6NjpO4PLd2vo2PV6IAkm6uPX9XoTgii1eRUR81UAVbVQV7dypgIQdYVV93KAwgG1bJS0MkAABrSkVDQyYAkm6uPXyTqfS+7o2sPI+p/viUOXKVs55LB8w8gp4rnh7TuDOitVed/viUOXKUW6znBZw/spBbr4cDbDrmiFutZHw/bhB7i2n0e4NqlHbLapB2y2lofENsgJN/WFBwg3AAjWNqyIjvbiCLF24kix9s+bViGqV52gSZt84b4XoKB8VMufXpTdnzprPOTxq0RlFitApTHrRGU6azzkwEavlQRGiFVARq+VAka8FQRGiFVtNxXprTcV6a03FemHdxtqRzcbqmg2yyqoNssqp7aobCh2qCwvdr/sMDa/rBuQk92ikLwdIpC8HRtQlF2SWqNhGxy0YhsctKISWqNhIU17G5FMultRjLobYU17G7GXneBMm2lhrZT0XxXrQKUCRrvVN4zdG7eM3RuT26mhlBuqIag2yyqRtpSsETaUrAi3GypI9xsqX5CnnV/Qp117hvv2/sbANzkG+LbnhxZ154cWdeeHFnX")
+}, {
+"aabb": AABB(-0.111068, -0.144099, -0.0903729, 0.228425, 0.292923, 0.174277),
+"attribute_data": PackedByteArray("D7XqFKGONkkltD8UAY8vCPm1lBXtzCg17cxESXZJdUjghx/adkkf2siHgEh2SSD/34ff/yoIe0c1Sd7aAQrd2jZJNEk2Sd//AQqE/JBZICu5je4DcnlZQlqNVkLkWDMqOFhGKXhODAQ="),
+"format": 34896613399,
+"index_count": 54,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAAAEAAEABQABAAQAAQAFAAYABwAIAAkABwAKAAgACwAJAAgACwAIAAwADQAOAA8ADQAQAA4AEQAPAA4AEQASAA8AEwAUABUAFQAUABYAFwAUABMAGAAUABcAFAAYABkA"),
+"material": SubResource("StandardMaterial3D_5lsio"),
+"name": "veneer1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 26,
+"vertex_data": PackedByteArray("7aKGCyOsxOn//8wyPHy46Z+i9wrLqcPp96kAABFUw+k7oxQMfK7F6SC/6SQH86XpJdr8M///g+n//8wyPHzE8lBX/9XEu8DynH0X1f03wPIl2vwz///E8n5cU/6nJrzyazX//wiqvPL3qQAAEVQg+5x9F9X9Nyb7pSiZpcQPJvv//8wyPHwg+35cU/6nJiv7hgoXywAAK/uCAJTVGlnLy35cU/6nJrXKwBr88D+dcMprNf//CKqPyUEA89TEVhfMAABU1GxUY8uGChfLAACWyo0dbNjjHVTYhx1v2Igdbti/HVXYNx5F2HgeT9hIrNqTPazYkz2s2JNIrNqTM6zWkzOs1pNEGmhWRBpjVkQaY1ZEGmhWQxpcVkMaXFYA2iKxStp3sHvaw6/f2n2u8dk4sRLaDLE22tuw")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5f1jr")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wdxgx"]
 size = Vector3(5.19238, 0.001, 3.60193)
@@ -58,6 +128,13 @@ size = Vector3(1.35767, 0.76123, 0.953125)
 [sub_resource type="BoxShape3D" id="BoxShape3D_vb6mh"]
 size = Vector3(0.620575, 0.771362, 0.31543)
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cl2ru"]
+height = 0.416428
+radius = 0.097168
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_357fn"]
+size = Vector3(0.78125, 2.04306, 0.601944)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_60y21"]
 size = Vector3(1.0083, 2.00562, 0.0885127)
 
@@ -72,7 +149,7 @@ size = Vector3(2.48096, 0.71872, 1.27051)
 size = Vector3(1.26542, 0.905548, 0.988464)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bhjip"]
-size = Vector3(0.307223, 0.190445, 0.320661)
+size = Vector3(0.307223, 0.190445, 0.328299)
 
 [node name="Game_House" type="Node3D"]
 script = ExtResource("1_ekcrl")
@@ -155,35 +232,59 @@ surface_material_override/0 = ExtResource("11_nkbct")
 [node name="Table" parent="Static/House_inside" index="12"]
 surface_material_override/0 = ExtResource("5_igj70")
 
-[node name="Wood1" parent="Static/House_inside/Wood_for_fireplace" index="0"]
+[node name="Wood11" type="MeshInstance3D" parent="Static/House_inside/Wood_for_fireplace" index="0"]
+transform = Transform3D(-0.111285, -0.436802, 0.892648, -0.780542, -0.517551, -0.350564, 0.615117, -0.735762, -0.283347, 0.0134964, 0.0734877, 0.00482893)
+visible = false
+mesh = SubResource("ArrayMesh_yxnys")
+skeleton = NodePath("")
 surface_material_override/0 = ExtResource("8_0o18y")
 surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Wood2" parent="Static/House_inside/Wood_for_fireplace" index="1"]
+[node name="Wood9" type="MeshInstance3D" parent="Static/House_inside/Wood_for_fireplace" index="1"]
+transform = Transform3D(0.947884, -0.0629593, 0.312332, -0.31378, -0.0143479, 0.949387, -0.0552915, -0.997913, -0.0333554, -0.083688, 0.0807043, 0.0499816)
+visible = false
+mesh = SubResource("ArrayMesh_yxnys")
+skeleton = NodePath("")
 surface_material_override/0 = ExtResource("8_0o18y")
 surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Wood3" parent="Static/House_inside/Wood_for_fireplace" index="2"]
+[node name="Wood10" type="MeshInstance3D" parent="Static/House_inside/Wood_for_fireplace" index="2"]
+transform = Transform3D(-0.245288, -0.968793, -0.0356925, 0.167952, -0.0062056, -0.985776, 0.954791, -0.247794, 0.164233, 0.0944397, 0.100635, -0.033823)
+visible = false
+mesh = SubResource("ArrayMesh_yxnys")
+skeleton = NodePath("")
 surface_material_override/0 = ExtResource("8_0o18y")
 surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Wood4" parent="Static/House_inside/Wood_for_fireplace" index="3"]
+[node name="Wood1" parent="Static/House_inside/Wood_for_fireplace" index="3"]
 surface_material_override/0 = ExtResource("8_0o18y")
 surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Wood5" parent="Static/House_inside/Wood_for_fireplace" index="4"]
+[node name="Wood2" parent="Static/House_inside/Wood_for_fireplace" index="4"]
 surface_material_override/0 = ExtResource("8_0o18y")
 surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Wood6" parent="Static/House_inside/Wood_for_fireplace" index="5"]
+[node name="Wood3" parent="Static/House_inside/Wood_for_fireplace" index="5"]
 surface_material_override/0 = ExtResource("8_0o18y")
 surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Wood7" parent="Static/House_inside/Wood_for_fireplace" index="6"]
+[node name="Wood4" parent="Static/House_inside/Wood_for_fireplace" index="6"]
 surface_material_override/0 = ExtResource("8_0o18y")
 surface_material_override/1 = ExtResource("13_vb6mh")
 
-[node name="Wood8" parent="Static/House_inside/Wood_for_fireplace" index="7"]
+[node name="Wood5" parent="Static/House_inside/Wood_for_fireplace" index="7"]
+surface_material_override/0 = ExtResource("8_0o18y")
+surface_material_override/1 = ExtResource("13_vb6mh")
+
+[node name="Wood6" parent="Static/House_inside/Wood_for_fireplace" index="8"]
+surface_material_override/0 = ExtResource("8_0o18y")
+surface_material_override/1 = ExtResource("13_vb6mh")
+
+[node name="Wood7" parent="Static/House_inside/Wood_for_fireplace" index="9"]
+surface_material_override/0 = ExtResource("8_0o18y")
+surface_material_override/1 = ExtResource("13_vb6mh")
+
+[node name="Wood8" parent="Static/House_inside/Wood_for_fireplace" index="10"]
 surface_material_override/0 = ExtResource("8_0o18y")
 surface_material_override/1 = ExtResource("13_vb6mh")
 
@@ -269,6 +370,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.00363, 0.339208, -2.10735)
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -0.229797, 0.166138, -0.111353)
 shape = SubResource("BoxShape3D_iqc42")
 
+[node name="FireplaceLight" type="OmniLight3D" parent="Static/Fireplace"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0667565, 0.17528, -0.0431089)
+visible = false
+light_color = Color(1, 0.619608, 0.431373, 1)
+light_energy = 0.5
+light_size = 0.015
+shadow_enabled = true
+
 [node name="Table_Chair" type="StaticBody3D" parent="Static"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.593581, 0.473432, -2.31073)
 
@@ -279,6 +388,17 @@ shape = SubResource("BoxShape3D_kyp6l")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Static/Table_Chair"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.232224, 0.119934, 0.632324)
 shape = SubResource("BoxShape3D_vb6mh")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Static/Table_Chair"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.583675, 0.640961, 0.197358)
+shape = SubResource("CylinderShape3D_cl2ru")
+
+[node name="Locker" type="StaticBody3D" parent="Static"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.23701, 0.346934, 0.306059)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/Locker"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.140869, 0.880356, -0.181114)
+shape = SubResource("BoxShape3D_357fn")
 
 [node name="Interactables" type="Node3D" parent="."]
 
@@ -324,7 +444,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.972418, 0.606849, -2.14707
 script = ExtResource("20_bhjip")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactables/AxeGrinder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100247, 0.286644, 0.221074)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100247, 0.286644, 0.224893)
 shape = SubResource("BoxShape3D_bhjip")
 
 [node name="SpawnPoints" type="Node3D" parent="."]
@@ -337,26 +457,67 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0903096, 0.342944, 0.3073)
 
 [node name="ItemSpawnPoints" type="Node3D" parent="."]
 
-[node name="AxeSpawn1" type="Marker3D" parent="ItemSpawnPoints"]
+[node name="Axe" type="Node3D" parent="ItemSpawnPoints"]
+
+[node name="AxeSpawn1" type="Marker3D" parent="ItemSpawnPoints/Axe"]
 transform = Transform3D(-0.5, -0.866025, 3.78552e-08, 0, -4.37114e-08, -1, 0.866025, -0.5, 2.18557e-08, -0.544232, 0.915014, -2.20358)
 script = ExtResource("20_7u4ct")
 item_data = ExtResource("21_bhjip")
 unique_instance_id = &"axe_story_01"
 spawn_option_id = &"axe_spawn_1"
 
-[node name="AxeSpawn2" type="Marker3D" parent="ItemSpawnPoints"]
+[node name="AxeSpawn2" type="Marker3D" parent="ItemSpawnPoints/Axe"]
 transform = Transform3D(-0.99906, 0.043314, -0.00183317, 0.0396791, 0.896544, -0.441174, -0.0174654, -0.440832, -0.89742, -1.82088, 0.422187, -2.5817)
 script = ExtResource("20_7u4ct")
 item_data = ExtResource("21_bhjip")
 unique_instance_id = &"axe_story_01"
 spawn_option_id = &"axe_spawn_2"
 
-[node name="AxeSpawn3" type="Marker3D" parent="ItemSpawnPoints"]
+[node name="AxeSpawn3" type="Marker3D" parent="ItemSpawnPoints/Axe"]
 transform = Transform3D(-0.997782, -0.0231801, -0.0624105, -0.0475167, 0.904551, 0.423708, 0.0466319, 0.425733, -0.903646, 0.833535, 0.412568, 0.827791)
 script = ExtResource("20_7u4ct")
 item_data = ExtResource("21_bhjip")
 unique_instance_id = &"axe_story_01"
 spawn_option_id = &"axe_spawn_3"
+
+[node name="Tinder" type="Node3D" parent="ItemSpawnPoints"]
+
+[node name="TinderSpawn1" type="Marker3D" parent="ItemSpawnPoints/Tinder"]
+transform = Transform3D(0.958093, 0, 0.286458, 0, 1, 0, -0.286458, 0, 0.958093, -3.46635, 0.247366, -1.30198)
+script = ExtResource("20_7u4ct")
+item_data = ExtResource("27_43vob")
+unique_instance_id = &"tinder_story_01"
+spawn_option_id = &"tinder_spawn_1"
+
+[node name="TinderSpawn2" type="Marker3D" parent="ItemSpawnPoints/Tinder"]
+transform = Transform3D(0.385101, 0, 0.922875, 0, 1, 0, -0.922875, 0, 0.385101, -1.16393, 0.936378, -2.40143)
+script = ExtResource("20_7u4ct")
+item_data = ExtResource("27_43vob")
+unique_instance_id = &"tinder_story_01"
+spawn_option_id = &"tinder_spawn_2"
+
+[node name="TinderSpawn3" type="Marker3D" parent="ItemSpawnPoints/Tinder"]
+transform = Transform3D(-0.445901, 0, -0.895082, 0, 1, 0, 0.895082, 0, -0.445901, -2.21863, 0.264584, -2.372)
+script = ExtResource("20_7u4ct")
+item_data = ExtResource("27_43vob")
+unique_instance_id = &"tinder_story_01"
+spawn_option_id = &"tinder_spawn_3"
+
+[node name="Matches" type="Node3D" parent="ItemSpawnPoints"]
+
+[node name="MatchesSpawn1" type="Marker3D" parent="ItemSpawnPoints/Matches"]
+transform = Transform3D(0.86877, 0, -0.495216, 0, 1, 0, 0.495216, 0, 0.86877, -1.2418, 0.932395, -1.86708)
+script = ExtResource("20_7u4ct")
+item_data = ExtResource("28_cl2ru")
+unique_instance_id = &"matches_story_01"
+spawn_option_id = &"matches_spawn_1"
+
+[node name="MatchesSpawn2" type="Marker3D" parent="ItemSpawnPoints/Matches"]
+transform = Transform3D(0.525353, 0, 0.850884, 0, 1, 0, -0.850884, 0, 0.525353, -0.15111, 0.936035, -2.28052)
+script = ExtResource("20_7u4ct")
+item_data = ExtResource("28_cl2ru")
+unique_instance_id = &"matches_story_01"
+spawn_option_id = &"matches_spawn_2"
 
 [editable path="Static/House_inside"]
 [editable path="Static/Lantern"]

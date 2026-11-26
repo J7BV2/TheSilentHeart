@@ -7,7 +7,7 @@ var is_transitioning: bool = false
 
 
 func get_prompt_text() -> String:
-	return "ДВЕРЬ\nНажмите, чтобы открыть"
+	return "Дверь\nНажмите, чтобы открыть"
 
 
 func can_interact(_actor: Node) -> bool:

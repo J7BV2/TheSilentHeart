@@ -1,0 +1,287 @@
+[gd_scene load_steps=45 format=3 uid="uid://dtnlpp0m8avg5"]
+
+[ext_resource type="Texture2D" uid="uid://cn8iubl0s2rld" path="res://assets/ui/interactables/fireplace/Melt/UI_MeltFireplace.png" id="1_80dl2"]
+[ext_resource type="Script" uid="uid://bk1isgxehimt6" path="res://scripts/ui/game_inside/fireplace_melt_ui.gd" id="1_r32nk"]
+[ext_resource type="Texture2D" uid="uid://c2y6uyhkq2mwn" path="res://assets/ui/interactables/bed/arrow_buttonFocus.png" id="2_dym3x"]
+[ext_resource type="Texture2D" uid="uid://c84h07cnnf2ip" path="res://assets/ui/interactables/bed/arrow_buttonPressed.png" id="3_fmyu6"]
+[ext_resource type="Texture2D" uid="uid://c6gjwi3ur7782" path="res://assets/ui/interactables/bed/arrow_buttonNormal.png" id="4_x5yjj"]
+[ext_resource type="Texture2D" uid="uid://ctym53e5eovq1" path="res://assets/ui/interactables/chopping_log/ButtonLogNull.png" id="5_l78yc"]
+[ext_resource type="Texture2D" uid="uid://krlktpjdnj0o" path="res://assets/ui/player/interface/UI_buttonInventoryNormal.png" id="6_g5xgl"]
+[ext_resource type="Texture2D" uid="uid://cabxhemvcdign" path="res://assets/ui/interactables/chopping_log/ButtonLogNormal.png" id="7_2nh1q"]
+[ext_resource type="Texture2D" uid="uid://p72sogf3j6si" path="res://assets/ui/interactables/bed/confirm_buttonFocus.png" id="8_80dl2"]
+[ext_resource type="Texture2D" uid="uid://n1fhc4aoc2f1" path="res://assets/ui/interactables/bed/confirm_buttonPressed.png" id="9_r32nk"]
+[ext_resource type="Texture2D" uid="uid://crujbkmn7sts8" path="res://assets/ui/interactables/bed/confirmbutton.png" id="10_wxoxy"]
+[ext_resource type="Texture2D" uid="uid://cbbrd0vnwuv8b" path="res://assets/ui/interactables/bed/small_buttonFocus.png" id="11_28l8x"]
+[ext_resource type="Texture2D" uid="uid://buhurb1ahpkgm" path="res://assets/ui/interactables/bed/small_buttonPressed.png" id="12_w7kcv"]
+[ext_resource type="Texture2D" uid="uid://bthuddqloxooh" path="res://assets/ui/interactables/bed/small_buttonNormal.png" id="13_w15o3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_80dl2"]
+texture = ExtResource("2_dym3x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r32nk"]
+texture = ExtResource("3_fmyu6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wxoxy"]
+texture = ExtResource("4_x5yjj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28l8x"]
+texture = ExtResource("5_l78yc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7kcv"]
+texture = ExtResource("6_g5xgl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w15o3"]
+texture = ExtResource("2_dym3x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5278n"]
+texture = ExtResource("3_fmyu6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8vhri"]
+texture = ExtResource("4_x5yjj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28gjt"]
+texture = ExtResource("2_dym3x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6n1mx"]
+texture = ExtResource("3_fmyu6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hs8wk"]
+texture = ExtResource("4_x5yjj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qy6y1"]
+texture = ExtResource("5_l78yc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dxifg"]
+texture = ExtResource("7_2nh1q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htomh"]
+texture = ExtResource("2_dym3x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gr0la"]
+texture = ExtResource("3_fmyu6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m4kcv"]
+texture = ExtResource("4_x5yjj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dym3x"]
+texture = ExtResource("2_dym3x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fmyu6"]
+texture = ExtResource("3_fmyu6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x5yjj"]
+texture = ExtResource("4_x5yjj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l78yc"]
+texture = ExtResource("5_l78yc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5xgl"]
+texture = ExtResource("7_2nh1q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2nh1q"]
+texture = ExtResource("2_dym3x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pbto0"]
+texture = ExtResource("3_fmyu6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lntoc"]
+texture = ExtResource("4_x5yjj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l188b"]
+texture = ExtResource("8_80dl2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ewung"]
+texture = ExtResource("9_r32nk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_axa56"]
+texture = ExtResource("10_wxoxy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xcoxe"]
+texture = ExtResource("11_28l8x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y3jx1"]
+texture = ExtResource("12_w7kcv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cjv2m"]
+texture = ExtResource("13_w15o3")
+
+[node name="FireplaceMelt" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r32nk")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" type="Control" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/Window"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -903.0
+offset_top = -467.0
+offset_right = 903.0
+offset_bottom = 302.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_80dl2")
+
+[node name="IgniterLeftArrow" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -846.0
+offset_top = -136.0
+offset_right = -791.0
+offset_bottom = -61.0
+rotation = 3.14159
+theme_override_styles/hover = SubResource("StyleBoxTexture_80dl2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_r32nk")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wxoxy")
+
+[node name="IgniterCell" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -812.0
+offset_top = -264.0
+offset_right = -627.0
+offset_bottom = -79.0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_28l8x")
+theme_override_styles/normal = SubResource("StyleBoxTexture_w7kcv")
+
+[node name="IgniterRightArrow" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -592.0
+offset_top = -212.0
+offset_right = -537.0
+offset_bottom = -137.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_w15o3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5278n")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8vhri")
+
+[node name="LogLeftArrow" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -847.0
+offset_top = 115.0
+offset_right = -792.0
+offset_bottom = 190.0
+rotation = 3.14159
+theme_override_styles/hover = SubResource("StyleBoxTexture_28gjt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6n1mx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hs8wk")
+
+[node name="LogCell" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -811.0
+offset_top = -14.0
+offset_right = -626.0
+offset_bottom = 171.0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_qy6y1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dxifg")
+
+[node name="LogRightArrow" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -592.0
+offset_top = 41.0
+offset_right = -537.0
+offset_bottom = 116.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_htomh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gr0la")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m4kcv")
+
+[node name="TimberLeftArrow" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -847.0
+offset_top = 372.0
+offset_right = -792.0
+offset_bottom = 447.0
+rotation = 3.14159
+theme_override_styles/hover = SubResource("StyleBoxTexture_dym3x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fmyu6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_x5yjj")
+
+[node name="TimberCell" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -812.0
+offset_top = 236.0
+offset_right = -627.0
+offset_bottom = 421.0
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l78yc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_g5xgl")
+
+[node name="TimberRightArrow" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = -590.0
+offset_top = 293.0
+offset_right = -535.0
+offset_bottom = 368.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_2nh1q")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pbto0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lntoc")
+
+[node name="ConfirmButton" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 402.0
+offset_right = 714.0
+offset_bottom = 466.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxTexture_l188b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ewung")
+theme_override_styles/normal = SubResource("StyleBoxTexture_axa56")
+text = "Подтвердить"
+
+[node name="CancelButton" type="Button" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = 709.0
+offset_top = 403.0
+offset_right = 880.0
+offset_bottom = 467.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxTexture_xcoxe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_y3jx1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cjv2m")
+text = "X"
+
+[node name="FireChanceLabel" type="Label" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = -360.0
+offset_right = 286.0
+offset_bottom = -290.0
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BurnTimeLabel" type="Label" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = 413.0
+offset_top = -360.0
+offset_right = 543.0
+offset_bottom = -290.0
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChanceLabel" type="Label" parent="CenterContainer/Window"]
+layout_mode = 0
+offset_left = 666.0
+offset_top = -360.0
+offset_right = 796.0
+offset_bottom = -290.0
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
