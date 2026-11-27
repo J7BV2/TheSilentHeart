@@ -86,7 +86,7 @@ func close_ui() -> void:
 	if not DisplayServer.is_touchscreen_available():
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		
-		ui_closed.emit()
+	ui_closed.emit()
 
 func hide_prompt() -> void:
 	if prompt_label:

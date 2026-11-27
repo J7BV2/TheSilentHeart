@@ -21,16 +21,35 @@ func _ready() -> void:
 
 	add_to_group("game_session")
 
-	# При создании новой игровой сессии
-	# печь изначально выключена.
+	# Сбрасываем печь при запуске новой игры.
 	FireplaceState.reset_for_new_game()
 
-	# Привязываем менеджер игрового времени.
-	FireplaceState.bind_time_manager(
-		$TimeManager as TimeManager
-	)
+	# Подключаем игровое время.
+	var time_manager := $TimeManager as TimeManager
+
+	FireplaceState.bind_time_manager(time_manager)
+
+	# Сбрасываем здоровье.
+	player.health_component.reset_for_new_game()
+
+	# Подключаем смерть игрока.
+	if not player.health_component.died.is_connected(
+		_on_player_died
+	):
+		player.health_component.died.connect(
+			_on_player_died
+		)
 
 	change_location(HOUSE_SCENE, &"PlayerStart")
+
+
+func _on_player_died() -> void:
+
+	$TimeManager.is_running = false
+
+	player.set_physics_process(false)
+
+	print("GAME OVER")
 
 
 func change_location(

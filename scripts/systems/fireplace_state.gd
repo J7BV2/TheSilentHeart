@@ -1,5 +1,8 @@
 extends Node
 
+signal minute_processed(heat_percent: int)
+signal minutes_batch_processed(amount: int)
+
 signal state_changed(
 	is_burning: bool,
 	remaining_minutes: int
@@ -26,7 +29,8 @@ func reset_for_new_game() -> void:
 # Подключаем менеджер игрового времени.
 func bind_time_manager(manager: TimeManager) -> void:
 
-	if time_manager != null:
+	# Отключаем предыдущий TimeManager.
+	if is_instance_valid(time_manager):
 
 		if time_manager.minutes_advanced.is_connected(
 			_on_minutes_advanced
@@ -35,9 +39,11 @@ func bind_time_manager(manager: TimeManager) -> void:
 				_on_minutes_advanced
 			)
 
+	# Запоминаем новый TimeManager.
 	time_manager = manager
 
-	if time_manager != null:
+	# Подключаем сигнал, если менеджер существует.
+	if is_instance_valid(time_manager):
 
 		if not time_manager.minutes_advanced.is_connected(
 			_on_minutes_advanced
@@ -66,24 +72,44 @@ func start_fire(duration_minutes: int = 40) -> void:
 # Уменьшение времени горения.
 func _on_minutes_advanced(amount: int) -> void:
 
-	if not is_burning:
+	if amount <= 0:
 		return
 
-	remaining_burn_minutes = maxi(
-		remaining_burn_minutes - amount,
-		0
-	)
+	var previous_burning := is_burning
+	var previous_remaining := remaining_burn_minutes
 
-	if remaining_burn_minutes <= 0:
+	# Обрабатываем каждую игровую минуту отдельно.
+	for i in range(amount):
 
-		is_burning = false
+		# Сначала определяем тепло.
+		var heat := get_heat_output_percent() if is_burning else 0
 
-		print("Огонь в печи погас.")
+		# Передаём информацию системе HP.
+		minute_processed.emit(heat)
 
-	state_changed.emit(
-		is_burning,
-		remaining_burn_minutes
-	)
+		# Затем расходуем минуту горения.
+		if is_burning:
+
+			remaining_burn_minutes = maxi(
+				remaining_burn_minutes - 1,
+				0
+			)
+
+			if remaining_burn_minutes <= 0:
+				is_burning = false
+
+	# Обновляем состояние печи.
+	if (
+		previous_burning != is_burning
+		or previous_remaining != remaining_burn_minutes
+	):
+		state_changed.emit(
+			is_burning,
+			remaining_burn_minutes
+		)
+
+	# Сообщаем, что перемотка обработана.
+	minutes_batch_processed.emit(amount)
 
 
 # Добавление топлива в уже горящую печь.

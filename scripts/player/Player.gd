@@ -11,9 +11,14 @@ const ITEM_PICKUP_SCENE: PackedScene = preload(
 @onready var inventory_hud: InventoryHUD = $CanvasLayer/Inventory
 @onready var item_dropper: ItemDropper = $ItemDropper
 
+@onready var health_component: PlayerHealth = $HealthComponent
+@onready var health_points: Control = $CanvasLayer/HealthPoints
+
 func _ready() -> void:
 
 	inventory_hud.setup(inventory)
+	
+	health_points.setup(health_component)
 
 	inventory_hud.drop_requested.connect(
 		item_dropper.drop_selected_item
